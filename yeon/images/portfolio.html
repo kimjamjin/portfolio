@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>김연진portfolio</title>
+  <link rel="shortcunt icon" href="k.ico">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Heebo" rel="stylesheet">
+  <script>
+	// *op -> animate *d:n -> show/hide fadeIn/fadeOut slideDown/slideUp
+		$(document).ready(function(){
+			$('#wheel').animate({'opacity':'0','top':'30px'},500,function a(){
+				$('#wheel').css({'top':'5px','opacity':'1'})
+				$('#wheel').animate({'opacity':'0','top':'30px'},500,a)				
+			})
+			$(window).scroll(function(){
+				sc=$(window).scrollTop();//현재 스크롤탑의 위치정보를 sc라는 변수에 선언
+				$('#sc_text').html(sc);//#sc_text라는 h1에 현재 스크롤탑정보 sc변수 삽입
+				if(sc>=800){ //만약 sc(현재스크롤이) 800보다 크거나 같으면 
+					$('header').css({'position':'fixed'})				
+				}
+				else{
+					$('header').css({'position':'static'})
+				}
+				if(sc>=550){
+					$('#work_list li:eq(0),#work_list li:eq(1),#work_list li:eq(2),#work_list li:eq(3)').stop().animate({'opacity':'1'})
+				}
+				if(sc>=850){
+					$('#work_list li:eq(4),#work_list li:eq(5),#work_list li:eq(6),#work_list li:eq(7)').stop().animate({'opacity':'1'})
+				}
+				if(sc>=950){
+					$('#work_list li:eq(8),#work_list li:eq(9),#work_list li:eq(10),#work_list li:eq(11)').stop().animate({'opacity':'1'})
+				}
+				if(sc>=1900){
+					$('#about_right li:eq(0) .about_boxbg2').stop().animate({'width':'90%'})
+					$('#about_right li:eq(1) .about_boxbg2').stop().delay(100).animate({'width':'90%'})
+					$('#about_right li:eq(2) .about_boxbg2').stop().delay(200).animate({'width':'95%'})
+					$('#about_right li:eq(3) .about_boxbg2').stop().delay(300).animate({'width':'80%'})
+				}
+			})
+			$('#main h1').animate({marginTop:300,opacity:1},400)
+			$('#main p').delay(200).animate({marginTop:5,opacity:1},600)	
+			$('#menu li:nth-child(1)').click(function(){				
+				$('body,html').animate({scrollTop:0},400)
+			})
+			$('#menu li:nth-child(2)').click(function(){						
+				$('body,html').animate({scrollTop:800},400)
+			})
+			$('#menu li:nth-child(3)').click(function(){				
+				$('body,html').animate({scrollTop:2035},400)
+			})
+			$('#menu li:nth-child(4)').click(function(){			
+				$('body,html').animate({scrollTop:2960},400)
+			})
+
+		}) //마지막 괄호 항상 유지 ! 전체문서 괄호는 지우지 않음
+  </script>
+  <style>
+	* { margin: 0; padding: 0; list-style: none; font-family: 'Heebo', sans-serif;}
+	a { color:inherit; text-decoration: none; }	
+/*	#sc_text{position: fixed; left: 0; top: 0; background-color: #999900; font-size: 100px;}*/
+	#main{width: 100%; height: 800px; background:  url(img599.jpg) center no-repeat; text-align: center; overflow: hidden; color: #fff; background-attachment: fixed; position: relative;}
+	#main h1{margin-top: 350px; font-size: 40px; letter-spacing: 1.5px; opacity: 0;}
+	#main p{ margin-top: 20px; opacity: 0; }
+	#mouse{position: absolute; left: 0;right: 0; bottom: 30px; width: 20px; height: 45px; border: 3px solid #fff; border-radius: 30px; margin: auto;}
+	#wheel{position: absolute; width: 7px; height: 7px; border-radius: 10px; background-color: #fff; left: 0; right: 0; top: 5px; margin: auto; }
+	header{width: 100%; height: 50px; background-color: #fff; border-bottom: 1px solid #ccc; line-height: 50px; z-index: 999; top: 0; left: 0;}
+	#header_box{width: 1200px; margin: auto; }
+	#logo{font-size: 25px; font-weight: 900; float: left; }
+	#menu{float: right; }
+	#menu li{float: left; font-size: 14px; margin-left: 20px;  cursor: pointer;	}
+
+	#work{width: 100%; padding: 80px 0; background-color: #ddd; text-align: center; overflow: hidden; background-attachment: fixed;}
+	#work>h2{margin-top: 100px;}
+	#work>p{margin: 20px 0;}
+	#work_list{width: 1000px; margin: 50px auto 0;  }
+	#work_list li{float: left; width: 292px; height: 250px; margin-right: 40px; margin-bottom: 40px; background-color: #000; position: relative;  opacity: 0; cursor: pointer;} 
+	#work_list li img{width: 292px; height: 250px; vertical-align: top;}
+	#work_list li button{position: absolute; left: 0;right: 0; top: 0;bottom: 0; margin: auto; width: 80px; height: 30px; line-height: 30px; border: 1px solid #fff; color: #fff; background-color:transparent; display: none;}
+	#work_list li:hover img{opacity: 0.5; }
+	#work_list li:hover button{display: inline; cursor: pointer;	}
+
+	#about{width: 1200px; margin: 100px auto; background-color: #fff;  text-align: center; overflow: hidden;}
+	#about>h2{ margin-top: 50px;}
+	#about>img{margin-top: 70px;	border-radius:300px; width: 300px; height:300px;}
+	#about_box{width: 100%; margin-top: 80px; }
+	#about_left{float: left; width: 50%; text-align: left;}
+	#about_left h5{line-height:20px; font-size: 17px; margin-bottom: 5px;}
+	#about_left p{font-size: 15px;}
+	#about_right{float: right; width: 50%;}
+	#about_right li{overflow: hidden; width: 80%; margin: 20px auto;}
+	#about_right li h4{float: left; margin-bottom: 10px;}
+	#about_right li h5{float: right;}
+	.about_boxbg{width: 100%; height: 5px; background-color: #ccc; clear: both;	}
+	.about_boxbg2{width: 0%; height: 5px; background-color: #8a8a8a;}
+      
+	#footer_wrap{width: 100%; background:  url(img599.jpg) center no-repeat; text-align: center; background-attachment: fixed; overflow: hidden; }
+	#footer_wrap>h2{font-size: 20px; color: #fff; padding-top: 100px;}
+	#conteact{padding-top: 50px;}
+	#conteact li{display: inline-block; border-right: 1px solid #ccc; padding: 0 20px; text-align: left; color: #fff;}
+	#conteact li h5{font-size: 13px; padding: 10px 0;}
+	#conteact li p{font-size: 13px;}
+	#conteact_line{color: #fff; padding-top: 30px; font-size: 25px;}
+	footer{border-top: 1px solid #fff; height: 60px; line-height: 60px; margin-top: 100px; color: #fff;	}
+	#footer_box{width: 1400px; height: 60px; margin: auto;}
+	#footer_box h3{float: left; font-size:22px; line-height: 60px; margin-left: 50px;}
+	#footer_box p {float: right; text-align: center; font-size: 12px; text-align: right; line-height: 18px; margin-top: 10px; margin-right: 100px;}
+
+  </style></head>
+  <body>
+ 		<div id="main">
+ 			<h1>I AM WEBPUBLISHER</h1>
+ 			<p>creating modern and responsive design for Web and Mobile</p>
+			<div id="mouse">
+				<div id="wheel"></div>
+			</div>
+ 		</div>
+	<header>
+		<div id="header_box">
+			<h1 id="logo">KYJ</h1>
+			<ul id="menu">
+				<li>HOME</li>
+				<li>WORKS</li>
+				<li>ABOUT ME</li>
+				<li>CONTACT</li>
+			</ul>
+		</div>
+	</header>
+	<div id="work">
+		<h2>MY WORKS</h2>
+		<p>First work is my representative portfolio.<br>And besides this work, I’m looking forward for new projects and opportunities.</p>
+		<ul id="work_list">
+			<li><img src="10.jpg" alt=""><button><a href="http://dongle.dothome.co.kr/new/new.html" target="_blank">View More</a></button></li>
+			<li ><img src="1.jpg" alt=""><button><a href="http://dongle.dothome.co.kr/work/1.kakao_media/kakao.html" target="_blank">View More</a></button></li>	
+			<li><img src="2.jpg" alt=""><button><a href="http://dongle.dothome.co.kr/work/2.ralphlauren/RalphLauren.html" target="_blank">View More</a></button></li>			
+			<li><img src="4.jpg" alt=""><button><a href="http://dongle.dothome.co.kr/work/4.ford/ford.html" target="_blank">View More</a></button></li>
+			<li><img src="5.jpg" alt=""><button><a href="http://dongle.dothome.co.kr/work/5.bkk/bkk.html" target="_blank">View More</a></button></li>
+			<li><img src="6.jpg" alt=""><button><a href="http://dongle.dothome.co.kr/work/6.qnigirls/qnigirls2.html" target="_blank">View More</a></button></li>
+			<li><img src="7.jpg" alt=""><button><a href="http://dongle.dothome.co.kr/work/7.lotteworld/lotteworld.html" target="_blank">View More</a></button></li>
+			<li><img src="8.jpg" alt=""><button><a href="http://dongle.dothome.co.kr/work/8.SeoulArtsCenter/SeoulArtsCenter.html" target="_blank">View More</a></button></li>
+			<li><img src="9.jpg" alt=""><button><a href="http://dongle.dothome.co.kr/work/9.coffeebeankorea/coffeebeenkorea.html" target="_blank">View More</a></button></li>
+		</ul>
+	</div>
+<!--  -->
+	
+<!--  -->
+	<div id="about">
+		<h2>ABOUT ME</h2>
+		<img src="2-3.jpg" alt="">
+		<div id="about_box">
+			<div id="about_left">
+				<h5>WEB, UX/UI Designer</h5>
+				<h5>YOU HWIRIM</h5>
+				<p>I am proficient in all design software, as well as some other computer<br> applications. My skills range from website design, all the way to application<Br> design.I will continue further studies to improve design skills.</p>
+			</div>
+			<ul id="about_right">
+				<li>
+					<h4>Photoshop</h4>
+					<h5>90</h5>
+					<div class="about_boxbg">
+						<div class="about_boxbg2"></div>
+					</div>
+				</li>
+				<li>
+					<h4>Illustrator</h4>
+					<h5>90</h5>
+					<div class="about_boxbg">
+						<div class="about_boxbg2"></div>
+					</div>
+				</li>
+				<li>
+					<h4>html5 & css</h4>
+					<h5>95</h5>
+					<div class="about_boxbg">
+						<div class="about_boxbg2"></div>
+					</div>
+				</li>
+				<li>
+					<h4>Java script</h4>
+					<h5>80</h5>
+					<div class="about_boxbg">
+						<div class="about_boxbg2"></div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="footer_wrap">
+		<h2>CONTEACT ME</h2>
+		<ul id="conteact">
+			<li>
+				<img src="call.png" alt="">
+				<h5>010-8820-9722</h5>
+				<p>김연진</p>
+			</li>
+			<li>
+				<img src="locate.png" alt="">
+				<h5>경기도 남양주시</h5>
+				<p>청학리 주공아파트 709동</p>
+			</li>
+			<li>
+				<img src="mese.png" alt="">
+				<h5>NAVER</h5>
+				<p>1994being@naver.com</p>
+			</li>
+		</ul>
+		<div id="conteact_line">.....</div>
+		<footer>
+			<div id="footer_box">
+			<h3>KYJ</h3>
+			<p>KYJKYJ 2019 copyright @ ALL RIGHTS RESERVED.<br>creating modern and responsive design for Web and Mobile.</p>
+			</div>
+		</footer>
+	</div>
+
+<!-- 	<div id="sc_text"></div> -->
+ </body>
+ </html>
+

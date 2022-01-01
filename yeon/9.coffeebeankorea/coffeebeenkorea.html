@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+ <head>
+ <link rel="shortcunt icon" href="icons/logo.ico">
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>coffeebeen</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+		$('#popup_box2 button,#btn').click(function(){
+			  $('#popup_bg').hide();
+			})  
+  })
+  </script>
+  <style>
+  *{margin: 0; padding: 0; list-style: none;}
+  header{}/*상단고정배열인 pos:f가 필요하다. 단 pos:f는 w의 기본값이 100%가 아니므로 꽉 찬 공간을 원한다면 w100%가 지정이 필요하다. 가로크기 100% 세로높이는 자식의 크기를 받아오도록 하기위해서 따로 지정하지 말자. 도한 pos:f를 하면서 중요한점은 위치 설정인 좌표 배열을 꼭 넣어야한다(left_0; top:0;). 좌표지정을 하지 않으면 자신의 좌표가 없으므로 다른 요소에 의해 밀려다니게 된다. pos:f는 고정식으로 붙어있으므로 배경색이 필요하다면 배경색을 지정해야하나 #header1과 #header2에서 할당을 한다면 굳이 header에서 지정할 필요는 없다.*/
+  #header1{width: 100%; height: 40px; background-color: #ebebeb; line-height: 40px;}/*배경색회색, 그 회색이 꽉 차므로	w:100% 높이는 변경을 하더라도 일정한 수치로 시작(h:??px)*/
+  #header1_box{width: 1400px; height:40px; margin: auto; padding-right: 100px; }/*안쪽의 제한된 크기영역(그 영역은 창 기준으로 가운데 정렬), 가로값이 고정되어 있는 공간, w:1400px; h:95px; 해당 영역이 가운데 정렬!!!!! (m:a)*/
+  #header1_menu{float: right; height: 30px; }/*덩어리 메뉴 그룹요소(ul), 오른쪽으로 치우치게 fl:r*/
+  #header1_menu li{float: left; font-size: 13px; margin-left: 20px; }/*목록의 li도 옆으로 배열해야하므로 12345순이라면(fl:l), 54321순이라면(fl:r), 그리고 항목 li 별로 margin으로 여백을 생성하여 자리를 잡자.*/
+  #li1{border-right: 1px solid #cacaca; padding-right: 20px;}
+  #icons{margin-top: 10px;}
+  #header1_menu div{background-color: #422100; width:60px; height: 40px; text-align: center; }
+
+  #header2{width: 100%; background-color: #ffffff; border-bottom: 1px solid#e7e7e7;}/*가로크기가 꽉찬 w100%, 배경색 흰색, 아래쪽 하단 테두기 1px 실선 연한회색*/
+  #header2_box{width: 1400px; height: 95px; margin: auto; position: relative; padding-right: 80px;}/*안쪽의 제한된 크기영역(그 영역은 창 기준으로 가운데 정렬), 가로값이 고정되어 있는 공간, w:1400px; h:95px; 해당 영역이 가운데 정렬!!!!! (m:a)*/
+  #header2 #logo{float: left; margin-top: 13px; margin-left: 90px; }/*3단 배열의 왼쪽부분, 왼쪽으로 밀기 fl:l, 필요에 따라 margin을 이용하여 위치를 조정 */
+  #header2_menu{;position: absolute; left: 50%; margin-left: -400px; text-align: center; margin-top: 25px;  }/*3단 배열의 가운데부분, fl:l와 fl:r사이에 가운데로 정렬의 공간이 생성되지 않는다. 기존 배열에(float) 영향을 받지않고 영역의 가운데로 오도록 pos:a를 사용하여  pos:a를 할당 하자마자 부모요소인  #header_box에 pos:r를 할당하여 부모가 정상적으로 부모의 역활로 자식을 감쌀 수 있도록 한다. 또한 영역이 가운데로 정렬되어야 하며 내용도 가운데로 정렬이 필요하다. 영역의 가운데 정렬은 pos:a는 가로 크기의 기본값이 100%로 시작하지 않으므로 필요하다면, 100%를 줄 수 있으나 가운데 정렬이라 함은 크기가 남아있을 경우 남는 공간에 따른 정렬을 가운데로 보낸다 함이겠다. 즉 가로크기가 (부모가 1400이므로, li를 전부 포함할 수 있는 정도의 가로크기) 800?정도로 임의로 지정하여 남는 공간이 생신다면 그 공간을 바탕으로 가운데 정렬하자. left:50%; margin-left:-400px; (영역의 가로크기가 800이므로 400만큼인 절반의 값을 왼쪽 기준으로 빼주자) 자식요소의 inline값을 가운데로 보내기 위해여 (글자 가운데) ta:c를 할당한다. */
+  #header2_menu li{display: inline-block; margin:10px 30px; font-size: 15px; }/*l항목별로 옆으로 배열하되 전체가 가운데로 정렬되도록 d:ib을 할당한다. 필요에따라 li에 여백을 생성하자.*/
+
+  #zoom{float: right; margin:35px 20px 0;}/*3단 배열의 오른쪽부분. 오른쪽으로 밀기 fl:r, 필요에 따라 margin을 이용하여 위치를 조정 */
+
+  #slide{ background: #fff url(images/mmm_1.jpg) center 0 no-repeat;	}/*가로의 100% 위의 형제요소인 header의 높이값을 전달받아 다음부터 시작하는 것이 일반적이나 위의 header는 pos:f 배열로 인하여 다른 요소에 높이전달을 할 수 없다. 그래서 해당 slide요소에 mt을 추가하여 강제로 밀어준다. 예:mt135px, 창의 크기가 작아도 이미지가 가운데 정렬 될 수 있도록 배경이미지를 사용한다!!! bg+ 그리고 background:url(이미지 이름) conter top no-repeat*/
+  #slide_box{width: 1400px; height: 540px; position: relative; margin: auto; }/*제한된 가로크기가 w1400px, 고정된 세로높이가 할당되어있다. h540px 영역을 가운데로 정렬 m:a pos:a 자식요소의 부모로서 인지하게 하기위하여 pos:r를 할당한다.*/
+  #left_arrow{position: absolute; width: 40px; height: 40px; left:0px; top: 50%; margin-top: -20px;}/*fl:l으로도 가능하지만 위아래의 위치를 정확히 가운데로 설정하기 위해 pos:a를 사용하자. 가로 세로크기 w40 h40  좌표 l0px t50% 위아래 가운데 설정으로 margi-top:-20px;(요소크기의 절반) 정렬한다.*/
+  #right_arrow{position: absolute; width: 40px; height: 40px; top: 50%; margin-top: -20px; right: 0px;}
+
+  #slide2{background: url(images/HB_2333__1.jpg ) center 0 no-repeat;	}
+  #slide2_box{width: 100%; height: 400px; margin: auto;}
+  
+  #md{width:1100px; height: 500px; text-align: center;  margin:50px auto 0;}
+  #md h3{text-align: center; color: #cc6600;	font-size: 25px;}
+  #md .list{}
+  #md li{ width: 25%; float: left;  }
+  #md img{margin-top: 5px; width: 100%;}
+  #md h4{margin-top: 10px;font-size: 18px;}
+  #md h5{margin-top: 4px; font-size: 16px;}
+  #md h6{margin-top: 10px;font-size: 13px; color: #ff9900;}
+  
+  #list1{}
+  #list1 li {position: relative;}
+  #list1 li button{width: 150px; height: 35px; background-color: #ff9900; color: #fff; border: none; position: absolute; top: 50%; margin-top: -17.5px; left: 50%; margin-left: -75px; display: none; }
+  #list1 li:hover button{display: inline;}
+
+  #bt1{width: 100%; text-align: center;}
+
+  #bt1_left{display: inline-block; margin-right: 10px; border-right: 1px solid #e7e7e7; padding-right: 15px;	}
+
+  #bt1_right{display: inline-block;  overflow: hidden; vertical-align: top;}
+  #bt1_right li {float: left; margin: 0 2px;}
+
+  #new{width: 1100px; text-align: center; margin:auto ; overflow: hidden; }
+  #new h3{text-align: center; color: #cc6600;font-size: 25px; margin-bottom: 25px;}
+  #new #list2{overflow: hidden;}
+  #new li {width: 31%; float:left; }
+  #new li:nth-child(2)  { margin: 0 3.5%;}
+  #new img{width: 100%; opacity: 1;}
+  #new img:hover{opacity: 0.7; transition:0.5s;}
+
+  #new h6{margin-top: 10px;font-size: 15px; margin-top: 5px; color: #cc6600;}
+
+  #new #bt2{text-align: center; width: 100%;margin-top: 30px; }
+
+  #bt2_left{display: inline-block; margin-right: 10px; border-right: 1px solid #e7e7e7; padding-right: 15px;}
+  
+  #bt2_right{display: inline-block;  overflow: hidden; vertical-align: top;}
+  #bt2_right li{float: left; }
+
+  #insta{width:100%; background-color: #660099; text-align: center; margin-top: 100px; overflow: hidden;}
+  #insta_box{width: 1200px; margin: auto;}
+  #insta_box h4{text-align: center; color: #fff; font-size: 22px; padding: 50px 0 30px;}
+  #insta_box ul{overflow: hidden;}
+  #insta_box ul li{float: left; width: 200px; height: 200px; overflow: hidden;}
+  #insta_box ul li img{width:100%; vertical-align: top; opacity: 1;}
+  #insta_box ul li img:hover{opacity: 0.7; transition:0.6s; width: 110%;	}
+  
+  #insta_box h5 {width: 400px; height: 50px; line-height: 50px; margin: 30px auto; background-color: #ff6633; color: #fff; font: 13px;}
+
+  #footer_box{width: 100%; background-color: #dfdfdf; text-align: center; overflow: hidden;}
+  #footer1{width: 1200px; margin: auto;   overflow: hidden;	border-bottom: 1px solid #000;	}
+  .footer1_box{text-align: center;  float: left; margin-right: 105px; margin-top: 50px; margin-bottom: 50px; 	} 
+  .footer1_box h4{color: #cc6600; font-size: 15px; margin-bottom: 15px; text-align: left;}
+  .footer1_box ul {margin-top: 20px;  }
+  .footer1_box ul li{margin-top: 10px; font-size: 13px; text-align: left; color: #3e2900;}
+
+  #footer2 {width: 1200px; margin: auto; background-color:#dfdfdf;  overflow: hidden;		}
+  #footer2_left { width: 800px; float: left; margin-top: 40px; text-align: left;}
+  #footer2_left h5{font-size: 12px; color: #663300;}s
+  #footer2_left span{color: #cc9900;}
+  #footer2_left p{margin-top: 20px; color: #663300; font-size: 12px; margin-bottom: 25px;}
+
+  #footer2_right { float: right; margin-top: 40px; }
+  #footer2_right li{float: left; }
+  #footer2_right img { margin-left: 15px; }
+
+  #popup_bg{width: 100%; height: 100%; position: fixed; left: 0; top: 0; z-index: 9999; background-color:rgba(0,0,0,0.5);}
+  #popup_box{width: 450px; : background-color: #fff; position: absolute; left: 0; right: 0; top: 200px; bottom: 0; margin: auto; position: relative;	}
+  #popup_box2{width: 450px; height: 20px; background-color: #000; position: absolute; bottom: 0; left: 0; right: 0; } 
+  #popup_box2>p{font-size: 12px; color: #fff; position: absolute; left: 15px; bottom: 0; line-height: 20px; } 
+  #popup_box2>button{font-size: 12px; color: #fff; position: absolute; border: none;  background-color: #000;	right: 10px; bottom: 0; line-height: 20px; font-weight: 100;}
+  #btn{position: absolute; right: -12px; top: -12px; width: 28px; height: 28px; }
+
+ 
+
+  
+ 
+ </style> </head>
+ <body>
+     <header><!--#header1과 #header2를 묶어주는 영역. 상단부분이 pos:f로 고정되어있다. 그 고정영역이 header  -->     
+     	 <div id="header1"><!--header안에 자식으로 고정 상단영역안에 회색배경영역 공간. 단100% 꽉차게 있으므로 내부적인 고정크기 영역이 별도로 필요하다.-->
+		     <div id="header1_box"><!--header1 영역 안에 가로로 제한된 크기를 가지는 영역공간(가운데정렬)-->	
+			     <ul id="header1_menu"><!--haeder1_box안에 오른쪽으로 치우친 공간. li를 묶어주는 ul로 오른쪽에 붙이는 배열을 사용한다.-->
+			     	<li id="li1">로그인</li>
+			     	<li>매장찾기</li>
+			     	<li>채용정보</li>
+			     	<li>단체 및 기업구매</li>
+			     	<li>고객서비스</li>
+			     	<li><div><img src="icons/ico_user_info_line.png" alt="" id="icons"></div></li>
+			     </ul>
+			 </div>
+		 </div>
+     	 <div id="header2"><!--header안에 자식으로 고정 상단영역안에 흰색배경영역공간. 단 아래쪽으로 라인이 100% 꽉차므로 내부적인 고정크기 영역이 별도로 필요하다.-->
+		     <div id="header2_box"><!--header2 영역 안에 가로로 제한된 크기를 가지는 영역공간(가운데정렬)-->	
+             <!--3단배열만들기 1.좌우요소를 float로 밀고 가운데 요소를 pos:a 로 가운데 정렬한다.
+			      3단배열만들기 2.가운데 요소를 그냥 ta:c로 정렬하고 (필요에따라 m:a가 될수도있다) 나머지 좌우요소를 pos:a로 좌표로 배열한다.-->
+				  <h1 id="logo"><img src="logo.png" alt=""></h1><!--왼쪽공간-->
+				  <ul id="header2_menu"><!--가운데 영역 공간( 자식요소 li )-->
+				  	<li>BUY ONLINE</li>
+				  	<li>MEMBER'S CLUB</li>
+				  	<li>MENU</li>
+				  	<li>STORE</li>
+				  	<li>THE COFFEE BEAN</li>
+				  	<li>CBTL</li>
+				  </ul>
+				  <img src="icons/ico_search.png" alt="" id="zoom"><!--오른쪽공간-->
+				  </div>
+			 </div>
+			     <div id="slide"><!--header 다음 요소의 slide 영역. 배경 이미지가 100%로 꽉찬다-->
+				     <div id="slide_box"><!--좌우 단추 영역. 창의 크기가 작아도 이미지는 가운데 있어야 할 경우 배경이미지를 삽입힌다.(img 태그 사용x) 완성된 형태는 가로는 100%로 꽉차지만 버튼의 영역위치는 header안에 box처럼 제한된 가로 크기를 가지고 있다.-->
+					 <img src="icons/btn_prev.png" alt="" id="left_arrow">
+					 <img src="icons/btn_next.png" alt="" id="right_arrow">
+				</div>	
+		</div>
+		<div id="slide2">
+			<div id="slide2_box"></div>
+		</div>
+     </header>
+<!--  -->
+     
+<!--  -->
+     <div id="md">
+     	<h3>MD'S PICK</h3>
+     	<ul id="list1">
+     		<li>
+     			<img src="images/10200509.jpg" alt="">
+     			<h4>위드 머그(핑크)</h4>     			
+     			<h6>9,000원</h6>
+				<button>QUICKVIEW</button>
+     		</li>
+     		<li>
+     			<img src="images/10200510.jpg" alt="">
+     			<h4>위드 머그(그레이)</h4>     			
+     			<h6>9,000원</h6>
+				<button>QUICKVIEW</button>
+     		</li>
+     		<li>
+     			<img src="images/K0205061.jpg" alt="">
+     			<h4>MARCO'S밀크 초콜릿 50g</h4>
+     			<h5>FINEST MILK CHOCOLATE</h5>
+     			<h6>3,500원</h6>
+				<button>QUICKVIEW</button>
+     		</li>
+     		<li>
+     			<img src="images/K0205060.jpg" alt="">
+     			<h4>MARCO'S 다크 초콜릿 50g</h4>
+     			<h5>FINEST DARK CHOCOLATE</h5>
+     			<h6>3,500원</h6>
+				<button>QUICKVIEW</button>
+     		</li>
+     	</ul>
+     <div id="bt1">
+		 <div id="bt1_left">
+		     <img src="icons/btn_pause.png" alt="">
+         </div>
+		 	<ul id="bt1_right">
+		 		<li><img src="icons/paging_on.png" alt=""></li>
+		 		<li><img src="icons/paging_on_popup.png" alt=""></li>
+		 		<li><img src="icons/paging_on_popup.png" alt=""></li>
+		 	</ul>
+		 		
+		</div>
+     </div>
+<!--  -->
+     <div id="new">
+     	<h3>What's new</h3>
+     	<ul id="list2">
+     		<li>
+     			<img src="images/PC_B_51.jpg" alt="">
+     			<h6>2019 02 Cheese Crumble Cake</h6>
+     		</li>
+     		<li>
+     			<img src="images/PC_B (2).jpg" alt="">
+     			<h6>2019 03 Black Sugar Pearl Latte</h6>
+     		</li>
+     		<li>
+     			<img src="images/PC_B_49.jpg" alt="">
+     			<h6>2019 03 Brown Gradation Steel Tumbler</h6>
+     		</li>
+     	</ul>
+     	<div id="bt2">
+		     <div id="bt2_left">
+		         <img src="icons/btn_pause.png" alt="">
+		     </div>
+
+		 <ul id="bt2_right">
+		     <li><img src="icons/paging_on.png" alt=""></li>
+		     <li><img src="icons/paging_on_popup.png" alt=""></li>
+		     <li><img src="icons/paging_on_popup.png" alt=""></li>
+		 </ul>
+		</div>
+     </div>	
+<!--  -->
+     <div id="insta">
+     	<div id="insta_box">
+     		<h4>#커피빈코리아 #커피빈맛있다 #커피빈사랑해</h4>
+     		<ul>
+     			<li><img src="images/sns1.jpg" alt=""></li>
+     			<li><img src="images/sns2.jpg" alt=""></li>
+     			<li><img src="images/sns3.jpg" alt=""></li>
+     			<li><img src="images/sns4.jpg" alt=""></li>
+     			<li><img src="images/sns5.jpg" alt=""></li>
+     			<li><img src="images/sns6.jpg" alt=""></li>
+     			<li><img src="images/sns7.jpg" alt=""></li>
+     			<li><img src="images/sns8.jpg" alt=""></li>
+     			<li><img src="images/sns9.jpg" alt=""></li>
+     			<li><img src="images/sns10.jpg" alt=""></li>
+     			<li><img src="images/sns11.jpg" alt=""></li>
+     			<li><img src="images/sns12.jpg" alt=""></li>
+     		</ul>
+     	    <h5>OUR INSTAGRAM-@COFFEEBEANKOREA</h5>
+          	</div>
+     </div>		
+<!--  -->
+     <footer>
+     	<div id="footer_box">
+     		<div id="footer1">
+     			<div class="footer1_box">
+     				<h4>Buy Online</h4>
+     				<ul>
+     					<li>VIEW ALL</li>
+     					<li>커피</li>
+     					<li>티</li>
+     					<li>CBTL 시스템</li>
+     					<li>상품</li>
+     					<li>멤버스몰</li>
+     					<li></li>
+     				</ul>
+     			</div>
+     			<div class="footer1_box">
+     				<h4>Member`s Club</h4>
+     				<ul>
+     					<li>커피빈 멤버스 클럽</li>
+     					<li>나의 커피빈</li>
+     					<li>멤버스 몰</li>     				
+     				</ul>
+     			</div>
+     			<div class="footer1_box">
+     				<h4>Menu</h4>
+     				<ul>
+     					<li>음료</li>
+     					<li>푸드</li>
+     					<li>상품</li>
+     					<li>카드</li>
+     				</ul>
+     			</div>
+     			<div class="footer1_box">
+     				<h4>Store</h4>
+     				<ul>
+     					<li>매장 찾기</li>
+     					<li>신규 매장</li>
+     					
+     				</ul>
+     			</div>
+     			<div class="footer1_box">
+     				<h4>The Coffee Bean</h4>
+     				<ul>
+     					<li>커피빈 코리아</li>
+     					<li>커피빈 소식</li>
+     					<li>사회공헌</li>
+     					<li>제휴 마케팅 제안</li>
+     					<li>채용안내</li>
+     					<li>신규 입점 제의</li>
+     					<li>결산공고</li>
+     				</ul>
+     			</div>
+     			<div class="footer1_box">
+     				<h4>CBTL</h4>
+     				<ul>
+     					<li>CBTL 가이드</li>
+     					<li>CBTL 서비스</li>
+     					<li>AS 안내</li>
+     					<li>AS 신청</li>
+     					<li>CBTL FAQ</li>
+     					<li>제품설명서</li>
+     					<li>기업용 머신</li>
+     				</ul>
+     			</div>
+     		</div>
+
+     		<div id="footer2">
+     			<div id="footer2_left">
+				<h5>이용약관ㅣ<span>개인정보처리방침</span>ㅣ영상정보처리기기운영방침ㅣ멤버스카드이용약관</h5>
+
+			    <p>(주)커피빈코리아 대표이사 박상배 ㅣ 사업자등록번호 120-86-07029 ㅣ 통신판매업신고 제 2010-서울강남-00560<br>서울시 강남구 봉은사로 99길 7 ㅣ 고객센터 02-1577-4708 (09:00 - 18:00) ㅣE-mail : cbk@coffeebeankorea.com<br>호스팅사업자 : SK브로드밴드<br>ⓒ 2016. The Coffee Bean. All rights reserved.</p>
+				</div>
+
+     	    <div id="footer2_right">
+			 <ul>
+			 	<li><img src="icons/ico_facebook.png" alt=""></li>
+			 	<li><img src="icons/ico_instagram.png" alt=""></li>
+			 	<li><img src="icons/ico_twitter.png" alt=""></li>
+			 	<li><img src="icons/ico_blog.png" alt=""></li>
+			 </ul>	
+			</div>     		 
+	     </div>			
+	   </div>
+     </div>	
+     </footer>
+
+	 <div id="popup_bg">
+		<div id="popup_box">
+			<img src="images/popup_img.jpg" alt="">
+			<img src="http://www.coffeebeankorea.com/images/main/btn_popup_close.png" alt="" id="btn">
+			<div  id="popup_box2">
+						
+			<input type="checkbox">
+			<p>오늘하루 창열지 않기</p>
+			<button>닫기</button>
+		</div>
+		
+		
+		</div>
+	 </div>
+  
+ </body>
+</html>

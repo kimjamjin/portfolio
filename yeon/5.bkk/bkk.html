@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>BANGKOK</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+		$(document).ready(function(){
+			$('#gallery ul li').click(function(){
+				$('#bg').css({'background':'url('+$(this).children('img').attr("src")+') center'})
+			})
+			$('#gallery ul li').click(function(){
+				$(this).css({'opacity':'1'})
+				$(this).siblings().css({'opacity':'0.5'})
+			})
+			$('#textbox,#bg').click(function(){	
+				$('#gallery ul').animate({width:'0%'},300,function(){			
+				$('#gallery').animate({bottom:-150},300)
+				$('#textbox').animate({top:'30%'},200)	
+				})
+			
+			})
+			$('#gallery_bt').click(function(){				
+				$('#gallery').animate({bottom:0},800,function(){
+					$('#gallery ul').animate({width:'100%'},200)
+					$('#textbox').animate({top:'25%'},200)					
+					
+				})
+			})
+			$('#bg').animate({backgroundSize:1920},1000,function(){
+				$('header').animate({top:0},function(){
+					$('footer').animate({bottom:0},1000,function(){
+						$('#gallery_bt').animate({bottom:50},200,function(){	
+							$('#textbox').animate({opacity: 1},1000,function(){
+								$('#textbox h1').animate({letterSpacing:5},500,function a(){
+									$('#gallery_bt p').animate({top:10},500)
+										$('#gallery_bt p').animate({top:0},500)
+										$('#gallery_bt p').animate({top:10},500)
+										$('#gallery_bt p').animate({top:0},500,a)
+									})					
+							})							
+						})
+					})
+				})			
+			})			
+		}) //마지막 괄호 항상 유지 ! 전체문서 괄호는 지우지 않음
+  </script>
+  <style>
+	* { margin: 0; padding: 0; list-style: none; }
+	body,html{height: 100%;}
+	#bg{width: 100%; height: 100%; background:url(bg.jpg) center; background-size:2000px;}
+	header{position: fixed; width: 100%; left: 0; top: -100px;}
+	#logo{padding:15px 30px; background-color:rgba(0,0,0,0.5); float: left; margin-left: 100px;}
+	#menu{float: right; margin-right: 100px; margin-top: 30px; color: #fff;}
+	#menu li{float: left;}
+	a{color:inherit; text-decoration: none;	}
+	#menu li a:hover{text-decoration: underline;}
+	#menu li:after {content:'|'; margin: 0 10px;}
+	#menu li:last-child:after{content:''; margin: 0;}
+	#textbox{position: fixed; width: 100%; text-align: center; top: 30%; left: 0; color: #fff; opacity: 0;}
+	#textbox h1{font-size: 70px; text-shadow: 0 2px 6px rgba(0,0,0,0.4);	}
+	#textbox p{font-size: 18px;}
+	#textbox p span{color: #ffcc00;}
+	footer{position: fixed; width: 100%; bottom: -50px; left: 0; height: 30px; line-height: 30px; background-color: #000; }
+	footer p{float: left; font-size: 12px; color: #fff; margin-left: 20px;}
+	footer img{float: right; margin-left: 20px; margin-top: 4px;}
+	#gallery_bt{width: 150px; height: 60px;color: #fff; position: fixed; left: 0; right: 0; margin: auto; bottom: -100px; text-align: center; cursor: pointer; }
+	#gallery_bt p{position: absolute; width: 100%; top:0; left: 0; }
+	#gallery_bt h5{margin-top: 30px; font-size: 15px;}
+	#gallery{width: 100%; background-color:#000; position: fixed; bottom: -150px; left: 0;}
+	#gallery ul{width: 0%; height: 100px; margin: 10px auto 0; text-align: center; overflow: hidden;}
+	#gallery ul li{display: inline-block; width: 120px; opacity: 0.5;}
+	#gallery ul li:hover{opacity: 1;}
+	#gallery ul li img{width: 100%;}
+
+
+  </style></head>
+ <body>
+		<div id="bg"></div>
+		<header>
+			<h1 id="logo"><img src="logo.png" alt=""></h1>
+			<ul id="menu">
+				<li><a href="">Radisson Blu</a></li>
+				<li><a href="">Thailand</a></li>
+				<li><a href="">Radisson Blu Plaza Bangkok</a></li>
+			</ul>
+		</header>
+		<div id="textbox">
+			<h1>RADISSON BLUE PLAZA BANGKOK</h1>
+			<p>RADISSON BLUE PLAZA HOTEL <span>★★★★★</span> 489 Sukhumvit Road Klongtoey Nua Wattana, Bangkok, 10110, TH</p>
+		</div>
+		<div id="gallery_bt">
+			<p>^</p>
+			<h5>OPEN GALLERY</h5>
+		</div>
+		<div id="gallery">
+			<ul>
+				<li><img src="img1.jpg" alt=""></li>
+				<li><img src="img2.jpg" alt=""></li>
+				<li><img src="img3.jpg" alt=""></li>
+				<li><img src="img4.jpg" alt=""></li>
+				<li><img src="img5.jpg" alt=""></li>
+				<li><img src="img6.jpg" alt=""></li>
+				<li><img src="img7.jpg" alt=""></li>
+				<li><img src="img8.jpg" alt=""></li>
+				<li><img src="img9.jpg" alt=""></li>
+				<li><img src="img10.jpg" alt=""></li>
+				<li><img src="img11.jpg" alt=""></li>
+				<li><img src="img12.jpg" alt=""></li>
+				<li><img src="img13.jpg" alt=""></li>
+			</ul>
+		</div>
+		<footer>
+			<p>©2017 The Carlson Rezidor Hotel Group. All rights reserved.</p>
+			<img src="logo_bottom.png" alt="">
+		</footer>	
+ </body>
+ </html>

@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>QNIGIRLS</title>
+  <style>
+   * { margin: 0; padding: ;0 list-style: none; }
+   h1{text-align: center; margin-top: 30px; margin-bottom: 20px;}
+   ul {text-align: center; margin-bottom: 15px;}
+   li {display: inline-block; margin-left: 7px; margin-right: 7px; font-size: 12px;}
+   .red{ color:red; }
+   body {text-align: center;}
+   #focus{ width:1150px ; border-top: 1px solid #000; margin: auto; margin-top: 120px; }
+   #focus h2 {width:300px; line-height: 45px;	 text-align: center; font-size: 16px; border: 1px solid #000; margin: auto; text-transform: uppercase; letter-spacing: 3px; border-top: none;}
+   table {width:1150px; margin: auto; margin-top: 80px;}
+   body>h3 {text-align: center; font-size:14px; margin-top: 100px; letter-spacing: 3px;	}
+   table td{text-align: left; vertical-align: top;}
+   table h4{font-size:12px; line-height: 30px; border-bottom: 1px solid #000;}
+   table h5{font-size:12px; color: red; margin-top: 5px;}
+   table p{font-size:12px;margin-top: 5px;}
+   table .h6_red{font-size:12px;margin-top: 5px;}
+   table .h6_black{font-size: 12px;margin-top: 5px;}
+  ul>li>a>#blue{font-size: 20px;margin-top: 5px;}
+  
+  </style></head>
+  <body>
+
+     <h1><img src="toplogo.jpg"></h1>
+     <ul>
+	   <li class="red">NEW 7%</li>
+	   <li>BEST</li>
+	   <li>MADEQNI</li>
+	   <li class="red">155JEAN</li>
+	   <li>TOP</li>
+	   <li>DRESS</li>
+	   <li>OUTER</li>
+	   <li>BOTTOM</li>
+	   <li>SHOES&BAG</li>
+	   <li>ACC</li>
+	   <li>10.000</li>
+	   <li class="red">언더웨어</li>
+	   <li>스포츠웨어</li>
+	   <li>세일상품</li>
+	   <li id="blue" ><a href="QNIGIRLS_LOGIN.html" target="_blank">로그인</a></li>
+	 </ul>
+	 <img src="1.jpg">
+	 <div id="focus"><h2>focus on</h2></div>
+     <table width="1150px">
+	  <tr>
+	    <td align="left"><img src="12.jpg"></td>
+	    <td rowspan="2"><img src="10.gif"></td>
+	    <td align="right"><img src="11.jpg"></td>
+	  </tr>
+	  <tr>
+	   <td align="left"><img src="11.jpg"></td>
+	   <td align="right" ><img src="12.jpg"></td>			
+	  </tr>     
+	 </table>
+    <h3>NEW ARRIVAL</h3>
+	<table id="content">
+	<tr>
+		<td><img src="2.jpg">
+		       <h4>드라이워싱 세미배기데님팬츠</h4>
+			   <h5>믿고사는 큐니제작♥</h5>
+			   <p>빈티지하면서 세련된 워싱!
+슬림한 라인이 돋보이는 핏!</p>
+					 <h6 class="h6_red">XS,S,M,L</h6>
+					 <h6 class="h6_black">26,100</h6></td>
+		<td><img src="3.jpg">
+		<h4>라이트먼슬 일자데님팬츠</h4>
+			   <h5>믿고사는 큐니제작♥</h5>
+			   <p>빈티지하면서 세련된 워싱!
+                    슬림한 라인이 돋보이는 핏!:)</p>
+					 <h6 class="h6_red">XS,S,M,L</h6>
+					 <h6 class="h6_black">26,100</h6></td>
+		<td><img src="4.jpg">
+		<h4>더블버튼 히든밴딩부츠컷팬츠</h4>
+			   <h5>믿고사는 큐니제작♥</h5>
+			   <p>뱃살쏙! 감춰주는 더블버튼 히든밴딩!
+                    슬림하게 떨어지는 세미부츠컷!</p>
+					 <h6 class="h6_red">XS,S,M,L</h6>
+					 <h6 class="h6_black">33,500</h6></td>
+  </tr>
+
+	<tr>
+		<td><img src="qni5.gif">
+		<h4>(L♥VEQNI)라이트컷팅 롤업일자팬츠</h4>
+			   <h5>믿고사는 큐니제작♥</h5>
+			   <p>수선 필요 없어요! 내길이에 딱! 맞게 입는 롤업진!
+                     요즘 트렌디 컬러 라이트진:)</p>
+					 <h6 class="h6_red">XS,S,M,L</h6>
+					 <h6 class="h6_black">33,500</h6></td>
+	    <td><img src="14.gif">
+		<h4>나그랑 골지티셔츠</h4>
+			   <h5>믿고사는 큐니제작♥</h5>
+			   <p>가녀린 숄더라인 만들어주는 라운딩 절개 디테일!
+                    슬림한 골지 티셔츠:)</p>
+					 <h6 class="h6_red">FREE(44-66)</h6>
+					 <h6 class="h6_black">14,000</h6></td>
+		<td><img src="14.gif">
+		<h4>귀여운 트임맨투맨</h4>
+			   <h5>믿고사는 큐니제작♥</h5>
+			   <p>광택감이 도는 영문 자수 포인트!
+                     박시핏과 트임으로 편해요~</p>
+					 <h6 class="h6_red">XS,S,M,L</h6>
+					 <h6 class="h6_black">18m,600</h6></td>
+	</tr>
+	</table>
+
+	 </body>
+</html>

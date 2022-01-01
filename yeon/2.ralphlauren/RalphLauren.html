@@ -1,0 +1,390 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+  <title>RalphLauren</title>
+  <!-- 제이쿼리 설치 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+	$(document).ready(function(){
+		$('#brand').focusin(function(){ //focusin=안에들어오면
+			$('#brand_list').show()
+		})
+		$('#brand').focusout(function(){ //focusin=대상에서 나가면
+			$('#brand_list').hide()		
+		})
+		win_w=$(window).width();
+			if(win_w < 768){
+			$('#section1_img').attr({'src':'images/HP-earthpolo-block-01-mob.jpg'});
+			$('#section1_text img').attr({'src':'images/HP-earthpolo-headline-mob.png'});
+			$('#footer_box dd').stop().hide()
+			$('#footer_box dt p').removeClass('more_click')
+			}
+
+			else if(win_w>= 768 && win_w < 1024){
+			$('#section1_img').attr({'src':'images/HP-earthpolo-block-01.jpg'});
+			$('#section1_text img').attr({'src':'images/BLP_EarthPolo_2019_HL_White_3.png'});
+			$('#footer_box dd').stop().show()
+			}
+			else if(win_w >= 1024){
+			$('#section1_img').attr({'src':'images/HP-earthpolo-block-01.jpg'});
+			$('#section1_text img').attr({'src':'images/BLP_EarthPolo_2019_HL_White_3.png'});
+			}
+		$(window).resize(function(){ /*css의 미디어쿼리 처럼 화면크기가 변경될 때 반응하는 이벤트 resize = 화면크기가 변경되면 수행한다.*/
+			win_w=$(window).width();
+			if(win_w < 768){
+			$('#section1_img').attr({'src':'images/HP-earthpolo-block-01-mob.jpg'});
+			$('#section1_text img').attr({'src':'images/HP-earthpolo-headline-mob.png'});
+			}
+
+			else if(win_w>= 768 && win_w < 1024){
+			$('#section1_img').attr({'src':'images/HP-earthpolo-block-01.jpg'});
+			$('#section1_text img').attr({'src':'images/BLP_EarthPolo_2019_HL_White_3.png'});
+			}
+			else if(win_w >= 1024){
+			$('#section1_img').attr({'src':'images/HP-earthpolo-block-01.jpg'});
+			$('#section1_text img').attr({'src':'images/BLP_EarthPolo_2019_HL_White_3.png'});
+			}
+		})	
+	});
+  </script>
+
+  <style>
+	* { margin:0; padding:0; list-style:none;}
+	a { text-decoration: none; color:inherit; }
+
+	header{width: 100%; height: 122px; position: fixed; left: 0; top: 0; z-index: 999; background-color: #fff;}
+	#header1{overflow: hidden;	}
+	#header_select{float: left; margin:25px; font-size: 12px;}
+	#header_hide_menu{width: 18px; height: 13px;  float: left; margin: 20px; } 
+	#header_hide_menu li{width: 100%; height: 2px; background-color: #000; margin-bottom: 2px;}
+	#logo{ width: 440px; position: absolute; left: 0; right: 0; margin: 26px auto;}
+	#logo img{width: 100%;}
+	#icon_map{float: right; margin:25px 15px;}
+	#header2{text-align: center; margin-top: 15px; clear: both;}
+	#header2 li{display: inline-block;  margin: 10px 40px 0; font-size: 12px; }
+	#section0 { width: 100%;  margin-top: 122px; text-align: center; position: relative;}
+	#section0_bg { width: 100%; }
+	#section0_text { width: 90%;}
+	#section0 h4 { width: 100%; text-align: center; position: absolute; top: 70%; color: #fff;}
+	#section1{width: 100%; position: relative; overflow: hidden;}
+	#section1 img{width: 100%;}
+	#section1_text{width: 30%; height: 300px; position: absolute; left: 10%; top: 30%; color: #fff; text-align: center; font-size: 16px;} 
+	#section1_text h3{font-size: 2.5em; font-weight: 100;}
+	#section1_text p{font-size: 1em; line-height: 2em;}
+	#section1_text h5{font-size: 1.2em; margin-top: 20px;}
+	#section2{text-align: center;}
+	#section2_img{width: 100%;}
+	#section2_text{width: 70%;}
+	#section2 button{width: 200px; height: 40px; background-color: #002c57; color: #fff; border: none; outline: none; cursor: pointer; line-height: 40px; margin: 20px;	}
+	#partners{width: 100%; margin: 50px auto 0;  background-color: #fff;}
+	#partners_title img:nth-child(1){width: 33%; }
+	#partners_title img:nth-child(2){width: 30%; margin:0 2%;}	
+	#partners_title img:nth-child(3){width: 33%;}
+	#partners_content { width: 100%; position: relative; }
+	#partners_content ul { width: 86%; background-color:#fff; margin:50px auto 0; overflow: hidden; }
+	#partners_content ul li { width: 32%; height: 300px; float: left; border: 1px solid #bebebe;	box-sizing: border-box; position: relative; }
+	#partners_content ul li:nth-child(1) img { margin-top: 80px;  }
+	#partners_content ul li:nth-child(2) img { margin-top: 60px; }
+	#partners_content ul li:nth-child(3) img { margin-top: 55px;}
+	#partners_content ul li img{width: 100%; margin-top: 10%;}
+	#partners_content ul li h4{position: absolute; left: 30%; right: 0; top: 60%; margin: auto; font-size: 16px;}
+	#arrow_left{position: absolute;  top: 0; bottom: 0; margin: auto; left: 5%;}
+	#arrow_right{position: absolute;  top: 0; bottom: 0; margin: auto; right: 5%;}
+
+	#social { width: 100%; max-width:1200px; margin:100px auto 0;}
+	#social_title { overflow: hidden; }
+	#social_title img { float: left; }
+	#social_table { width: 100%; overflow: hidden; margin-top: 30px; }
+	#social_table li { width: 23.5%; margin-right:2%; margin-bottom: 2%	; float: left; position: relative; background-color: #000; }	
+	#social_table li:nth-child(4n) { margin-right: 0; }
+	#social_table li .social_img { width: 100%; vertical-align: top; }
+	#social_table li:hover .social_img { opacity: 0.5; }
+	#social_table li .social_zoom { position: absolute; left: 0;right: 0;top: 0;bottom: 0; margin: auto; vertical-align: top; display: none; }
+	#social_table li:hover .social_zoom { display:inline; }
+
+	footer{margin-top: 50px;}
+	#footer_box{width: 96%; margin: auto; height: 200px;}
+	#footer_box dl{float: left; width: 21.6666%; height: 200px; box-sizing: border-box;  font-size: 12px;}
+	#footer_box dt p{float: right; font-size: 20px;}
+	#footer_box dt .more_click { background: #fff url(images/more_bg2.jpg) center no-repeat; }
+	#footer_box dl:nth-child(3){width: 35%;}
+	#footer_box dl dt{font-size: 14px; font-weight: 900; }
+	#footer_box dl dd{margin-top: 30px;}
+	#footer_box dl ul li { margin:10px 0; padding-left:20px; }
+	#footer_box dl:nth-child(1) ul li:nth-child(1){background: #fff url(icons/logo_01.png) 0 0 no-repeat;	}
+	#footer_box dl:nth-child(1) ul li:nth-child(2){background: #fff url(icons/logo_02.png) 0 0 no-repeat;	}
+
+	#footer_box dl:nth-child(2) ul li{height: 35px; padding-left:30px; line-height: 35px;}
+	#footer_box dl:nth-child(2) ul li:nth-child(1){background: #fff url(icons/logo_03.png) 0 center no-repeat;	}
+	#footer_box dl:nth-child(2) ul li:nth-child(2){background: #fff url(icons/logo_04.png) 0 center no-repeat;	}
+	#footer_box dl:nth-child(2) ul li:nth-child(3){background: #fff url(icons/logo_05.png) 0 center no-repeat;	}
+
+	#footer_box dl:nth-child(3){padding-right: 14%;}
+	#footer_box dl:nth-child(3) p{line-height: 25px; margin-bottom: 10px;}
+	#footer_box dl:nth-child(3) #email{border: 1px solid #000; margin-top: 10px; }
+	#footer_box dl:nth-child(3) #email input{width: 70%; height:30px; border: none;}
+	#footer_box dl:nth-child(3) #email button{width: 30%; height:30px; border: none;}
+
+	#search{border: 1px solid #000; overflow: hidden; background-color: #fff;}
+	#search input{float: left; padding-left: 10px; width: 70%; height: 30px; border: none;}
+	#search img{float: right; margin-top: 10px;}
+	#footer_box dl:nth-child(4) dd p{margin: 10px 0; padding-left: 20px; background: #fff url(icons/logo_06.png) 0 0 no-repeat;}
+	#brand{border: 1px solid #000; height: 30px; background-color: #fff; position: relative; box-sizing: border-box;}
+	#brand input{float: left; padding-left: 10px; width: 70%; height:30px; border: none;}
+	#brand img{float: right; margin-top: 10px;}
+
+	#brand_list{width: 100%; border: 1px solid #000; position: absolute;  left: -1px; background-color: #fff; bottom:30px; display: none;}
+	#brand_list li{line-height: 30px; box-sizing: border-box; padding-left: 15px;}
+	#brand_list li:hover{background-color: #eee;}
+
+	#to_top{margin: 10px 0; width: 100%; height: 70px; line-height: 70px; border-top: 1px solid #000; border-bottom: 1px solid #000; text-align: center;}
+	#to_top h5{display: inline-block; padding-left: 30px; background-color: #eee; font-size: 20px; background: url(icons/arrow_left.png) 0 center no-repeat;	}
+	
+
+  </style>
+  <style>
+	/*미디어쿼리*/
+	@media all and (min-width:0px) { /*0~767 = 모바일*/
+		#header_select{margin:20px 25px; display: none;}
+		#logo{width: 200px;  margin: 0 auto;}
+		#icon_map{margin:15px 15px;}
+		header{height: 55px;}
+		#header2{display: none;}
+		#section0 { margin-top:55px; }
+		#section0_text { display: inline; }
+		#section0 h4 { position: static; color: #000;}
+		#section1{margin-top: 55px;}
+		#header_hide_menu{display: block;}
+		#section1_text{width:100%; left: 10%; font-size: 20px; position: static; color: #336633;}
+		#section2 button{margin: 20px auto; display: block;}
+		#partners_title img:nth-child(1){width: 0%; }
+		#partners_title img:nth-child(2){width: 90%; margin:0 5%;}	
+		#partners_title img:nth-child(3){width: 0%;}
+		#partners_content ul{width: 100%;}
+		#partners_content ul li{width: 90%; margin:2% 5%;}
+		#partners_content ul li:nth-child(2){margin:2% 5%;}
+		#partners_content ul li img{width: 70%; }
+		#arrow_left,#arrow_right{display: none;}
+		#social_title img:nth-child(1) { width: 0%; }
+		#social_title img:nth-child(2) { width: 60%; margin:0 20%; }
+		#social_title img:nth-child(3) { width: 0%; }
+		#social_table li { width: 49%; margin-right:2%; }			
+		#social_table li:nth-child(4n) { margin-right: 0%; }
+		#social_table li:nth-child(2n) { margin-right: 0%; }
+		#footer_box dl{width: 96%; margin:0 2%; border-bottom: 1px solid #000;}
+		#footer_box dl:nth-child(3){width: 96%;}
+		#footer_box dt p{display: block;}
+		#to_top{display: block;}
+		#footer_box dl:nth-child(3){padding-right: 0;}
+
+	}
+	@media all and (min-width:768px) { /*768~1023 = 태블릿pc*/
+		#header_select{margin:20px 25px; display: block;}
+		#logo{width: 340px;  margin: 16px auto;}
+		#icon_map{margin:20px 15px;}
+		header{height: 110px;}
+		#header2{display: block;}
+		#section0 { margin-top:110px;}
+		#section0_text { display:none; }
+		#section0 h4 { position: absolute; color: #fff;}
+		#section1{margin-top: 110px;}
+		#header_hide_menu{display: none;}
+		#section1_text{width: 26%; left: 10%; font-size: 12px; position: absolute; color: #fff;}
+		#section2 button{margin: 20px auto; display: block;}
+		#partners_title img:nth-child(1){width: 21%; }
+		#partners_title img:nth-child(2){width: 50%; margin:0 4%;}	
+		#partners_title img:nth-child(3){width: 21%;}	
+		#partners_content ul{width: 86%;}
+		#partners_content ul li{width: 32%; margin:0;}
+		#partners_content ul li:nth-child(2){margin:0 2%;}
+		#partners_content ul li img{width: 100%;}
+		#arrow_left,#arrow_right{display: inline;}
+		#social_title img:nth-child(1) { width: 33%; }
+		#social_title img:nth-child(2) { width: 30%; margin:0 2%; }
+		#social_title img:nth-child(3) { width: 33%; }
+		#footer_box dl{width: 21.6666%; margin:0;}
+		#footer_box dl:nth-child(3){width: 35%; border: none;}
+		#footer_box dt p{display: none;}
+		#to_top{display: none;	}
+		#footer_box dl:nth-child(3){padding-right: 14%;}
+	}
+	@media all and (min-width:1024px) { /*1024~ = pc*/
+		#header_select{margin:25px; display: block;}
+		#logo{width: 440px;  margin: 26px auto;}
+		#icon_map{margin:25px 15px;}	
+		header{height: 122px;}
+		#header2{display: block;}
+		#section0 { margin-top:122px; }
+		#section0_text { display:none; }
+		#section0 h4 { position: absolute; color: #fff; }
+		#section1{margin-top: 122px;}
+		#header_hide_menu{display: none;}	
+		#section1_text{width: 30%; left: 10%; font-size: 16px; position: absolute; color: #fff; }
+		#section2 button{margin: 20px; display:inline;}
+		#partners{width: 100%;}
+		#partners_title img:nth-child(1){width: 33%; }
+		#partners_title img:nth-child(2){width: 30%; margin:0 2%;}	
+		#partners_title img:nth-child(3){width: 33%;}
+		#partners_content ul li img{width: 100%;}
+		#arrow_left,#arrow_right{display: inline;}
+		#social_title img:nth-child(1) { width: 33%; }
+		#social_title img:nth-child(2) { width: 30%; margin:0 2%; }
+		#social_title img:nth-child(3) { width: 33%; }
+		#social_table li { width: 23.5%; margin-right:2%; }	
+		#social_table li:nth-child(2n) { margin-right: 2%; }
+		#social_table li:nth-child(4n) { margin-right: 0; }
+		#footer_box dl{width: 21.6666%; margin:0; border: none;}
+		#footer_box dl:nth-child(3){width: 35%;}
+		#footer_box dt p{display: none;}
+		#to_top{display: none;	}
+		#footer_box dl:nth-child(3){padding-right: 14%;}
+	}
+	@media all and (min-width:1200px) {
+		#partners{width: 1200px;}	
+	}
+ </style></head>
+ <body>
+ 		<header>
+			<div id="header1">
+				<div id="header_select">
+					KOREA 한국어 ▼
+				</div>
+				<ul id="header_hide_menu">
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+				<h1 id="logo"><img src="icons/logo.png" alt=""></h1>
+				<img src="icons/map.jpg" alt="" id="icon_map">
+			</div>
+			<ul id="header2">
+				<li>RL50</li>
+				<li>MEN</li>
+				<li>WOMEN</li>
+				<li>CHILDREN</li>
+				<li>WORLD RALPH LAUREN</li>
+				<li>SHOP ONLINE</li>
+			</ul>			
+		</header>
+		<div id="section0">
+			<img src="images/20190521_pride_lp_c01_hero_0.jpg" alt="" id="section0_bg">
+			<img src="images/pride_logo_2.png" alt="" id="section0_text">
+			<h4>EXPLORE NOW</h4>
+		</div>
+		<div id="section1">
+			<img src="images/HP-earthpolo-block-01.jpg" alt="" id="section1_img">
+			<div id="section1_text">
+				<h3>INTRODUCING</h3>
+				<img src="images/BLP_EarthPolo_2019_HL_White_3.png" alt="">
+				<p>Designed with <Br> Mother Nature in mind</p>
+				<h5>EXPLORE NOW</h5>
+			</div>
+		</div>
+	<!--  -->
+		<div id="section2">
+			<img src="images/HP_Family_01-v5-1366x768.jpg" alt="" id="section2_img">
+			<img src="images/Family_Headline_black.png" alt="" id="section2_text"><br>			
+			<button>영상 감상하기</button>
+			<button>지금 둘러보기</button>
+		</div>
+<!--  -->
+	<div id="partners">
+		<div id="partners_title">
+			<img src="images/grey-line.png" alt=""><img src="images/HP-RL-Online-Partners-Logo2.png" alt=""><img src="images/grey-line.png" alt="">
+		</div>
+		<div id="partners_content">
+			<ul>
+				<li>
+					<img src="images/HP-RL-Online-Partners-Logo2.png" alt="" class="partners_logo">
+					<h4>지금쇼핑하기</h4>
+				</li>
+				<li>
+					<img src="images/OnlinePartner_LOGO_DavidJones_Navy_v3.png" alt="" class="partners_logo">
+					<h4>지금쇼핑하기</h4>
+				</li>
+				<li>
+					<img src="images/OnlinePartner_LOGO_ICONIC_Navy_v2.png" alt="" class="partners_logo">
+					<h4>지금쇼핑하기</h4>
+				</li>
+			</ul>
+		</div>
+	</div>
+<!--  -->
+	<div id="social">
+		<div id="social_title">
+			<img src="icons/grey-line.png" alt="">
+			<img src="icons/logo-rlsocial.png" alt="">
+			<img src="icons/grey-line.png" alt="">
+		</div>
+		
+		<ul id="social_table">
+			<li><img src="images/s1.jpg" alt="" class="social_img"><img src="icons/zoom.png" alt="" class="social_zoom"></li>
+			<li><img src="images/s2.jpg" alt="" class="social_img"><img src="icons/zoom.png" alt="" class="social_zoom"></li>
+			<li><img src="images/s3.jpg" alt="" class="social_img"><img src="icons/zoom.png" alt="" class="social_zoom"></li>
+			<li><img src="images/s4.jpg" alt="" class="social_img"><img src="icons/zoom.png" alt="" class="social_zoom"></li>
+			<li><img src="images/s5.jpg" alt="" class="social_img"><img src="icons/zoom.png" alt="" class="social_zoom"></li>
+			<li><img src="images/s6.jpg" alt="" class="social_img"><img src="icons/zoom.png" alt="" class="social_zoom"></li>
+			<li><img src="images/s7.jpg" alt="" class="social_img"><img src="icons/zoom.png" alt="" class="social_zoom"></li>
+			<li><img src="images/s8.jpg" alt="" class="social_img"><img src="icons/zoom.png" alt="" class="social_zoom"></li>
+		</ul>
+	</div>
+<!-- footer -->
+	<footer>
+		<div id="to_top">
+			<h5>BACK TO TOP</h5>
+		</div>
+		<div id="footer_box">
+			<dl>
+				<dt>문의처<p>+</p></dt>
+				<dd>
+					<ul>
+						<li>고객지원부:<br>080-566-1199</li>
+						<li>이메일 문의</li>
+					</ul>
+				</dd>
+			</dl>
+			<dl>
+				<dt>FOLLOW US<p>+</p></dt>
+				<dd>
+					<ul>
+						<li>Facebook</li>
+						<li>Instagram</li>
+						<li>Twitter</li>						
+					</ul>
+				</dd>
+			</dl>
+			<dl>
+				<dt>놓치지 마세요<p>+</p></dt>
+				<dd>
+				<p>랄프 로렌의 최신 스타일과 독점 혜택 등 다양한<br> 소식을 이메일로 받아보세요.</p>
+				<input type="checkbox">남성
+				<input type="checkbox">여성
+				<div id="email"><input type="text" placeholder="이메일 주소"><button>등록</button></div>
+				</dd>
+			</dl>
+			<dl>
+				<dt>매장찾기<p>+</p></dt>
+				<dd>
+					<div id="search"><input type="text" placeholder="위치별 검색"><img src="icons/logo_07.png" alt=""></div>
+					<p>현위치로검색</p>
+					<div id="brand" tabindex="-1"><input type="text" placeholder="브랜드별 검색"><img src="icons/icon_arrow.png" alt="">
+						<ul id="brand_list">
+							<li>ALL BRANDS</li>
+							<li>RALPH LAUREN</li>
+							<li>POLO RALPH LAUREN</li>
+							<li>RRL</li>
+							<li>RALPH LAUREN CHILDREN</li>
+							<li>LAUREN</li>
+							<li>RALPH LAUREN HOME</li>
+							<li>SPORT</li>
+							<li>WATCHES & JEWELRY</li>
+						</ul>
+					</div>
+				</dd>
+			</dl>
+		</div>
+	</footer>
+ </body>
+ </html>
