@@ -22,9 +22,9 @@ header{padding-top: 1rem; padding-bottom: 1rem; background: #2C434F; z-index: 99
 #menu li{float: left; margin-right: 1rem !important; margin-left: 1rem !important; cursor: pointer; font-size: 1.5rem;}
 
 #work{width: 100%; padding-top: 1rem; text-align: center; overflow: hidden; background-attachment: fixed; padding: 7rem 0;}
-#work>p{margin: 3rem 0 10rem 0; font-size: 1rem;}
+#work>p{margin: 3rem 0 4rem 0; font-size: 1rem;}
 #work_list{width: 55%; margin: auto; display: flex; flex-wrap: wrap;}
-#work_list li{width: 30.6%; height: 30.6%; margin-right: 4%; margin-bottom: 4%; background-color: #000; position: relative;  opacity: 0; cursor: pointer;} 
+#work_list li{width: 31%; height: 31%; margin-right: 3%; margin-bottom: 3%; background-color: #000; position: relative;  opacity: 0; cursor: pointer;  box-shadow: 20px 30px 40px 0px;} 
 #work_list li:nth-child(3n){margin-right: 0;} 
 #work_list li img{width: 100%; height: 100%; vertical-align: top;}
 
@@ -36,27 +36,27 @@ header{padding-top: 1rem; padding-bottom: 1rem; background: #2C434F; z-index: 99
 #about_box{width: 80%; height: 100%; margin: 0 auto; position: relative; }
 #about_box h2{color: #fff;}
 
-.about_cont {width: 80%; display:flex; flex-wrap: wrap; margin: 3rem auto 0; text-align: left; box-shadow: 10px 20px 55px 9px; background-color: #E0DEE1;}
-.about_cont .about_left {width: 28%; background-color: #223A48; color: #fff; padding-bottom: 20px;}
+.about_cont {width: 80%; display:flex; flex-wrap: wrap; margin: 3rem auto 0; text-align: left; box-shadow: 10px 20px 55px 9px; background-color: #fff;}
+.about_cont .about_left {width: 25%; background-color: #223A48; color: #fff; padding-bottom: 3rem;}
 .about_cont .about_left .about_img {width: 100%; height: auto; position: relative;}
 .about_cont .about_left .me_img {width: 100%;}
 .about_cont .about_left h1 {width: 100%; transform: translate(-50%, -50%); text-align: center; position: absolute; left: 50%; right: 50%; bottom: 0px;}
-.about_cont .about_left > p {width: 80%; margin: 2rem auto 0;}
+.about_cont .about_left > p {width: 80%; margin: 2rem auto 0; letter-spacing: -1px;}
 
 .about_cont .about_left .left_in {width: 80%; margin: 2rem auto 0;}
 .about_cont .about_left .left_in h2 {font-size: 2rem; border-bottom: 1px solid #fff;}
 .about_cont .about_left .left_in p {line-height: 26px;}
-.about_cont .about_left .left_in img {width: 30px; margin-right: 1.2rem;}
+.about_cont .about_left .left_in img {width: 30px; margin-right: 1rem;}
 
-.about_cont .about_right {width: 62%; background-color: #E0DEE1; padding: 5rem 0 0 5rem; display: flex; flex-wrap: wrap; color: #444;}
-.about_cont .about_right .w50 {width: 50%; font-size: 1.5rem;}
+.about_cont .about_right {width: 70%; background-color: #fff; display: flex; flex-wrap: wrap; color: #444; padding: 5rem 0 0 3.5rem;}
+.about_cont .about_right .w50 {width: 47%; font-size: 1.5rem;}
 .about_right .w50 img {width: 30px; margin-right: 0.5rem;}
-.about_right .w50 spna {font-size: 3rem; font-weight: 800;}
+.about_right .w50 spna {font-size: 2.5rem; font-weight: 800;}
 .about_right .w50 ul li{overflow: hidden; width: 100%; margin-bottom: 2%;}
 .about_right .w50 ul .tet4{float: left;}
 .about_right .w50 .m25 {font-size: 1.1rem; line-height: 28px;}
 .about_right .w50 .m25 b {font-size: 1.5rem; line-height: 2.5rem;}
-.about_right .w50 ul .about_boxbg{width: 80%; height: 8px; background-color: #B79E61; clear: both;	}
+.about_right .w50 ul .about_boxbg{width: 80%; height: 8px; background-color: #B79F90; clear: both;}
 .about_right .w50 ul .about_boxbg2{width: 0%; height: 8px; background-color: #C6AA52;}
 
 #footer_wrap{width: 100%; background: #2C434F; text-align: center; background-attachment: fixed; overflow: hidden; }

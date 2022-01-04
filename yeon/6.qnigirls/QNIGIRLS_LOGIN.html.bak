@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+		table:nth-child(1) { margin-top:100px; }
+		h3 { font-size:14px; width:1200px; margin: auto; margin-top:40px; margin-bottom:10px;}
+		table { border: 1px solid #bebebe; border-collapse: collapse; width:1200px; margin: auto;}
+		table td:nth-child(1) { width:250px; height:55px; border: 1px solid #e3e3e3; 
+		box-sizing: border-box; padding-left:30px; background-color:#efefef;}
+		table td:nth-child(2) { width:950px; height:55px; border: 1px solid #e3e3e3;
+		box-sizing: border-box; padding-left:10px;}
+		img {va:m}
+		span {color: red;}
+  </style></head><body>		
+		<table>
+			<tr>
+				<td>회원구분</td>
+				<td><input type="radio" name="a" checked>개인회원 <input type="radio" name="a">사업자회원</td>
+			</tr>
+		</table>
+
+		<h3>기본정보</h3>
+		<table>
+			<tr>
+				<td>아이디 <span>*</span></td>
+				<td><input type="text"> <img src="btn_overlap_id.gif" alt=""> (영문소문자/숫자, 4~16자)</td>
+			</tr>
+			<tr>
+				<td>비밀번호<span>*</span></td>
+				<td><input type="password"> (영문 대소문자/숫자/특수문자 중 2가지 이상 종합, 8자~16자)</td>
+			</tr>
+			<tr>
+				<td>비밀번호 확인<span>*</span></td>
+				<td><input type="password"></td>
+			</tr>
+			<tr>
+				<td>생년월일</td>
+				<td><input type="text" size="4">년<input type="text" size="1">월<input type="text"size="1">일
+			 <input type="radio" name="a">양력 <input type="radio" name="a">음력</td>
+			</tr>
+			<tr>
+				<td>이름<span>*</span></td>
+				<td><input type="text"></td>
+			</tr>
+			<tr>
+				<td>주소<span>*</span></td>
+				<td><input type="text"size="2"> -<br>
+				        <input type="text" size="30">기본주소<br>
+						<input type="text" size="30">나머지주소</td>
+			</tr>
+			<tr>
+				<td>일반전화</td>
+				<td><select name="" id="">
+					<option value="">02</option>
+					<option value="">031</option>
+					<option value="">031</option>
+					</select> - <input type="text" size="1"> - <input type="text" size="1">
+					</td>
+			</tr>
+			<tr>
+				<td>휴대전화<span>*</span></td>
+				<td> <select name="" id="">
+				<option value="">010</option>
+				<option value="">011</option>
+				<option value="">012</option>
+				<option value="">013</option>
+				</select> - <input type="text" size="1"> - <input type="text" size="1"
+         </td>
+			</tr>
+			<tr>
+				<td>SMS 수신여부<span>*</span></td>
+				<td><input type="checkbox">동의함 <br>
+				쇼핑몰에서 제공하는 유익한 이벤트 소식을 SMS로 받으실 수 있습니다.</td>
+			</tr>
+			<tr>
+				<td>이메일<span>*</span></td>
+				<td><input type="text" size="15"> @ <input type="text" size="15">
+				<select name="" id="">
+					<option value="">- 이메일선택 -</option>
+					<option value="">naver.com</option>
+					<option value="">hanmail.net</option>
+					<option value="">nate.com</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td>이메일 수신여부<span>*</span></td>
+				<td><input type="checkbox">동의함 <br>
+				쇼핑몰에서 제공하는 유익한 이벤트 소식을 SMS로 받으실 수 있습니다.</td>
+			</tr>
+			<tr>
+				<td>평생회원</td>
+				<td><input type="radio" name="a">동의함 <input type="radio" name="a" checked>동의안함 <br>
+				- 평생회원으로 가입하시면 큐니걸스 회원 탈퇴시까지는 휴면회원으로 전환되지 않으며, 고객님의 개인정보가 탈퇴시까지 안전하게 보관됩니다.</td>
+			</tr>
+		</table>	
+
+<!-- 		<h3>추가정보</h3> -->
+<!-- 		<table> -->
+<!-- 			<tr> -->
+<!-- 				<td></td> -->
+<!-- 				<td></td> -->
+<!-- 			</tr> -->
+<!-- 			<tr> -->
+<!-- 				<td></td> -->
+<!-- 				<td></td> -->
+<!-- 			</tr> -->
+<!-- 			<tr> -->
+<!-- 				<td></td> -->
+<!-- 				<td></td> -->
+<!-- 			</tr> -->
+		</table>	
+ </body>
+</html>

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>history</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=DM+Serif+Display&display=swap" rel="stylesheet">
+   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script>
+	$(document).ready(function(){	
+		$('#dragbt').draggable({
+			containment:"#dragbox", axis : 'x'					
+		})
+		setInterval(function(){
+			drag_left=$('#dragbt').offset().left-($(window).width()/2-$('#dragbox').width()/2);;
+			slide_margin_area=$('#slide ul').width() - $(window).width()
+		drag_move_area=$('#dragbox').width()-$('#dragbt').width();
+			drag_num=drag_left*-(slide_margin_area/drag_move_area)
+			$('#slide ul').css({'left':drag_num})		
+		},30)		
+	})
+  </script>
+  <style>
+	* { margin: 0; padding: 0; list-style: none; }
+	a { color:inherit; text-decoration: none; } 
+	#history{width: 100%; height:100%; background-color: #67808c; position: fixed; left: 0; right: 0; top: 0; bottom: 0; margin: auto; overflow: hidden; 		  }
+	#history>h2{font-size: 100px; color: #fff; text-align: center; font-family: 'DM Serif Display', serif; font-weight: 100;}
+	#line{width: 900px; height: 0px; border: 1px solid #fff; margin: auto;}
+
+	
+	#slide{width: 1800px; height:600px; position: relative; left: 0; right: 0; top: 100px; margin: auto; overflow: hidden; background-color: #e8e8e8; box-shadow: 10px 20px 30px rgba(0,0,0,0.5);	}
+	#slide ul{width: 6020px; position: absolute;	}
+	#slide ul li{width: 500px; height: 400px; float: left; margin-right: 40px; margin-top: 90px; position: relative; cursor: pointer;}
+	#slide ul li img{width: 100%; height: 100%; vertical-align: top; }
+	#slide ul li div{width: 100%; height: 100%; position: absolute; left: 0; bottom: 0; transition:0.5s;}
+
+	#slide ul li:hover div	{background-color: rgba(0,0,0,0.8); }
+	#slide ul li p {width: 80%; height: 90%; position: absolute; left: 0; right: 0; top: 0; margin: auto; text-align: center; transition:0.5s; color: #fff; padding: 50px; padding-top: 100px; opacity: 0;}
+	#slide ul li:hover p{opacity: 1;}
+
+	#slide ul li h2{text-align: center;	 margin-top: 15px; font-family: 'DM Serif Display', serif; font-weight: 100;}
+
+	#dragbox{width: 200px; height: 50px;  position: absolute; left: 0; right: 0; margin: auto; bottom: 10px;}
+	#dragbg{width: 100%; height: 5px; background-color: #fff; border-radius: 5px; position: absolute; margin-top: 22.5px;}
+	#dragbt{width: 50px; height: 30px; border-radius: 20px ; background-color: #003399; position: absolute; left: 0; bottom: 0; top: 0; margin: auto;	text-align: center;	cursor: pointer;}
+	#dragbt img:nth-child(1){margin-right: 20px;}
+
+  </style>	
+ </head>
+ <body>
+	<div id="history">
+	  <h2>HAAGENDAZS HISTORY</h2>
+	  <div id="line"></div>	
+	  <div id="slide">	  	
+	  	<ul>
+	  		<li><img src="img/history_1.jpg" alt="" id="history_1"><div></div><h2>1960</h2><p>Reuben Mattus had a vision for changing the world of ice cream. At a time when others were cutting corners and pumping their ice cream with air, Mattus set out to do something better. Using only the finest ingredients, his rich, velvety ice cream created a category all its own. With three simple flavors -- Vanilla, Chocolate and Coffee - the Häagen-Dazs® brand was born.</p></li>	
+	  		<li><img src="img/history_2.jpg" alt="" id="history_2"><div></div><h2>1966</h2><p>When Mattus set his sights on Strawberry, he knew that only the best varietal would do. It took him six years to find the perfect sweet red berries for his ice cream. He launched the flavor in 1966, and over 50 years later, our dedication to using the finest berries has made our Strawberry ice cream a fan favorite.</p></li>
+
+	  		<li><img src="img/history_3.jpg" alt="" id="history_3"><div></div><h2>1976</h2><p>Reuben’s daughter Doris opens the first Häagen-Dazs® shop in Brooklyn Heights, NY, introducing Brooklynites to his delicious, velvety ice cream in every hand-pulled scoop. The shop on Montague Street remains today.</p></li>
+
+			<li><img src="img/history_5.jpg" alt="" id="history_4"><div></div><h2>1986</h2><p>On Valentine’s Day, Häagen-Dazs® introduces bars, a whole new line to love.</p></li>	
+
+	  		<li><img src="img/history_6.jpg" alt="" id="history_5"><div></div><h2>1988</h2><p>Just two years after the introduction of bars, Häagen-Dazs® launched the Vanilla Milk Chocolate Almond flavor. The new bar combined the creamy vanilla ice cream that Häagen-Dazs® fans have loved for years with an irresistible crunch of almonds and milk chocolate, placing it in stores and fans’ hearts everywhere.</p></li>
+
+	  		<li><img src="img/history_7.jpg" alt="" id="history_6"><div></div><h2>1991</h2><p>The Häagen-Dazs® brand brings perfectly balanced flavors and true indulgence to a new line with the launch of frozen yogurt.</p></li>
+
+			<li><img src="img/history_8.jpg" alt="" id="history_7"><div></div><h2>1993</h2><p>Fans of fruit rejoice with the launch of Häagen-Dazs® Sorbet.</p></li>	
+
+	  		<li><img src="img/history_9.jpg" alt="" id="history_8"><div></div><h2>1998</h2><p>Forever seeking inspiration, Häagen-Dazs® discovered Dulce de Leche in South America. We set out to recreate the regional favorite as ice cream, but finding balance between texture and flavor proved challenging. In the spirit of innovation, Häagen-Dazs® developed its own thicker, richer caramel that holds up to the ice cream and still transports you to another place.</p></li>
+
+	  		<li><img src="img/history_11.jpg" alt="" id="history_9"><div></div><h2>2008</h2><p>Häagen-Dazs® is committed to using only the best ingredients the world has to offer. So we knew we had to act when the bees that pollinate one-third of the foods we eat, including many of the ingredients we use every day, started to struggle. To date, we’ve donated more than $1,000,000 to keep them buzzing, and to keep our ice cream as sweet as it’s always been.</p></li>
+
+			<li><img src="img/history_12.jpg" alt="" id="history_10"><div></div><h2>2013</h2><p>Häagen-Dazs® falls in love with the creamy texture of gelato. Inspired, we set out to make our own version, bringing a little Italian flair to the freezer.</p></li>	
+
+	  		<li><img src="img/history_13.jpg" alt="" id="history_11"><div></div><h2>2016</h2><p>Häagen-Dazs® begins phasing out GMO ingredients from its products and sets a goal to transition out all GMO ingredients from every flavor. Today, flavors made with no GMO ingredients include vanilla, vanilla bean, strawberry, rum raisin, chocolate chocolate chip, pineapple coconut, coffee, chocolate and chocolate peanut butter.</p></li>
+	  	</ul>
+	  </div>
+	  <div id="dragbox">
+				<div id="dragbg"></div>
+					<div id="dragbt">
+						<img src="img/mainCon2_scroll_bg1.png" alt="">
+						<img src="img/mainCon2_scroll_bg2.png" alt="">
+					</div>
+				
+			</div>
+	</div>
+ </body>
+</html>

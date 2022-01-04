@@ -1,0 +1,928 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>HAAGENDAZS</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="jquery.textillate.js"></script>
+  <script src="jquery.lettering.js"></script>
+  <script src="jquery.fittext.js"></script>
+  <link rel="stylesheet" href="animate.css">  
+  <link href="https://fonts.googleapis.com/css?family=Nunito|Palanquin+Dark|Tauri" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Actor&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="jquery-animate-css-rotate-scale.js"></script>  
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script>
+		$(document).ready(function(){
+//			$(window).mousemove(function(e){ //event
+//				x=e.pageX-($('#wrap_box1').width()/2); //현재 마우스의 x좌표
+//				y=e.pageY-($('#wrap_box1').height()/2); //현재 마우스의 y좌표				
+//				$('#wrap_box1').css({'left':x}).css({'top':y})				
+//			})
+			$('#page1_box1').animate({scale:0},0)		
+			
+			$('#textbox h4,#textbox p,#right_box h5').textillate({  			
+			loop:true, 
+			autoStart: true,
+			in: {  	    
+			effect: 'fadeInLeft',			  
+			delay:25,    
+			sync: false,    
+			shuffle:false,    
+			reverse:false,    
+			callback: function () {}
+			},
+			out: {
+			effect: 'stop',			
+			},
+		})
+			onoff = 1;
+			nuts1_pos_x = 100; nuts2_pos_x = -150; cho1_pos_x = -1650; cho2_pos_x = -1300;
+			raz1_pos_x = -400; raz2_pos_x = -430; raz3_pos_x = -270;
+			ba_pos_x = 400; leaf1_pos_x = 200; leaf2_pos_x = 800; leaf3_pos_x = 800; leaf4_pos_x = 500; leaf5_pos_x = 600;
+			leaf6_pos_x = 1100; leaf7_pos_x = 1400; img=0; menu_leaf1_pos_x=200; menu_leaf2_pos_x=-270; menu_leaf3_pos_x=-270; menu_leaf4_pos_x=370; menu_leaf5_pos_x=-400;
+		
+			onoff = 0;
+			$(window).mousemove(function(e){
+				if( onoff == 0 ){
+				nuts1_mous_x =(e.pageX -($(window).width()/2) ) * -0.04;
+				nuts2_mous_x =(e.pageX -($(window).width()/2) ) * -0.02;
+				cho1_mous_x =(e.pageX -($(window).width()/2) ) * -0.04;
+				cho2_mous_x =(e.pageX -($(window).width()/2) ) * -0.03;
+				raz1_mous_x =(e.pageX -($(window).width()/2) ) * -0.03;
+				raz2_mous_x =(e.pageX -($(window).width()/2) ) * -0.04;
+				raz3_mous_x =(e.pageX -($(window).width()/2) ) * -0.045;				
+				ba_mous_x =(e.pageX -($(window).width()/2) ) * -0.02;
+				leaf1_mous_x =(e.pageX -($(window).width()/2) ) * -0.02;
+				leaf2_mous_x =(e.pageX -($(window).width()/2) ) * -0.04;
+				leaf3_mous_x =(e.pageX -($(window).width()/2) ) * -0.02;
+				leaf4_mous_x =(e.pageX -($(window).width()/2) ) * -0.1;
+				leaf5_mous_x =(e.pageX -($(window).width()/2) ) * -0.04;
+				leaf6_mous_x =(e.pageX -($(window).width()/2) ) * -0.04;
+				leaf7_mous_x =(e.pageX -($(window).width()/2) ) * -0.03;	
+				menu_leaf1_mous_x =(e.pageX -($(window).width()/2) ) * -0.045;
+				menu_leaf2_mous_x =(e.pageX -($(window).width()/2) ) * -0.04;
+				menu_leaf3_mous_x =(e.pageX -($(window).width()/2) ) * -0.03;
+				menu_leaf4_mous_x =(e.pageX -($(window).width()/2) ) * -0.03;
+				menu_leaf5_mous_x =(e.pageX -($(window).width()/2) ) * -0.02;
+				
+				$('#nuts1').css({'left': nuts1_pos_x + nuts1_mous_x })
+				$('#nuts2').css({'left': nuts2_pos_x + nuts2_mous_x })
+				$('#cho1').css({'left': cho1_pos_x + cho1_mous_x })
+				$('#cho2').css({'left': cho2_pos_x + cho2_mous_x })
+				$('#raz1').css({'left': raz1_pos_x + raz1_mous_x })
+				$('#raz2').css({'left': raz2_pos_x + raz2_mous_x })
+				$('#raz3').css({'left': raz3_pos_x + raz3_mous_x })				
+				$('#ba').css({'left': ba_pos_x + ba_mous_x })
+				$('#leaf1').css({'left': leaf1_pos_x + leaf1_mous_x })
+				$('#leaf2').css({'left': leaf2_pos_x + leaf2_mous_x })
+				$('#leaf3').css({'left': leaf3_pos_x + leaf3_mous_x })
+				$('#leaf4').css({'left': leaf4_pos_x + leaf4_mous_x })
+				$('#leaf5').css({'left': leaf5_pos_x + leaf5_mous_x })
+				$('#leaf6').css({'left': leaf6_pos_x + leaf6_mous_x })
+				$('#leaf7').css({'left': leaf7_pos_x + leaf7_mous_x })
+				$('#menu_leaf1').css({'left': menu_leaf1_pos_x + menu_leaf1_mous_x })
+				$('#menu_leaf2').css({'left': menu_leaf2_pos_x + menu_leaf2_mous_x })
+				$('#menu_leaf3').css({'left': menu_leaf3_pos_x + menu_leaf3_mous_x })
+				$('#menu_leaf4').css({'left': menu_leaf4_pos_x + menu_leaf4_mous_x })
+				$('#menu_leaf5').css({'left': menu_leaf5_pos_x + menu_leaf5_mous_x })
+				}				
+			})		
+		$('#button').click(function(){
+			onoff = 1;
+				$('#button').delay(600).animate({opacity:0},600)					
+				$('#sec1 #cho1').animate({left:'-3000px'},400,'easeInBack')
+				$('#sec1 #cho2').delay(200).animate({left:'-3000px'},400,'easeInBack')
+				$('#sec1 #raz1').delay(220).animate({left:'-3000px'},400,'easeInBack')
+				$('#sec1 #raz2').delay(225).animate({left:'-3000px'},500,'easeInBack')
+				$('#sec1 #raz3').delay(230).animate({left:'-3000px'},600,'easeInBack')
+				$('#sec1 #nuts1').delay(235).animate({left:'-3000px'},600,'easeInBack')
+				$('#sec1 #nuts2').delay(240).animate({left:'-3000px'},400,'easeInBack')
+				$('#sec1 #ba').delay(245).animate({left:'-3000px'},400,'easeInBack')
+				$('#sec1 #leaf1').delay(245).animate({left:'-3000px'},400,'easeInBack')
+				$('#sec1 #leaf2').delay(250).animate({left:'-3000px'},400,'easeInBack')
+				$('#sec1 #leaf3').delay(250).animate({left:'-3000px'},400,'easeInBack')
+				$('#sec1 #leaf4').delay(255).animate({left:'-3000px'},500,'easeInBack')
+				$('#sec1 #leaf5').delay(255).animate({left:'-3000px'},500,'easeInBack')
+				$('#sec1 #leaf6').delay(255).animate({left:'-3000px'},500,'easeInBack')
+				$('#sec1 #leaf7').delay(300).animate({left:'-3000px'},300,'easeInBack')
+				$('#bgbox #box1').delay(600).animate({opacity:0},600)	
+				$('#bgbox #box2').delay(600).animate({width: 200,height: 200,left: -1300, top:-450},900)
+				$('#bgbox #box3').delay(600).animate({opacity:0},600)				
+				$('#bgbox #box4').delay(750).animate({width: 1600, height: 1600,left:900},700)
+				$('#sec1 #icecon').delay(600).animate({opacity:0},600)
+				$('#page1_box1').delay(900).animate({scale:1},800)
+				$('#bg1').delay(600).animate({left:0},600)
+				$('#textbox').delay(600).animate({opacity:0},600)
+				$('#logo>img').delay(600).animate({width: 140,height: 80},600)
+				$('#paint>img').delay(600).animate({left:250,opacity:1},function(){
+					$(this).animate({'rotate':'-1deg'},function a(){
+						$(this).animate({'rotate':'0deg'},function(){
+							$(this).animate({'rotate':'-1deg'},a)						
+					})
+					})
+				})
+				$('#num>li').delay(600).animate({fontSize:15},500)	
+				$('#page1_text').delay(900).animate({opacity:1, left:1400},1200)	
+				$('#page1_text>li').delay(900).animate({opacity:1, marginLeft:50},1200)	
+				$('#page1_left_text').delay(600).animate({opacity:1},1000)	
+				$('#page1_text li:nth-child(1)').css({'font-size':'60px','color':'#b10b22'},300)
+				$('#raz1_1').delay(600).animate({opacity:1},1000)
+				$('#raz2_2').delay(600).animate({opacity:1},1000)
+				$('#raz3_3').delay(600).animate({opacity:1},1000)
+				$('#peach').delay(600).animate({opacity:1},1000)
+				$('#raz_leaf1').delay(600).animate({opacity:1},1000)
+				$('#raz_leaf2').delay(600).animate({opacity:1},1000)				
+			})
+
+			$('#logo,#menu1>li:nth-child(1)').click(function(){
+				onoff = 0;
+				$('#button').animate({opacity:1})	
+				$('#menu_page').animate({bottom: -2000})
+				$('#page1_menu').animate({top:50})
+				$('#menu1').animate({top:-550})
+				$('#sec1 #cho1').css({left:'-1650px'})
+				$('#sec1 #cho2').css({left:'-1300px'})
+				$('#sec1 #raz1').css({left:'-400px'})
+				$('#sec1 #raz2').css({left:'-430px'})
+				$('#sec1 #raz3').css({left:'-270px'})
+				$('#sec1 #nuts1').css({left:'100px'})
+				$('#sec1 #nuts2').css({left:'-150px'})
+				$('#sec1 #ba').css({left:'400px'})
+				$('#sec1 #leaf1').css({left:'200px'})
+				$('#sec1 #leaf2').css({left:'800px'})
+				$('#sec1 #leaf3').css({left:'800px'})
+				$('#sec1 #leaf4').css({left:'500px'})
+				$('#sec1 #leaf5').css({left:'600px'})
+				$('#sec1 #leaf6').css({left:'1100px'})
+				$('#sec1 #leaf7').css({left:'1400px'})
+				$('#bgbox #box1').animate({opacity:1})	
+				$('#bgbox #box2').animate({width: 250,height: 250,left: -1200, top:600,'backgroundColor':'#b10b22'})
+				$('#bgbox #box3').animate({opacity:1},600)				
+				$('#bgbox #box4').animate({width: 700, height: 700,left:1000,'backgroundColor':'#b10b22'})
+				$('#sec1 #icecon').animate({opacity:1})
+				$('#page1_box1').animate({scale:0})
+				$('#bg1').animate({'left':'-100%'})
+				$('#textbox').animate({opacity:1})
+				$('#logo>img').animate({width: 180,height: 100})
+				$('#paint>img').animate({opacity:0})	
+				$('#num>li').animate({fontSize:10})	
+				$('#page1_text').animate({opacity:0,left:1400})	
+				$('#page1_text>li').animate({opacity:0, marginTop:30})	
+				$('#page1_left_text').animate({opacity:0})	
+				$('#page1_text li:nth-child(1)').css({'font-size':'60px','color':'#b10b22'})
+				$('#page1_text li:nth-child(1)').siblings().animate({'color':'#dcaBB0'})
+				$('#raz1_1').animate({opacity:0})
+				$('#raz2_2').animate({opacity:0})
+				$('#raz3_3').animate({opacity:0})
+				$('#peach').animate({opacity:0})
+				$('#raz_leaf1').animate({opacity:0})
+				$('#raz_leaf2').animate({opacity:0})							
+				$('#page1_left_text p').html('A ray of sunshine. This cup is bursting with <Br>the very best berries including strawberries,<Br> raspberries, blackberries and blueberries lathered <br>in the creamiest of ice cream.').css({'color':'#B10B22'})
+				$('#page1_left_text h4').html('PAINT').css({'color':'#fff','font-size': '70px'})
+				$('#paint_img2').animate({top:-2000,opacity:0},300)
+				$('#paint_img3').animate({top:-2000,opacity:0})
+				$('#paint_img4').animate({top:-2000,opacity:0})
+				$('#paint_img1').animate({top:150,opacity:0})
+				$('#circle1').animate({width: 100,height: 100,left:350,top:250,'backgroundColor':'#dcaBB0'})
+				$('#circle1').siblings().animate({left: 1200,top:600})
+				$('#caramel').animate({opacity:0})		
+				$('#caramel3').animate({opacity:0})
+				$('#vanilla').animate({opacity:0})
+				$('#brownie').animate({opacity:0})	
+				$('#choco3').animate({opacity:0})
+				$('#choco4').animate({opacity:0})
+				$('#almond').animate({opacity:0})
+				$('#almond2').animate({opacity:0})				
+				$('#greentea1').animate({opacity:0})
+				$('#greentea3').animate({opacity:0})
+				$('#greentea4').animate({opacity:0})
+				$('#matcha').animate({opacity:0})	
+				$('#raz1_1').animate({opacity:1})
+				$('#raz2_2').animate({opacity:1})
+				$('#raz3_3').animate({opacity:1})
+				$('#peach').animate({opacity:1})
+				$('#raz_leaf1').animate({opacity:1})
+				$('#raz_leaf2').animate({opacity:1})
+			})
+
+			$('#page1_text li').click(function(){
+				$(this).stop().animate({fontSize:60},300)
+				$(this).siblings().animate({fontSize:20},300)
+			})
+			$('#page1_text li:nth-child(1)').click(function(){
+				$(this).animate({'color':'#b10b22'},300)
+				$(this).siblings().animate({'color':'#dcaBB0'},300)
+				$('#bgbox #box2').animate({'backgroundColor': '#B10B22'},500)
+				$('#bgbox #box4').animate({'backgroundColor': '#B10B22'},500)				
+				$('#page1_left_text p').html('A ray of sunshine. This cup is bursting with <Br>the very best berries including strawberries,<Br> raspberries, blackberries and blueberries lathered <br>in the creamiest of ice cream.').css({'color':'#B10B22'})
+				$('#page1_left_text h4').html('PAINT').css({'color':'#fff','font-size': '70px'})
+				$('#paint_img2').animate({top:-2000,opacity:0},300,'easeInBack')
+				$('#paint_img3').animate({top:-2000,opacity:0},300,'easeInBack')
+				$('#paint_img4').animate({top:-2000,opacity:0},300,'easeInBack')
+				$('#paint_img1').animate({top:150,opacity:1},300)
+				$('#circle1').animate({width: 100,height: 100,left:350,top:250,'backgroundColor':'#dcaBB0'},900)
+				$('#circle1').siblings().animate({left: 1200,top:600},200)
+				$('#caramel').animate({opacity:0},500)		
+				$('#caramel3').animate({opacity:0},500)
+				$('#vanilla').animate({opacity:0},500)
+				$('#brownie').animate({opacity:0},500)	
+				$('#choco3').animate({opacity:0},500)
+				$('#choco4').animate({opacity:0},500)
+				$('#almond').animate({opacity:0},500)
+				$('#almond2').animate({opacity:0},500)				
+				$('#greentea1').animate({opacity:0},500)
+				$('#greentea3').animate({opacity:0},500)
+				$('#greentea4').animate({opacity:0},500)
+				$('#matcha').animate({opacity:0},500)	
+				$('#raz1_1').animate({opacity:1},500)
+				$('#raz2_2').animate({opacity:1},500)
+				$('#raz3_3').animate({opacity:1},500)
+				$('#peach').animate({opacity:1},500)
+				$('#raz_leaf1').animate({opacity:1},500)
+				$('#raz_leaf2').animate({opacity:1},500)
+			})
+			$('#page1_text li:nth-child(2)').click(function(){	
+				$(this).animate({'color':'#784C43'},300)
+				$(this).siblings().animate({'color':'#B29894'},300)
+				$('#bgbox #box2').animate({'backgroundColor': '#784C43'},500)
+				$('#bgbox #box4').animate({'backgroundColor': '#784C43'},500)
+				$('#page1_left_text p').html('We’ve raised the bar with this creation. <Br>Crack open the Belgian milk chocolate <Br>and almond coating to reveal sumptuous <Br>vanilla ice cream laced with thick caramel sauce.').css({'color':'#784C43'})
+				$('#page1_left_text h4').html('CECREAN BAR').css({'color':'#fff','font-size': '70px','opacity': '0.8'})	
+				$('#paint_img1').animate({top:-2000,opacity:0},300,'easeInBack')
+				$('#paint_img3').animate({top:-2000,opacity:0},300,'easeInBack')
+				$('#paint_img4').animate({top:-2000,opacity:0},300,'easeInBack')
+				$('#paint_img2').animate({top:200,opacity:1},300)
+				$('#circle2').animate({width: 100,height: 100,left:350,top:250,'backgroundColor':'#b29894'},900)
+				$('#circle2').siblings().animate({left: 1200,top: 600},200)
+				$('#caramel').animate({opacity:0},500)			
+				$('#caramel3').animate({opacity:0},500)
+				$('#vanilla').animate({opacity:0},500)
+				$('#brownie').animate({opacity:0},500)	
+				$('#choco3').animate({opacity:0},500)
+				$('#choco4').animate({opacity:1},500)
+				$('#almond').animate({opacity:1},500)
+				$('#almond2').animate({opacity:1},500)
+				$('#almond3').animate({opacity:0},500)	
+				$('#greentea1').animate({opacity:0},500)
+				$('#greentea3').animate({opacity:0},500)
+				$('#greentea4').animate({opacity:0},500)
+				$('#matcha').animate({opacity:0},500)			
+				$('#raz1_1').animate({opacity:0},500)
+				$('#raz2_2').animate({opacity:0},500)
+				$('#raz3_3').animate({opacity:0},500)
+				$('#peach').animate({opacity:0},500)
+				$('#raz_leaf1').animate({opacity:0},500)
+				$('#raz_leaf2').animate({opacity:0},500)
+			})
+			$('#page1_text li:nth-child(3)').click(function(){
+				$(this).animate({'color':'#87A65B'},300)
+				$(this).siblings().animate({'color':'#B3BCA6'},300)
+				$('#bgbox #box2').animate({'backgroundColor': '#87A65B'},500)
+				$('#bgbox #box4').animate({'backgroundColor': '#87A65B'},500)	
+				$('#page1_left_text p').html('Our fusion of mango ice cream and sweet raspberry <Br>swirls dipped in white chocolate and sprinkled with <br>freeze dried raspberry gems will take you to new heights.').css({'color':'#87A65B'})
+				$('#page1_left_text h4').html('IMULTIPACK')
+				$('#paint_img2').animate({top:-2000,opacity:0},300,'easeInBack')
+				$('#paint_img1').animate({top:-2000,opacity:0},300,'easeInBack')
+				$('#paint_img4').animate({top:-2000,opacity:0},300,'easeInBack')
+				$('#paint_img3').animate({top:180,opacity:1},300)
+				$('#circle3').animate({width: 100,height: 100,left:350,top:250,'backgroundColor':'#B3BCA6'},900)
+				$('#circle3').siblings().animate({left: 1200,top: 600},200)
+				$('#caramel').animate({opacity:0},500)			
+				$('#caramel3').animate({opacity:0},500)
+				$('#vanilla').animate({opacity:0},500)
+				$('#brownie').animate({opacity:0},500)	
+				$('#choco3').animate({opacity:1},500)
+				$('#choco4').animate({opacity:0},500)
+				$('#almond').animate({opacity:0},500)
+				$('#almond2').animate({opacity:0},500)				
+				$('#greentea1').animate({opacity:1},500)
+				$('#greentea3').animate({opacity:1},500)
+				$('#greentea4').animate({opacity:1},500)
+				$('#matcha').animate({opacity:1},500)
+				$('#raz1_1').animate({opacity:0},500)				
+				$('#raz2_2').animate({opacity:0},500)
+				$('#raz3_3').animate({opacity:0},500)
+				$('#peach').animate({opacity:0},500)
+				$('#raz_leaf1').animate({opacity:0},500)
+				$('#raz_leaf2').animate({opacity:0},500)
+			})
+			$('#page1_text li:nth-child(4)').click(function(){
+				$(this).animate({'color':'#DF973C'},300)
+				$(this).siblings().animate({'color':'#D8B071'},300)
+				$('#bgbox #box2').animate({'backgroundColor': '#DF973C'},500)
+				$('#bgbox #box4').animate({'backgroundColor': '#DF973C'},500)
+				$('#page1_left_text p').html('Devour the hills of caramel ice cream laced <Br>with rivers of salted caramel sauce <br>and craters of crunchy caramel pieces. <Br>A whole world of extraordinary in a mini cup.').css({'color':'#DF973C'})
+				$('#page1_left_text h4').html('MINI CUPS')
+				$('#paint_img1').animate({top:-2000,opacity:0},300,'easeInBack')
+				$('#paint_img3').animate({top:-2000,opacity:0},300,'easeInBack')
+				$('#paint_img2').animate({top:-2000,opacity:0},300,'easeInBack')
+				$('#paint_img4').animate({top:200,opacity:1},300)
+				$('#circle4').animate({width: 100,height: 100,left:350,top:250,'backgroundColor':'#D8B071'},900)
+				$('#circle4').siblings().animate({left: 1200,top: 600},200)
+				$('#caramel').animate({opacity:1},500)				
+				$('#caramel3').animate({opacity:1},500)
+				$('#vanilla').animate({opacity:1},500)
+				$('#brownie').animate({opacity:1},500)				
+				$('#choco3').animate({opacity:0},500)
+				$('#choco4').animate({opacity:0},500)
+				$('#almond').animate({opacity:0},500)
+				$('#almond2').animate({opacity:0},500)				
+				$('#greentea1').animate({opacity:0},500)
+				$('#greentea3').animate({opacity:0},500)
+				$('#greentea4').animate({opacity:0},500)
+				$('#matcha').animate({opacity:0},500)				
+				$('#raz5_5').animate({opacity:0},500)
+				$('#raz1_1').animate({opacity:0},500)
+				$('#raz2_2').animate({opacity:0},500)
+				$('#raz3_3').animate({opacity:0},500)
+				$('#peach').animate({opacity:0},500)
+				$('#raz_leaf1').animate({opacity:0},500)
+				$('#raz_leaf2').animate({opacity:0},500)
+			})	
+
+			$('#paint>img').click(function(){
+				$('#strawberry1').delay(500).animate({left:0},300)
+				$('#strawberry2').delay(600).animate({left:0},300)
+				$('#strawberry3').delay(700).animate({left:0},300)
+				$('#strawberry4').delay(800).animate({left:0},300)
+				$('#strawberry5').delay(900).animate({left:0},300)
+				$('#strawberry6').delay(1000).animate({left:0},300)
+				$('#ice1_1').delay(900).animate({left:-200},300,function(){
+					$('#ice1_1').animate({left:-800},700)
+					$('#ice').animate({opacity: 1},500)
+				})
+				$('#paintR_text_bt>h2').delay(1000).animate({opacity:0.4})
+				paintR = setInterval(function(){
+					if( paintR_text_x <= -400 ){
+					positionX = positionX * -1
+					}
+					else if( paintR_text_x >= 100){
+					positionX = positionX * -1
+					}
+					paintR_text_x = paintR_text_x + positionX
+					$('#paintR_text_bt>h2').css({'left':paintR_text_x})
+				},5)	
+			})
+//			paintR_text_x = 	-30;
+//			positionX = -2;
+			$('#paintR_text_bt').mouseover(function(){
+				positionX = 0;
+			 $('#paintR_text_bt>h2').html('BACK').css({'color':'#000','opacity':'1'})
+			})
+			$('#paintR_text_bt').mouseleave(function(){
+				positionX = -2;
+			 $('#paintR_text_bt>h2').html('HAGGENDAZS').css({'color':'#fff','opacity':'0.4'})
+			})
+
+			$('#paintR_text_bt').click(function(){
+				$('#paintbox').hide()
+				$('#paintL_bg1').animate({'width':'0%','height':'649px',left:970})
+				$('#paintR_bg1').animate({'width':'0%','height':'649px',right:970})
+				$('#paintL_bg>img').animate({left:-970})			
+				$('#ice1_1').animate({left:-360})
+				clearInterval(paintR)
+				
+			})
+
+			$('#paint_img1').click(function(){
+				$('#paintbox').fadeIn()
+				$('#paintL_bg').css({'background-color':'#B10B22'})
+				$('#paintL_bg1').delay(300).animate({'width':'70%','height':'649px',left:300},200)
+				$('#paintR_bg1').delay(600).css({'background-color':'#B10B22'}).animate({'width':'70%','height':'649px',right:300},200)
+				$('#ice').attr({'src':'img/ice.png'})
+				$('#ice1_1').attr({'src':'img/ice1_1.png'})
+				$('#strawberry1').attr({'src':'img/strawberry1.png'})
+				$('#strawberry2').attr({'src':'img/strawberry2.png'})
+				$('#strawberry3').attr({'src':'img/strawberry1.png'})
+				$('#strawberry4').attr({'src':'img/strawberry2.png'})
+				$('#strawberry5').attr({'src':'img/strawberry1.png'})
+				$('#strawberry6').attr({'src':'img/strawberry2.png'})
+				$('#paintR_bg>h2').css({'color':'#B10B22'})
+				$('#paintL_bg1_text>li').css({'color':'#B10B22'})
+				$('#paintL_bg1>h2').html('White Peach and Raspberry').css({'color':'#B10B22'})
+				$('#paintL_bg1>p').html('Two varieties of white peach go into our puree, <br>the Springtime and the Caprice, <br>which is stirred into our velvety ice cream base. <br>We then add white peach pieces from South East Asia and a vibrant raspberry swirl.')
+				$('#paintL_bg1_text li:nth-child(1)').html('&middot; cream')
+				$('#paintL_bg1_text li:nth-child(2)').html('&middot; peach')
+				$('#paintL_bg1_text li:nth-child(3)').html('&middot; raspberry')
+				$('#cream').attr({'src':'img/cream.png'})
+				$('#peach2').attr({'src':'img/peach.png'})
+				$('#raspberry').attr({'src':'img/raspberry.png'})
+			})
+
+			$('#paint_img2').click(function(){
+				$('#paintbox').fadeIn()
+				$('#paintL_bg').css({'background-color':'#784C43'})
+				$('#paintL_bg1').delay(300).animate({'width':'70%','height':'649px',left:300},600)
+				$('#paintR_bg1').delay(600).css({'background-color':'#784C43'}).animate({'width':'70%','height':'649px',right:300},600)
+				$('#ice').attr({'src':'img/ice2.png'})
+				$('#ice1_1').attr({'src':'img/ice2_2.png'})
+				$('#strawberry1').attr({'src':'img/chocolate1.png'})
+				$('#strawberry2').attr({'src':'img/chocolate2.png'})
+				$('#strawberry3').attr({'src':'img/chocolate1.png'})
+				$('#strawberry4').attr({'src':'img/chocolate2.png'})
+				$('#strawberry5').attr({'src':'img/chocolate1.png'})
+				$('#strawberry6').attr({'src':'img/chocolate2.png'})
+				$('#paintR_bg>h2').css({'color':'#784C43'})
+				$('#paintL_bg1_text>li').css({'color':'#784C43'})
+				$('#paintL_bg1>h2').html('Chocolate Choc Almond').css({'color':'#784C43'})
+				$('#paintL_bg1>p').html('One smooth operator. Intense ice cream, made with 70% cocoa dark chocolate,<br> has already seduced fudge pieces and caramelised almond pieces.<br> The classics are the best. Enjoy this velvety chocolate ice cream made<br> with real cream and milk for one indulgent pint.')
+				$('#paintL_bg1_text li:nth-child(1)').html('&middot; choco cream')
+				$('#paintL_bg1_text li:nth-child(2)').html('&middot; chocolate')
+				$('#paintL_bg1_text li:nth-child(3)').html('&middot; almond')
+				$('#cream').attr({'src':'img/chococream.png'})
+				$('#peach2').attr({'src':'img/choco2.png'})
+				$('#raspberry').attr({'src':'img/almond.png'})
+				
+				})
+
+			$('#paint_img3').click(function(){
+				$('#paintbox').fadeIn()
+				$('#paintL_bg').css({'background-color':'#87A65Bi'})
+				$('#paintL_bg1').delay(300).animate({'width':'70%','height':'649px',left:300},600)
+				$('#paintR_bg1').delay(600).css({'background-color':'#87A65Bi'}).animate({'width':'70%','height':'649px',right:300},600)
+				$('#ice').attr({'src':'img/ice3.png'}).css({'left':'-380px'})
+				$('#ice1_1').attr({'src':'img/ice3_3.png'})
+				$('#strawberry1').attr({'src':'img/green1.png'})
+				$('#strawberry2').attr({'src':'img/green2.png'})
+				$('#strawberry3').attr({'src':'img/green1.png'})
+				$('#strawberry4').attr({'src':'img/green2.png'})
+				$('#strawberry5').attr({'src':'img/green1.png'})
+				$('#strawberry6').attr({'src':'img/green2.png'})
+				$('#paintR_bg>h2').css({'color':'#87A65Bi'})
+				$('#paintL_bg1_text>li').css({'color':'#87A65Bi'})
+				$('#paintL_bg1>h2').html('Chocolate Choc Almond').css({'color':'#87A65Bi'})
+				$('#paintL_bg1>p').html('Our Matcha Green Tea Ice Cream delivers a hit of deeply intense,<br> fragrant and refreshing flavour. It’s like a spa day for your tastebuds.<br>Indulge in this Mixed Flavour Multipack which consists of top selling flavours<br> – Vanilla Caramel Almond, Matcha Green Tea Stickbar, Chocolate Choc Almond Stickbar.')
+				$('#paintL_bg1_text li:nth-child(1)').html('&middot; matcha green tea')
+				$('#paintL_bg1_text li:nth-child(2)').html('&middot; chocolate')
+				$('#paintL_bg1_text li:nth-child(3)').html('&middot; almond')
+				$('#cream').attr({'src':'img/matcha.png'})
+				$('#peach2').attr({'src':'img/choco5.png'})
+				$('#raspberry').attr({'src':'img/almond4.png'})
+			})
+			$('#paint_img4').click(function(){
+				$('#paintbox').fadeIn()
+				$('#paintL_bg').css({'background-color':'#e0973b'})
+				$('#paintL_bg1').delay(300).animate({'width':'70%','height':'649px',left:300},600)
+				$('#paintR_bg1').delay(600).css({'background-color':'#e0973b'}).animate({'width':'70%','height':'649px',right:300},600)
+				$('#ice').attr({'src':'img/ice4.png'})
+				$('#ice1_1').attr({'src':'img/ice4_4.png'})
+				$('#strawberry1').attr({'src':'img/dulce1.png'})
+				$('#strawberry2').attr({'src':'img/dulce2.png'})
+				$('#strawberry3').attr({'src':'img/dulce1.png'})
+				$('#strawberry4').attr({'src':'img/dulce2.png'})
+				$('#strawberry5').attr({'src':'img/dulce1.png'})
+				$('#strawberry6').attr({'src':'img/dulce2.png'})
+				$('#paintR_bg>h2').css({'color':'#e0973b'})	
+				$('#paintL_bg1_text>li').css({'color':'#e0973b'})
+				$('#paintL_bg1>h2').html('Caramel Mini Cups').css({'color':'#e0973b'})
+				$('#paintL_bg1>p').html('We’ve taken this combo to extraordinary levels with luxurious vanilla ice cream,<br> crunchy pecan pieces and swirls of sweet caramel sauce.<br> Our mouths are watering too. A delightful concoction of Belgian biscuit,<Br> deliciously rich caramel and the smoothest cream.  Also known as your new favourite.')
+				$('#paintL_bg1_text li:nth-child(1)').html('&middot; cream')
+				$('#paintL_bg1_text li:nth-child(2)').html('&middot; caramel')
+				$('#paintL_bg1_text li:nth-child(3)').html('&middot; vanilla')
+				$('#cream').attr({'src':'img/cream.png'})
+				$('#peach2').attr({'src':'img/caramelpng.png'})
+				$('#raspberry').attr({'src':'img/dulce.png'})
+			})			
+			$('#line').click(function(){	
+				onoff = 0;
+				$('#page1_menu').css({'top':'50px'})				
+				$('#menu1').css({'top':'-550px'},700)
+				$('#menu_page').animate({bottom:0},500)				
+				$('#menu_leaf1').delay(400).animate({opacity:1},700)
+				$('#menu_leaf2').delay(500).animate({opacity:1},700)
+				$('#menu_leaf3').delay(600).animate({opacity:1},700)
+				$('#menu_leaf4').delay(700).animate({opacity:1},700)
+				$('#menu_leaf5').delay(800).animate({opacity:1},700)			
+				$('#menu_img2').animate({'rotate':'3deg'},function a(){
+					$(this).animate({'rotate':'0deg'},function(){
+					$(this).animate({'rotate':'3deg'},a)				
+				})
+				})
+				$('#menu_img4').animate({'rotate':'-3deg'},function a(){
+					$('#menu_img4').animate({'rotate':'0deg'},function(){
+					$('#menu_img4').animate({'rotate':'-3deg'},a)	
+					})
+				})
+				$('#menu_img3').animate({'rotate':'3deg'},function a(){
+					$('#menu_img3').animate({'rotate':'0deg'},function(){
+					$('#menu_img3').animate({'rotate':'3deg'},a)	
+					})
+				})					
+			})
+			$('#menubuttonbox').click(function(){
+				$('#page1_menu').stop().animate({top:-100},700)
+				$('#menu1').delay(200).animate({top:50},700)
+			})
+			$('#menu1>li:nth-child(2)').click(function(){
+				$('#about').animate({right:0, opacity: 1})	
+				$('#slide_bt li:nth-child(1)').css({'background-color':'#d28dd3'})
+				$('#about_bg1').show()
+			})
+			$('#about button').click(function(){
+				$('#about').animate({right:-4000, opacity:0})
+				$('#slide_bt li:nth-child(1)').css({'background-color':'#d28dd3'})
+				$('#slide_bt li:nth-child(2),#slide_bt li:nth-child(3)').css({'background-color':'#fff'})
+				$('#about_bg1').fadeIn()
+				$('#about_bg2').fadeOut()
+				$('#about_bg3').fadeOut()
+				$('#about_span1').html('Dedicated To Great Ice Cream')
+				$('#about_ul1>p').html('From the age of nine, Reuben Mattus dedicated himself to ice cream, <Br>with the sole mission of creating a silky, smooth and creamy texture <br>and flavours that were deserving of an adult’s palate.<br>	He married business whizz Rose, and together they launched Häagen-Dazs <br>with three simple flavours: chocolate, vanilla and coffee.<br>Today this has grown to 46 extraordinary flavours. <br>And every step of the way Häagen-Dazs has been driven by a passion for perfection.<br>(It took us a whopping six years to figure out how to make the ultimate strawberry ice cream.)<br><span id="about_span2">#haagendazs</span>')
+			})
+			$('#slide_bt li').click(function(){
+				$(this).css({'background-color':'#d28dd3'})
+				$(this).siblings().css({'background-color':'#fff'})
+			})
+			$('#slide_bt li:nth-child(1)').click(function(){
+				$('#about_bg1').fadeIn()
+				$('#about_bg2').fadeOut()
+				$('#about_bg3').fadeOut()
+				$('#about_span1').html('Dedicated To Great Ice Cream')
+				$('#about_ul1>p').html('From the age of nine, Reuben Mattus dedicated himself to ice cream, <Br>with the sole mission of creating a silky, smooth and creamy texture <br>and flavours that were deserving of an adult’s palate.<br>				He married business whizz Rose, and together they launched Häagen-Dazs <br>with three simple flavours: chocolate, vanilla and coffee.<br>Today this has grown to 46 extraordinary flavours. <br>And every step of the way Häagen-Dazs has been driven by a passion for perfection.<br>(It took us a whopping six years to figure out how to make the ultimate strawberry ice cream.)<br><span id="about_span2">#haagendazs</span>')
+			})
+			$('#slide_bt li:nth-child(2)').click(function(){
+				$('#about_bg2').fadeIn()
+				$('#about_bg1').fadeOut()
+				$('#about_bg3').fadeOut()
+				$('#about_span1').html('Extraordinary Ice Cream Deserves Extraordinary Shops')
+				$('#about_ul1>p').html('Häagen-Dazs was born in one extraordinary kitchen – Reuben’s.<Br> Now, we bring you over 800 extraordinary shops inspired by that very space.<br> All over the world, you can indulge in 24 flavours in a setting<Br> as extraordinary as the ice cream itself (almost).<br> But what makes our shops extra tempting is the unique selection of seasonal specials <br>and over 20 enticing ice cream creations and drinks.<br> You won’t find them anywhere else.<br><span id="about_span2">#haagendazs #Serving extraordinary scoops since 1976.</span>')
+			})
+			$('#slide_bt li:nth-child(3)').click(function(){
+				$('#about_bg3').fadeIn()
+				$('#about_bg1').fadeOut()
+				$('#about_bg2').fadeOut()
+				$('#about_span1').html('Devoted To The Highest Standards')
+				$('#about_ul1>p').html('We set our own trends. And our own standards.<br> Reuben’s devotion to the highest quality changed the way people thought about ice cream. <Br>That’s where Häagen-Dazs started, and what we stand by today. <Br>That means the best ingredients, for the ultimate flavour.<Br> Because everyone deserves to experience a spoonful of pleasure.<br><span id="about_span2">#haagendazs</span>')
+			})
+			$('#menu_page button').click(function(){
+				$('#menu_page').animate({bottom:-2000})
+			})
+
+		
+	
+		}) //마지막 괄호 항상 유지 ! 전체문서 괄호는 지우지 않음
+  </script>
+  <style>
+	* { margin: 0; padding: 0; list-style: none; }
+	a { color:inherit; text-decoration: none; }
+	body{background-color: #fff; font-family: 'Tauri', sans-serif; overflow: hidden;}
+
+	/*#bgbox{position: relative; width: 100%; height: 100%; 	}*/
+	#bgbox div, #sec1>img{position: fixed; left: 0; right: 0;top: 0; bottom: 0; margin: auto;}
+	#bgbox #box1{width: 400px; height: 400px; background-color: #eee2d7; border-radius: 400px; left: -1500px; top: 500px;}
+	#bgbox #box2{width: 250px; height: 250px; background-color: #b10b22; border-radius: 300px; left: -1200px; top: 600px;}
+	#bgbox #box3{width: 450px; height: 450px; background-color: #eee2d7; border-radius: 500px; left: 100px; top:-400px;}
+	#bgbox #box4{width: 700px; height: 700px; background-color: #b10b22; border-radius: 1500px; left: 1000px; top: -100px;}	
+
+	#sec1 #cho1{width: 500px; height: 500px; left: -1650px; top: -400px; transform:rotate(-20deg); z-index: 99;}
+	#sec1 #cho2{width: 300px; height: 300px; left: -1300px; top: -500px; transform:rotate(-20deg);}
+	#sec1 #raz1{width: 100px;height: 100px;  left: -400px; top: 200px;}
+	#sec1 #raz2{width: 100px;height: 100px; left: -430px; top: 350px; }
+	#sec1 #raz3{width: 100px;height: 100px; left: -270px; top: 300px; transform:rotate(45deg); }
+	#sec1 #nuts1{width: 250px; height: 250px; left: 100px; top: -160px; z-index: 100;}
+	#sec1 #nuts2{width: 200px; height:200px; left: -150px; top: -120px; z-index: 99;}
+	#sec1 #ba{width:100px; height: 100px; left:400px; top: 300px;}
+	#sec1 #icecon{width:350px; height: 750px; left:1100px; top:100px; transform:rotate(15deg);}
+	#sec1 #leaf1{left: 200px; top: 200px;}
+	#sec1 #leaf2{left: 800px; top: 500px;}
+	#sec1 #leaf3{left: 800px; top: 100px;}
+	#sec1 #leaf4{left:500px; top: -400px;}
+	#sec1 #leaf5{left:600px; top: -800px;}
+	#sec1 #leaf6{left: 1100px; top: -100px;}
+	#sec1 #leaf7{left: 1400px; top: -400px;}
+
+	#textbox{ position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto; top: 550px; left: 300px;}
+	#textbox h2{font-size: 80px;}
+	#textbox h3{font-size: 80px;  }
+	#textbox h4{font-size: 20px; margin-top: 20px;}
+	#textbox p{font-size: 13px; line-height: 5px; margin-top: 18px;}
+
+	#logo{position: fixed; left: 20px; top: 20px; cursor: pointer;}
+	#logo>img{width: 180px; height: 100px;}
+
+	#right_box{width: 50px; height: 100%; position: fixed; right: 0; top: 0; text-align: center; z-index: 9999;}
+	#line{position: absolute; right: 15px; top: 10px; width: 30px; height: 60px; z-index: 9999; cursor: pointer;}
+	#line>li{width:30px; height:3px; background-color: #000; margin-top: 7px; }
+	#line1{position: absolute; width: 1px; height: 300px; background-color: #000; right:25px; top: 80px;}
+	#num{position: absolute; right: 24px; top: 400px;}
+	#num>li{font-size: 10px; color: #000; margin: 10px 0; cursor: pointer;}
+	#line2{position: absolute; width: 1px; height:300px; background-color: #000; right:25px; top: 500px;}
+	#right_box h4{position: absolute; font-size: 15px; right: -23px; top: 430px; width: 100px; color: #000; transform:rotate(90deg); }
+	#right_box h5{position: absolute; font-size: 12px; right: -25px; top: 900px; width: 100px; color: #000; transform:rotate(90deg); }
+
+	#button{position: absolute; left: 0; right: 0; bottom: 10px; margin: auto; width: 40px; height: 40px; border-radius:40px; background-color:rgba(0,0,0,0.7); cursor: pointer; z-index: 9999;}	
+
+	#page1_box1{position: absolute; left: 0; right: 0; bottom: 0; top: 0; margin: auto; width:900px; height:900px; left:1300px; top: -5px; background-color: #eee2d7; border-radius: 1000px; box-shadow: 10px 20px 30px rgba(0,0,0,0.5);}
+	#bg1{background-color: #eee2d7; width: 100%; height: 100%; position: absolute; left: -100%; right: 0; top: 0; bottom: 0;  z-index: -9999; }
+	
+	#paint{position: relative;}
+	#paint>img{position: absolute; left: 0;  top: 0; right: 0; margin: auto; cursor:pointer; opacity: 0.5;	}
+
+	#paint #paint_img1{width: 600px; height: 600px; top: 170px; left:-900px; opacity: 0;}	
+	#paint #paint_img2{width: 600px; height: 600px; top: -2000px; left:200px; opacity: 0;} 
+	#paint #paint_img3{ width: 580px; height: 600px; top: -2000px; left:220px;  opacity: 0;} 
+	#paint #paint_img4{width: 580px; height: 600px; top: -2000px; left:230px; transform:rotate(-1.9deg); opacity: 0;}
+
+	#page1_text{position: absolute; width: 650px; height: 650px; left: 1400px; top: 320px; border-radius: 1000px; opacity: 0; }
+	#page1_text>li{font-size: 18px; margin-top: 30px; font-weight:100; letter-spacing: 1px; color: #dcabb0;  font-family: 'Anton', sans-serif; cursor: pointer;}	
+
+	#page1_left_text{position: relative; opacity: 0; font-family: 'Actor', sans-serif;}
+	#page1_left_text p {position: absolute; left: 250px; top: 390px; font-size: 19px; color: #b10b22; font-weight: 900; letter-spacing: 1px;}
+	#page1_left_text h4{position: absolute; left: 250px; top: 300px; font-size: 70px; opacity: 0.8; color: #fff;}
+	#page1_left_line{position: absolute; left: 30px; top:120px; width: 1px; height: 800px; background-color: #fff; opacity: 0.8;}
+
+	#page1_circle{position: relative; z-index: -999; width: 50px; height: 50px; }
+	#circle1{position: absolute; left: 1200px; top: 600px; border-radius:200px;  }
+	#circle2{position: absolute; left: 1200px; top: 600px; border-radius:200px;  }
+	#circle3{position: absolute; left: 1200px; top: 600px; border-radius:200px;  }
+	#circle4{position: absolute; left: 1200px; top: 600px; border-radius:200px;  }
+
+	#page1_iceimg{position: relative; }
+	#page1_iceimg img{position: absolute; left: 0; top: 0; }
+	#page1_iceimg #raz1_1{width: 200px; height: 200px; transform:rotate(20deg); left: 190px; top: 700px; opacity: 0;}
+	#page1_iceimg #raz2_2{width: 80px; height: 80px;	left:560px; top: 600px; opacity: 0;}
+	#page1_iceimg #raz3_3{width: 150px; height: 150px; left:360px; top: 500px; opacity: 0;}
+	#page1_iceimg #peach{width: 80px; height: 80px; left:460px; top: 700px; opacity: 0;}
+	#page1_iceimg #raz_leaf1{width: 30px; height: 30px; left:550px; top: 710px;  transform:rotate(50deg); opacity: 0;}
+	#page1_iceimg #raz_leaf2{width: 30px; height: 30px;transform:rotate(10deg); left:420px; top: 650px; opacity: 0;}
+	#page1_iceimg #almond{width: 40px; height: 40px; left: 330px; top: 800px; opacity: 0;}
+	#page1_iceimg #almond2{width: 70px; height: 70px; left: 280px; top: 670px; opacity: 0;}			
+	#page1_iceimg #choco3{width: 300px; height: 250px; left: 300px; top: 600px; opacity: 0; }
+	#page1_iceimg #choco4{width: 400px; height: 300px; left: 300px; top: 550px; opacity: 0;}
+	#page1_iceimg #greentea1{width: 80px; height: 80px; left: 630px; top: 610px; opacity: 0;}
+	#page1_iceimg #greentea3{width: 70px; height: 70px; left: 400px; top: 550px; opacity: 0;}
+	#page1_iceimg #greentea4{width: 100px; height: 100px; left: 580px; top: 780px; opacity: 0;}
+	#page1_iceimg #matcha{width: 300px; height: 170px; left: 150px; top:710px; opacity: 0;}
+	#page1_iceimg #caramel{width: 400px; height: 480px; left: 230px; top: 500px; opacity: 0;}
+	#page1_iceimg #caramel3{width: 120px; height: 120px; left: 590px; top: 600px; opacity: 0;}	
+	#page1_iceimg #brownie{width: 160px; height: 160px; left: 610px; top: 640px; transform:rotate(-10deg);opacity: 0;}
+	#page1_iceimg #vanilla{width: 100px; height: 100px; left:560px; top: 690px;transform:rotate(-75deg); z-index: 99; opacity: 0;}
+
+	#paintbox{width: 100%; height: 100%; position: fixed; left: 0; top: 0;  z-index: 9999; display: none;}
+
+	#paintL_bg{position: relative; left: 0; top: 0; width: 50%; height: 100%; background-color: #B10B22; }
+	#paintL_bg>img{position: absolute; width: 960px; height: 166.666px; left: -970px;}
+	#strawberry2{top: 162px;} #strawberry3{top: 324px;} #strawberry4{top: 486px;} #strawberry5{top: 648px;} #strawberry6{top: 810px;}
+	#paintL_bg1{position: absolute; right: 0; top: 0;  bottom: 0; left: 0; left:970px; margin: auto; top: 1px; background-color:#eee2d7 ; width: 0%; height: 649px;}  
+	#paintL_bg1>h2{font-size: 42px; color: #B10B22; margin-left: 30px; margin-top: 25px;  font-family: 'Anton', sans-serif;}
+	#paintL_bg1>p{font-size: 14px; color: #707070; font-weight: 100; margin-top: 20px; font-family: 'Lora', serif; margin-left: 30px; line-height: 30px;}
+	#paintL_bg1_text{position: relative; width: 90%; height: 150px; border-top: 1px solid #707070;	left: -5px; right: 0; top: 40px; margin: auto;	}
+	#paintL_bg1_text>li{font-size: 22px; color: #B10B22; line-height: 45px; margin-top: 10px;  font-family: 'Lora', serif;}
+	#paintL_bg1_b{position: relative; width: 90%; height: 150px; border-top: 1px solid #707070; 	 left: -5px; right: 0; top: 70px; margin: auto; }
+	#paintL_bg1_b>li{width: 130px; height: 130px; background-color:rgba(255,255,255,0.3); margin-top: 30px; float: left; margin-right: 15px; margin-left: 40px; text-align: center; 	border-radius: 130px; }
+	#paintL_bg1_b>li:hover{box-shadow:-3px -3px 50px #ffffff, 3px -3px 50px #ffffff, -3px 3px 50px #ffffff, 3px 3px 50px #ffffff;}
+	
+	#paintL_bg1_b>li>img{width:90px; height: 90px; margin-top: 20px;}
+
+	#paintR_bg{position: absolute; right: 0; top: 0; width: 50%; height: 100%; background-color: #eee2d7;	overflow: hidden;}
+	#paintR_text_bt{position: relative; width: 980px; height: 160px; top: 0; right: 0; cursor: pointer; z-index: 99}
+	#paintR_text_bt>h2{position: absolute;font-size: 250px; line-height: 160px; color: #fff; left:-30px; opacity: 0;}	
+	#paintR_bg1{position: absolute; right: 0; top: 0; bottom: 0; left: 0; right:970px; margin: auto; top: 1px; background-color: #B10B22; width: 0%; height: 649px;  }
+	#ice{position: absolute; top: 0; bottom: 0; margin: auto; top:60px; left: -360px; width:700px; height: 700px; opacity: 0; z-index: 999;}
+	#ice1_1{position: absolute; top: 0; bottom: 0; margin: auto; top:55px; left: -360px; width:720px; height: 720px; z-index: 999;}
+	#paintR_bg_b_line{width: 500px; height: 1px; color: #fff;}
+
+	#snsbox{width: 230px; height: 50px; position: fixed; right: 50px; bottom: 30px; opacity: 0.3;}
+	#snsbox>li{width: 70px; height: 50px; float: left;	}
+	#snsbox>li>a>img{width: 50px; height: 50px; margin: 0 20px; cursor: pointer;}
+
+/*☆page2 시작☆*/	
+	#menu_page{width:100%; height: 100%; background-color: #7f1030;  position: fixed; bottom: -2000px; left: 0; z-index: 9999; overflow: hidden;}
+	#menu_page button{width: 50px; height: 50px; font-size: 30px; color: #4b4b4b; position: absolute; right: 0px; top: 0px; line-height: 50px; background-color:transparent; border: none; z-index: 99999; cursor: pointer;	}
+	#page1_menu{font-size: 80px; width: 900px; height: 100px;  color: #fff; position: absolute; left: 0; right: 0; top: 50px; margin: auto; text-align: center; }
+	#menu1{position: absolute; width: 1900px; height: 150px; top: -550px; left: 0; right: 0; margin: auto; text-align: center; cursor: pointer;}
+	#menu1>li{display: inline-block; font-size: 100px; color: #fff; line-height: 150px; cursor: pointer; margin: 0 50px;}
+	#menu_img{position: absolute; left: 0; right: 0; margin: auto; bottom: 100px; width: 700px; height: 700px;}
+	#menu_img2{position: absolute; left: 0; right: 0; margin: auto; bottom: 450px; left: 360px; width: 90px; height: 200px; transform-origin: 0% 100%; }
+	#menu_img3{width: 100px; height: 30px; position: absolute; left: 0; right: 0; margin: auto; left: -115px; top: 250px; transform-origin: 100% 0%;}
+	#menu_img4{width: 100px; height: 30px; position: absolute; left: 0; right: 0; margin: auto; left: 115px; top: 250px; transform-origin: 0% 0%;}
+	#menu_leaf1{position: absolute; left: 0;right: 0; margin: auto; bottom: 180px; left: 200px; top: 450px; transform:rotate(50deg);opacity: 0;}
+	#menu_leaf2{position: absolute; left: 0;right: 0; margin: auto; bottom: 500px; left: -270px; transform:rotate(170deg); width: 170px; height: 200px; opacity: 0;}
+	#menu_leaf3{position: absolute; left: 0;right: 0; margin: auto; bottom: 350px; left: -270px; transform:rotate(-90deg); width: 170px; height: 200px; opacity: 0;}
+	#menu_leaf4{position: absolute; left: 0;right: 0; margin: auto; bottom: 400px; left: 370px; transform:rotate(60deg); width: 250px; height: 200px; opacity: 0;}	
+	#menu_leaf5{position: absolute; left: 0;right: 0; margin: auto; bottom: 250px; left: -400px; transform:rotate(90deg); width:200px; height: 250px; opacity: 0;}	
+	#logo2{width: 150px; height: 90px; position: absolute; left: 0; right: 0; margin: auto; bottom: 80px;}
+	#logo_text{color: #7f1030; font-size: 20px; position: absolute; left: 0; right: 0; margin: auto; bottom: 30px;	 text-align: center;	}
+	#menu_bg{position: absolute; left: -450px; right: 0; bottom: -2500px; width: 3000px; height: 3000px; border-radius:3000px; background-color: #fff;} 
+	#menubuttonbox{position: relative; left: 0; right: 0; margin: auto; top: 450px; left: -5px; text-align: center; font-size: 50px; color: #7f1030; line-height: 80px; font-weight: 900; cursor: pointer;}
+/*☆menu page 시작☆*/
+	#about{width: 100%; height:100%; background-color: #fff; position: fixed; left: 0; right: -4000px; top: 0; bottom: 0; margin: auto; z-index: 99999; overflow: hidden; opacity: 0; }
+	#about button{width: 50px; height: 50px; font-size: 30px; color: #4b4b4b; position: absolute; right: 0px; top: 0px; line-height: 50px; background-color:transparent; border: none; z-index: 99999; cursor: pointer;	}
+	#slide_bt{position: absolute; width: 100%; left: 0; bottom: 60px; text-align: center;}
+	#slide_bt li{width: 13px; height: 13px; border-radius: 13px; display: inline-block; margin: 7px; background-color: #fff; cursor: pointer;}
+	#slide_bt li:nth-child(1){background-color: #d28dd3;}
+	#about_leftbox1{width: 50%; height: 100%; position: relative;	 left: 0; top: 0; }
+	#about_leftbox1>img{position: absolute; width: 90%;  height: 90%; left: 0; right: 0; bottom: 0; top: 0; margin: auto;}
+	#about_rightbox1{width: 50%; height: 100%;  position: absolute; right: 0; top: 0;	}
+	#about_ul{width: 90%; height:100px; margin: auto; border-bottom: 2px solid #747474; margin-top: 50px;}
+	#about_logo{width: 70px; height: 70px; float: left; margin-right: 20px; }
+	#about_ul>li{line-height: 100px; font-size: 24px; font-weight: 900;}
+	#about_ul1{width: 90%; height: 770px; margin: auto; }
+	#about_ul1>h2{font-size: 24px; width: 900px; line-height: 50px;}
+	#about_span1{font-weight: 100; font-size: 20px;}
+	#about_ul1 p{font-size: 18px; line-height: 30px;}
+	#about_span2{color: #0057ae;}
+	#about_icon{position: absolute; left: 40px; bottom: 80px; width: 100px; height: 40px;}
+	#about_rightbox1>h5{position: absolute; left: 50px; bottom: 50px;font-size: 18px;}	
+
+	
+ </style></head>
+ <body>
+<div id="wrap">
+  <div id="bgbox">
+		<div id="box1"></div>
+		<div id="box2"></div>
+		<div id="box3"></div>
+		<div id="box4"></div>		 
+  </div>
+  <div id="sec1">
+	<img src="img/cho1.png" alt="" id="cho1">
+	<img src="img/cho2.png" alt="" id="cho2">
+	<img src="img/raz1.png" alt="" id="raz1">
+	<img src="img/raz2.png" alt="" id="raz2">
+	<img src="img/raz3.png" alt="" id="raz3">
+	<img src="img/nuts1.png" alt="" id="nuts1">
+	<img src="img/nuts2.png" alt="" id="nuts2">
+	<img src="img/ba.png" alt="" id="ba">
+	<img src="img/icecon.png" alt="" id="icecon">
+	<img src="img/leaf1.png" alt="" id="leaf1">
+	<img src="img/leaf2.png" alt="" id="leaf2">
+	<img src="img/leaf3.png" alt="" id="leaf3">
+	<img src="img/leaf4.png" alt="" id="leaf4">
+	<img src="img/leaf5.png" alt="" id="leaf5">
+	<img src="img/leaf6.png" alt="" id="leaf6">
+	<img src="img/leaf7.png" alt="" id="leaf7">
+	<div id="textbox">
+		<h2>HAAGEN</h2>
+		<h3>DAZS</h3>
+		<h4>Haagen-Dazs Want to Share with People You Love</h4>
+		<p>Each bite of Hagen Dazs will give you a pleasant experience of being</p>
+		<p>overwhelmed with a strong urge to share with your loved ones.</p>
+	</div>
+  </div>
+  <div id="logo">
+	 <img src="img/logo.png" alt="">
+  </div>
+  <div id="right_box">
+	<ul id="line">
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	<div id="line1"></div>
+	<h4>HAAGENDAZS</h4>	
+	<div id="line2"></div>
+	<h5>HAAGENDAZS</h5>
+  </div>	
+  <div id="button"></div>
+</div>
+<!-- ☆메인시작☆ -->
+  <div id="page1_box1"></div>
+  <div id="bg1"></div>
+  <div id="paint">
+	<img src="img/Peach_ice1.png" alt="" id="paint_img1">
+ 	<img src="img/Peach_ice2.png" alt="" id="paint_img2">
+ 	<img src="img/Peach_ice3_3.png" alt="" id="paint_img3">
+ 	<img src="img/Peach_ice4.png" alt="" id="paint_img4">
+  </div>
+  <ul id="page1_text">
+  	<li>&middot;PAINT</li>
+  	<li>&middot;ICECREAN BAR</li>
+  	<li>&middot;MULTIPACK</li>
+  	<li>&middot;MINI CUPS</li>
+  </ul>
+  <div id="page1_left_text">		
+			<p>A ray of sunshine. This cup is bursting with <Br>the very best berries including strawberries,<Br> raspberries, blackberries and blueberries lathered <br>in the creamiest of ice cream.</p>
+			<h4>PAINT</h4>	
+		<div id="page1_left_line"></div>
+	</div>
+
+		<div id="page1_circle">
+			<div id="circle1"></div>
+			<div id="circle2"></div>
+			<div id="circle3"></div>
+			<div id="circle4"></div>
+		</div>
+
+		<div id="page1_iceimg">
+			<img src="img/raz1_1.png" alt="" id="raz1_1">
+			<img src="img/raz2_2.png" alt="" id="raz2_2">
+			<img src="img/raz3_3.png" alt="" id="raz3_3">
+			<img src="img/peach.png" alt="" id="peach">
+			<img src="img/raz_leaf.png" alt="" id="raz_leaf1">
+			<img src="img/raz_leaf.png" alt="" id="raz_leaf2">
+			<img src="img/choco3.png" alt="" id="choco3">
+			<img src="img/choco4.png" alt="" id="choco4">
+			<img src="img/almond.png" alt=""id="almond">
+			<img src="img/almond2.png" alt=""id="almond2">		
+			<img src="img/greentea1.png" alt="" id="greentea1">
+			<img src="img/greentea3.png" alt="" id="greentea3">
+			<img src="img/greentea4.png" alt="" id="greentea4">
+			<img src="img/caramel.png" alt="" id="caramel">		
+			<img src="img/caramel3.png" alt="" id="caramel3">
+			<img src="img/matcha.png" alt="" id="matcha">	
+		</div>
+
+
+<!-- paintbox   -->
+	<div id="paintbox">		
+		<div id="paintL_bg">		
+				<img src="img/strawberry1.png" alt="" id="strawberry1">			
+				<img src="img/strawberry2.png" alt="" id="strawberry2">	
+				<img src="img/strawberry1.png" alt="" id="strawberry3">
+				<img src="img/strawberry2.png" alt="" id="strawberry4">	
+				<img src="img/strawberry1.png" alt="" id="strawberry5">
+				<img src="img/strawberry2.png" alt="" id="strawberry6">			
+			<div id="paintL_bg1">
+				<h2>White Peach and Raspberry</h2>
+				<p>Two varieties of white peach go into our puree, <br>the Springtime and the Caprice, <br>which is stirred into our velvety ice cream base. <br>We then add white peach pieces<Br> from South East Asia and a vibrant raspberry swirl.</p>
+				<ul id="paintL_bg1_text">
+					<li>&middot; cream</li>
+					<li>&middot; peach</li>
+					<li>&middot; raspberry</li>
+				</ul>
+				<ul id="paintL_bg1_b">
+					<li><img src="img/cream.png" alt="" id="cream"></li>
+					<li><img src="img/peach.png" alt="" id="peach2"></li>
+					<li><img src="img/raspberry.png" alt="" id="raspberry"></li>
+				</ul>
+			</div>
+		</div>
+
+		<div id="paintR_bg">
+			<div id="paintR_text_bt">
+				<h2>HAAGENDAZS</h2>
+			</div>
+			<div id="paintR_bg1"></div>
+			<img src="img/ice.png" alt="" id="ice">
+			<img src="img/ice1_1.png" alt="" id="ice1_1">
+			<div id="paintR_bg_b_line"></div>			
+		</div>
+		<ul id="snsbox">
+			<li><a href="https://twitter.com/haagendazsuk" target="_blank"><img src="img/sns1.png" alt=""></a></li>
+			<li><a href="https://www.facebook.com/HaagenDazs.Singapore/" target="_blank"><img src="img/sns2.png" alt=""></a></li>
+			<li><a href="https://www.instagram.com/haagendazsuk/" target="_blank"><img src="img/sns3.png" alt=""></a></li>
+		</ul>	
+	</div>
+<!--★ 시작 메인 끝 ★  -->
+<!--☆page2 시작☆  -->
+	<div id="menu_page">
+		<button>X</button>
+		<h1 id="page1_menu">HAAGEN DAZS</h1>
+		<ul id="menu1">
+			<li>HOME</li>
+			<li>ABUOT</li>
+			<li><a href="history.html" target="_blank">HISTORY</a></li>
+			<li><a href="https://mall.haagendazs.co.kr/" target="_blank">SHOP</a></li>
+		</ul>
+		<div id="menu_bg"></div>
+		<img src="img/menu_leaf1.png" alt="" id="menu_leaf1">
+		<img src="img/menu_leaf2.png" alt="" id="menu_leaf2">
+		<img src="img/menu_leaf3.png" alt="" id="menu_leaf3">
+		<img src="img/menu_leaf4.png" alt="" id="menu_leaf4">
+		<img src="img/menu_leaf5.png" alt="" id="menu_leaf5">
+		<img src="img/logo2.png" alt="" id="logo2">
+		<p id="logo_text">EVERYDAY MADE EXTRAORINARY</p>	
+			<img src="img/menu_img3.png" alt=""  id="menu_img3" >
+			<img src="img/menu_img4.png" alt=""  id="menu_img4" >
+			<img src="img/menu_img2.png" alt=""  id="menu_img2" >
+			<img src="img/menu_img.png" alt=""  id="menu_img">	
+		<div id="menubuttonbox">MENU</div>	
+	</div>
+<!--about  -->
+	<div id="about">
+		<button>X</button>
+		<div id="about_leftbox1">
+			<img src="img/bg3.png" alt="" id="about_bg3">
+			<img src="img/bg2.jpg" alt="" id="about_bg2">
+			<img src="img/bg1.png" alt="" id="about_bg1">			
+			<ul id="slide_bt">
+				<li></li>
+				<li></li>
+				<li></li>		
+			</ul>
+		</div>
+		<div id="about_rightbox1">
+			<ul id="about_ul">
+				<a href="https://www.instagram.com/haagendazsuk/" target="_blank"><img src="img/about_logo.png" alt="" id="about_logo"></a>
+				<li>haagen dazs &middot; Following</li>
+			</ul>
+			<div id="about_ul1">
+				<h2>haagen dazs <span id="about_span1" >Dedicated To Great Ice Cream</span></h2>
+				<p>From the age of nine, Reuben Mattus dedicated himself to ice cream, <Br>with the sole mission of creating a silky, smooth and creamy texture <br>and flavours that were deserving of an adult’s palate. <br>
+				He married business whizz Rose, and together they launched Häagen-Dazs <br>with three simple flavours: chocolate, vanilla and coffee.<br>
+				Today this has grown to 46 extraordinary flavours. <br>And every step of the way Häagen-Dazs has been driven by a passion for perfection.<br>
+				(It took us a whopping six years to figure out how to make the ultimate strawberry ice cream.)<br>
+				<span id="about_span2">#haagendazs</span>
+				</p>				
+			</div>
+			<img src="img/icon.png" alt="" id="about_icon">
+			<h5>882likes</h5>			
+		</div>		
+	</div>
+	</div>
+ </body>
+ </html>
