@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <title>김연진portfolio</title>
     <link rel="shortcunt icon" href="k.ico">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Heebo" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">     
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>    
   <script>
 	// *op -> animate *d:n -> show/hide fadeIn/fadeOut slideDown/slideUp
 		$(document).ready(function(){
@@ -50,101 +51,15 @@
 				$('body,html').animate({scrollTop:2700},400)
 			})
 			$('#menu li:nth-child(4)').click(function(){			
-				$('body,html').animate({scrollTop:3600},400)
+				$('body,html').animate({scrollTop:4100},400)
 			})
 
 		}) //마지막 괄호 항상 유지 ! 전체문서 괄호는 지우지 않음
   </script>
   <style>
-	* { margin: 0; padding: 0; list-style: none; font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";}
-	a { color:inherit; text-decoration: none; }	
-    head body{width: 100%; height: 100%; height: auto; min-width: 640px; max-width: 1920px; padding: 0; margin: 0; } 
-    .m25 {margin-top: 25px;}
-    h2 {font-size: 3.5rem;} 
-      
-    .container{width: 100%; height: 100%; margin: 0 auto; text-align: center;}
 
-      
-	#main{width: 100%; height: 850px; background: #83B892; align-items: center !important; overflow: hidden; color: #fff; background-attachment: fixed; position: relative;}
-    #main .main_img{margin: 5rem 0 1rem 0; width: 27rem; height: 27rem;}
-	#main h1{margin-top: 150%; font-size: 4rem; line-height: 3.5rem; letter-spacing: 0.2rem; opacity: 0;}
-	#main p{margin-top: 0; opacity: 0; font-size: 1.1rem;}
-	#mouse{position: absolute; left: 0;right: 0; bottom: 7%; width: 20px; height: 45px; border: 3px solid #fff; border-radius: 30px; margin: auto;}
-	#wheel{position: absolute; width: 7px; height: 7px; border-radius: 10px; background-color: #fff; left: 0; right: 0; top: 5px; margin: auto;}
-      
-	header{padding-top: 1rem; padding-bottom: 1rem; background: #2C434F; z-index: 999; position: relative; left: 0; right: 0; top: 0;}
-	#header_box{ display: flex; flex-wrap: inherit; align-items: center; justify-content: space-between; color: #fff; width: 60%; margin: auto;}
-	#logo{display: flex; flex-wrap: inherit; align-items: baseline; font-size: 3.5rem;}
-    #logo span{font-size: 1rem;}
-	#menu{float: right; display: flex !important; flex-basis: auto;}
-	#menu li{float: left; margin-right: 1rem !important; margin-left: 1rem !important; cursor: pointer; font-size: 1.5rem;}
-      
-    #work{width: 100%; padding-top: 1rem; text-align: center; overflow: hidden; background-attachment: fixed; padding: 7rem 0;}
-	#work>p{margin: 3rem 0 10rem 0; font-size: 1rem;}
-	#work_list{width: 55%; margin: auto; display: flex; flex-wrap: wrap;}
-	#work_list li{width: 30.6%; height: 30.6%; margin-right: 4%; margin-bottom: 4%; background-color: #000; position: relative;  opacity: 0; cursor: pointer;} 
-    #work_list li:nth-child(3n){margin-right: 0;} 
-	#work_list li img{width: 100%; height: 100%; vertical-align: top;}
-
-	#work_list li button{position: absolute; left: 0;right: 0; top: 0;bottom: 0; margin: auto; width: 80px; height: 30px; line-height: 30px; border: 1px solid #fff; color: #fff; background-color:transparent; display: none;}
-	#work_list li:hover img{opacity: 0.5; }
-	#work_list li:hover button{display: inline; cursor: pointer;}
-
-    #about{width: 100%; background-color: #83B892; color: #2d2d2d; text-align: center; overflow: hidden; padding: 7rem 0;}
-    #about_box{width: 80%; height: 100%; margin: 0 auto; position: relative;}
-	#about_box h2{color: #fff;}
-	
-    .about_cont {width: 100%; display:flex; flex-wrap: wrap; margin-top: 5rem; text-align: left;}
-    .about_cont .about_left {width: 35%; margin-right: 10%;}
-    .about_cont .about_left .me_img {width: 250px; height:250px; border-radius: 50%; margin-bottom: 1.5rem;}
-    .about_cont .about_left li:nth-child(2) {font-size: 3rem; font-weight: 900; box-shadow: inset 0 -18px 0 #f4c977; line-height: 41px; color: #fff;}
-    .about_cont .about_left div {width: 1px; height: 200px; background-color: #2d2d2d; margin: 1.5rem 0;}
-    .about_cont .about_left p {font-size: 1rem; letter-spacing: -1px;}
-      
-    .about_cont .about_right {width: 55%; padding-top: 18rem; display: flex; flex-wrap: wrap;}
-    .about_cont .about_right .w50 {width: 50%; font-size: 1rem;}
-    .about_right .w50 ul li{overflow: hidden; width: 100%; margin-bottom: 2%; }
-	.about_right .w50 ul .tet4{float: left;}
-	.about_right .w50 ul .about_boxbg{width: 80%; height: 8px; background-color: #f4c977; clear: both;	}
-	.about_right .w50 ul .about_boxbg2{width: 0%; height: 8px; background-color: #ffaa00;}
-      
-	#footer_wrap{width: 100%; background: #2C434F; text-align: center; background-attachment: fixed; overflow: hidden; }
-	#footer_wrap>h2{font-size: 20px; color: #fff; padding-top: 100px;}
-	#conteact{padding-top: 50px;}
-	#conteact li{display: inline-block; border-right: 1px solid #ccc; padding: 0 20px; text-align: left; color: #fff;}
-	#conteact li h5{font-size: 13px; padding: 10px 0;}
-	#conteact li p{font-size: 13px;}
-	#conteact_line{color: #fff; padding-top: 30px; font-size: 25px;}
-      
-	footer{border-top: 1px solid #fff; height: 60px; line-height: 60px; margin-top: 100px; color: #fff;	}
-	#footer_box{width: 100%; height: 60px; margin: auto;}
-	#footer_box h3{float: left; font-size:22px; line-height: 60px; margin-left: 50px;}
-	#footer_box p {float: right; text-align: center; font-size: 12px; text-align: right; line-height: 18px; margin-top: 10px; margin-right: 100px;}
-      
-    .main_line {position: relative; margin: 1.25rem 0 1.5rem; width: 100%; display: flex; justify-content: center; align-items: center;}
-    .main_line .line {width: 100%; max-width: 7rem; height: 0.25rem; background-color: #000; border-radius: 1rem; margin: 0 2rem;}
-    .main_icon {padding: 15px 0;}
-    .main_icon img {height: 42px; max-width: 42px; position: absolute; bottom: -5px; left: 0; right: 0; margin: auto;}
-      
-    #main .main_line .line,
-    #about_box .main_line .line {width: 100%; max-width: 7rem; height: 0.25rem; background-color: #fff; border-radius: 1rem; margin: 0 2rem;}
-    
   </style>
-  <style>
-	/*미디어쿼리*/
-	@media all and (min-width:0px) { /*0~767 = 모바일*/
-    
-	}
-	@media all and (min-width:768px) { /*768~1023 = 태블릿pc*/
-	
-	}
-	@media all and (min-width:1024px) { /*1024~ = pc*/
-	 	
-	}
-	@media all and (min-width:1200px) {
-	
-	}
- </style></head> 
+</head> 
   <body>
   <div class="container">
     <div id="main">
@@ -181,8 +96,8 @@
         </div>
 		<p>First work is my representative portfolio.<br>And besides this work, I’m looking forward for new projects and opportunities.</p>
 		<ul id="work_list">
-			<li><img src="1.jpg" alt=""><button><a href="http://dongle.dothome.co.kr/new/new.html" target="_blank">View More</a></button></li>
-			<li ><img src="2.jpg" alt=""><button><a href="http://dongle.dothome.co.kr/work/1.kakao_media/kakao.html" target="_blank">View More</a></button></li>	
+			<li><img src="1.jpg" alt=""><button><a href="" target="_blank">View More</a></button></li>
+			<li ><img src="2.jpg" alt=""><button onclick="window.open('1.kakao_media/kakao.html','window_name','width=480,height=500,location=no,status=no,scrollbars=yes');"><a href="#">View More</a></button></li>	
 			<li><img src="3.jpg" alt=""><button><a href="http://dongle.dothome.co.kr/work/2.ralphlauren/RalphLauren.html" target="_blank">View More</a></button></li>			
 			<li><img src="4.jpg" alt=""><button><a href="http://dongle.dothome.co.kr/work/4.ford/ford.html" target="_blank">View More</a></button></li>
 			<li><img src="5.jpg" alt=""><button><a href="http://dongle.dothome.co.kr/work/5.bkk/bkk.html" target="_blank">View More</a></button></li>
@@ -197,40 +112,62 @@
     <div id="about">            
 		<div id="about_box">
             <h2>ABOUT ME</h2>
-            <p>This is my resume</p>
             <div class="main_line">
                 <div class="line"></div>
-                <div class="main_icon"><img src="icon_w.png" alt="메인 아이콘"></div>
-                <div class="line"></div>        
+                <div class="main_icon"><img src="icon_w.png" alt="메인 아이콘"></div>   
+                <div class="line"></div>
             </div>
+            <p style="color: #fff;">This is my resume</p>
             <div class="about_cont">
-                <ul class="about_left">
-                    <li><img src="kyj_02.png" alt="프로필사진" class="me_img"></li>
-                    <li>KIM YEON JIN</li>
-                    <div></div>
+                <div class="about_left">
+                    <div class="about_img">
+                        <img src="yeon03.jpg" alt="프로필사진" class="me_img">
+                        <h1>YEON JIN KIM</h1> 
+                    </div>                                       
                     <p><b>娟 (예쁠 연)</b> 1.예쁘다 2.아름답다<br><b>振 (떨칠 진)</b> 1.떨치다 2.떨쳐 일어나다</p>
-                    <br>
-                    <p>저는 신중하고 차분한 성격으로 저만의 시간을 가지고 집중하여 무언가를 만들어내고 완성하는 것을 좋아했습니다. 이로 인해 웹 퍼블리셔라는 직업에 관심을 가졌고 새로운 분야에 겁 없이 준비하고 배워왔습니다.</p>
-                </ul>
+                    <div class="left_in">
+                        <h2><img src="icon.png">ABOUT ME</h2><br>
+                        <p>저는 신중하고 차분한 성격으로 저만의 시간을 가지고 집중하여 무언가를 만들어내고 완성하는 것을 좋아했습니다. 이로 인해 웹 퍼블리셔라는 직업에 관심을 가졌고 새로운 분야에 겁 없이 준비하고 배워왔습니다.</p>
+                    </div>
+                    <div class="left_in">
+                        <h2><img src="icon.png">CONTACT</h2><br>
+                        <p><b>주소</b> 남양주시 별내면 청학리</p>   
+                        <p><b>생년월일</b> 1994.04.09</p>
+                        <p><b>이메일</b> 1994being@naver.com</p>
+                        <p><b>핸드폰</b> 010.8820.9722</p>
+                                             
+                    </div>
+                </div>
+                
                 <ul class="about_right">
-                    <li class="w50">
-                        <b>인적사항</b>
+                    <li class="w50"> 
+                        <spna><img src="icon02.png">EDUCATION</spna>
                         <ul class="m25">
-                            <li><b>생년월일</b> 1994.04.09</li>
-                            <li><b>이메일</b> 1994being@naver.com</li>
-                            <li><b>핸드폰</b> 01088209722</li>
+                            <li><b>2019.10~2020.10</b><br>퇴계원 고등학교</li>
+                            <li><b>2021.05~2021.08</b><br>경복대학교 항공서비스과</li>
+                            <li><b>2019.01~2019.06</b><br>UIUX엔지니어링 양성과정 취업성공패키지<br>
+                            <font size="2">* 웹 기획과 스토리보드 작성, 2D 그래픽 디자인, UX디자인,<br>웹표준 HTML5를 이용한 웹페이지 제작,웹페이지 만들고<br> CSS적용, 웹표준실무를 위한 멀티미디어 제작</font>
+                            </li>
                         </ul>
                     </li>
                     <li class="w50"> 
-                        <b>경력사항</b>
+                        <spna><img src="icon02.png">EXPERIENCE</spna>
                         <ul class="m25">
-                            <li><b>2019.10~2020.10</b><br>이노브 퍼블리셔</li>
-                            <li><b>2021.05~2021.08</b><br>㈜에이치알엔 11번가 아마존 HTML</li>
-                            <li><b>2021.09~2022.01</b><br>잡코리아 마케팅팀 퍼블리셔</li>
+                            <li><b>2019.10~2020.10</b><br>이노브<br>온라인사업부 퍼블리셔</li>
+                            <li><b>2021.05~2021.08</b><br>㈜에이치알엔<br>11번가 아마존 HTML</li>
+                            <li><b>2021.09~2022.01</b><br>잡코리아<br>마케팅팀 퍼블리셔</li>
+                        </ul>
+                    </li>
+                    <li class="w50 m25">
+                        <spna><img src="icon02.png">CERTIFICATE</spna>
+                        <ul class="m25">
+                            <li><b>2016.12&nbsp;&nbsp;</b>(국가공인) GTQ 1급</li>
+                            <li><b>2018.03&nbsp;&nbsp;</b>2종보통운전면허</li>
+                            <li><b>2019.06&nbsp;&nbsp;</b>웹디자인기능사</li>
                         </ul>
                     </li>
                     <li class="w50 eq m25"> 
-                        <b >보유스킬</b>
+                        <spna><img src="icon02.png">SKILLS</spna>
                         <ul class="m25 eq0">
                             <li class="tet4"><b>90</b>&nbsp;&nbsp;&nbsp;&nbsp;Photoshop</li>
                             <li class="about_boxbg">
@@ -255,15 +192,7 @@
 						      <ul class="about_boxbg2"></ul>
 					       </li>
                         </ul>
-                    </li>
-                    <li class="w50 m25">
-                        <b>자격증</b>
-                        <ul class="m25">
-                            <li><b>2016.12&nbsp;&nbsp;</b>(국가공인) GTQ 1급</li>
-                            <li><b>2018.03&nbsp;&nbsp;</b>2종보통운전면허</li>
-                            <li><b>2019.06&nbsp;&nbsp;</b>웹디자인기능사</li>
-                        </ul>
-                    </li>
+                    </li>                   
                 </ul>
             </div>
         </div>
