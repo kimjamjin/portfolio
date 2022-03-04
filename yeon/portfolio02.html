@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <title>YeonJin</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <script>
+    $(window).scroll(function(){
+        $(window).scroll(function(){
+				sc=$(window).scrollTop();//현재 스크롤탑의 위치정보를 sc라는 변수에 선언
+				if(sc>=560){
+					$('#skills-box .eq .eq0 .about_boxbg2').stop().animate({'width':'90%'})
+					$('#skills-box .eq .eq1 .about_boxbg2').stop().delay(100).animate({'width':'85%'})
+					$('#skills-box .eq .eq2 .about_boxbg2').stop().delay(200).animate({'width':'95%'})
+					$('#skills-box .eq .eq3 .about_boxbg2').stop().delay(300).animate({'width':'75%'})
+				}
+			})
+	})//마지막 괄호 항상 유지 ! 전체문서 괄호는 지우지 않음
+    </script>
+    <style>
+        body{color: #6c757d; margin: 0; padding-left: 17rem; text-transform: uppercase;}
+        img {vertical-align: middle;}
+        ul, a {text-decoration: none; text-align: -webkit-match-parent; list-style: none; padding: 0;}
+        li {color: #6c757d; font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";}
+        h2 {font-size: 3.5rem; line-height: 1.2; color: #343a40; margin-bottom: 1.5rem; margin-top: 0;}
+        h3, b{font-size: 2rem; margin-bottom: 0.2rem; color: #343a40; margin-top: 0;}
+        h4 {font-size: 1.5rem; margin-bottom: 0.2rem; color: #343a40; margin-top: 0; color: #343a40;}
+        h4::before {content: ""; position: absolute; top: 0; left: 1px; width: 2rem; height: 2rem; background: url(images/icon03.png) 0 0 no-repeat; background-size: 2rem;}
+        .mb-3 {margin-bottom: 3rem;}
+        .pl-2 {padding-left: 2rem;}
+        .fw-500 {font-weight: 500;}
+        .fw-900 {font-weight: 900;}
+        .display-flex {display: flex;}
+        .letter-05 {letter-spacing: -0.05rem; font-weight: 600; font-size: 1.2rem !important; font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";}
+            
+        #sideNav {background-color: #bd5d38; padding-left: 0; padding-right: 0; text-align: center; position: fixed; top: 0; left: 0; display: flex; flex-direction: column; width: 17rem; height: 100vh;}
+        .navbar {position: relative; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; padding-top: 0.5rem; padding-bottom: 0.5rem;}
+        #sideNav .main {display: flex; margin: auto auto 0; padding: 0.5rem;}
+        #sideNav .main .main-img {max-width: 9rem; max-height: 9rem; border-radius: 50%; border: 0.5rem solid rgba(255, 255, 255, 0.2);}        
+        #sideNavbar {display: flex; align-items: flex-start; flex-grow: 0; width: 100%; margin-bottom: auto;}
+        #sideNavbar .navbar-nav {width: 100%; display: flex; flex-direction: column; padding-left: 0; margin-bottom: 0; list-style: none;}
+        #sideNavbar .navbar-nav .nav-item {font-weight: 800; color: #fff;} 
+        #sideNavbar .navbar-nav .nav-item .nav-link {display: block; padding: 0.5rem 1rem; color: #bd5d38; transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out; color: rgba(255, 255, 255, 0.55);}
+        #sideNav .navbar .navbar-nav .nav-link:hover {color: #fff;}    
+        #sideNav .navbar .navbar-nav .nav-link.active {color: #fff;}
+        
+        #container {padding: 0 !important; }
+        section.resume {display: flex; align-items: center; padding: 5rem; min-height: 100vh; max-width: 75rem;}      
+        .resume-section {width: 100%;}
+        .resume-section h1{color: #343a40; font-size: 4rem; margin: 0; letter-spacing: -0.3rem; font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";}
+        .text-span {color: #bd5d38;}
+        .subheading {letter-spacing: -0.03rem; font-size: 1rem; font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";}  
+        .subheading a {color: #bd5d38;}
+        .flex-grow {flex-grow: 1 !important; position: relative;}
+        .flex-shrink {flex-shrink: 0 !important;}
+        
+        #skills-box {max-width: 30rem;}
+        .about_boxbg {width: 100%; height: 8px; background-color: #bd5d38; clear: both; margin: 0.8rem 0;}
+        .about_boxbg2 {width: 0%; height: 100%; background-color: #F5DA70;}
+        
+        #works {padding-top: 15rem; padding-bottom: 15rem;}
+        #work_list {width: 100%; max-width: 75rem; display: flex; flex-wrap: wrap; text-align: center;}
+        #work_list li {width: 23.66rem; height: 20rem; margin-right: 2rem; margin-bottom: 2rem; cursor: pointer; position: relative; box-shadow: 5px 5px 10px 0px;}
+        #work_list li:nth-child(3n) {margin-right: 0;}    
+        #work_list li div{position: absolute; left: 0; top: 0; width: 100%; height: 100%; background-color: #000; opacity: 0;}
+        #work_list li:first-child {background: url("images/1_1.jpg") center no-repeat;background-size: 100% 100%; }
+        #work_list li:nth-child(2) {background: url("images/2.jpg") center no-repeat; background-size: 100% 100%;}
+        #work_list li:nth-child(3) {background: url("images/3.jpg") center no-repeat; background-size: 100% 100%;}
+        #work_list li:nth-child(4) {background: url("images/4.jpg") center no-repeat; background-size: 100% 100%;}
+        #work_list li:nth-child(5) {background: url("images/5.jpg") center no-repeat; background-size: 100% 100%;}
+        #work_list li:nth-child(6) {background: url("images/6.jpg") center no-repeat; background-size: 100% 100%;}
+        #work_list li:nth-child(7) {background: url("images/7.jpg") center no-repeat; background-size: 100% 100%;}
+        #work_list li:nth-child(8) {background: url("images/8.jpg") center no-repeat; background-size: 100% 100%;}
+        #work_list li:nth-child(9) {background: url("images/9.jpg") center no-repeat; background-size: 100% 100%;}
+        #work_list li:last-child {background: url("images/10.png") center no-repeat; background-size: 100% 100%;}
+        
+        #work_list li button {position: absolute; left: 0; right: 0; top: 0; bottom: 0;  margin: auto; width: 5.5rem; height: 2rem; line-height: 2rem; border: 2px solid #fff; background-color: transparent; display: none;}
+        #work_list li button a {color: #fff;}
+        #work_list li:hover button {display: block; }
+        #work_list li:hover div {opacity: 0.7;}
+    
+    </style>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav id="sideNav">
+            <a class="main" href="#page-top">
+                <span><img class="main-img" src="images/profile.jpg" alt="..." /></span>
+            </a>
+            <div class="navbar" id="sideNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#works">works</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#certificate">Certificate</a></li>
+                </ul>
+            </div>            
+        </nav> 
+        <!-- Page Content-->
+        <div id="container">
+            <!-- About-->
+            <section class="resume" id="about">
+                <div class="resume-section">
+                    <h1 class="">
+                        Yeon Jin
+                        <span class="text-span">Kim</span>
+                    </h1>
+                    <div class="subheading">
+                        creating modern and responsive design for Web and Mobile · 010.8820.9722 ·
+                        <a href="mailto:1994being@naver.com">1994being@naver.com</a>
+                    </div>
+                </div>
+            </section>
+            <hr class=""/>
+            <!-- Experience-->
+            <section class="resume" id="experience">
+                <div class="resume-section">
+                    <h2 class="mb-3">Experience</h2>
+                    <div class="display-flex mb-3">
+                        <div class="flex-grow ">
+                            <h3 class="">이노브</h3>
+                            <div class="letter-05 subheading">Web PUBLISHER</div>
+                            <p>롯데백화점 PC, APP, WEP에 대하여 HTML, CSS, jQuery를 이용한 상세 페이지, 이벤트 페이지,<br>매거진 등 웹페이지 제작, 유지보수를 해왔습니다.</p>
+                        </div>
+                        <div class="flex-shrink"><span class="text-span">2019. 10 - 2020. 10</span></div>
+                    </div>
+                    <div class="display-flex mb-3">
+                        <div class="flex-grow">
+                            <h3 class="">㈜에이치알엔</h3>
+                            <div class="letter-05 subheading">Web PUBLISHER</div>
+                            <p>11번가 PDP · 상품관리기획팀에서 11번가에서 새로 오픈한 아마존 페이지에서<br>해외 상품들의 사이즈표 제작, 업로드에 참여했습니다.</p>
+                        </div>
+                        <div class="flex-shrink"><span class="text-span">2021. 05 - 2021. 08</span></div>
+                    </div>
+                    <div class="display-flex mb-3">
+                        <div class="flex-grow">
+                            <h3 class="">잡코리아</h3>
+                            <div class="letter-05 subheading">Web PUBLISHER</div>
+                            <p>잡코리아 마케팅팀에서 슈퍼기업관, 취업뉴스, 직무인터뷰를 담당하여<br>페이지 제작, 업로드, 유지보수를 해왔습니다.</p>
+                        </div>
+                        <div class="flex-shrink"><span class="text-span">2021. 09 - 2022. 01</span></div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Education-->
+            <section class="resume" id="education">
+                <div class="resume-section">
+                    <h2 class="mb-3">Education</h2>
+                   <div class="display-flex mb-3">
+                        <div class="flex-grow">
+                            <h3>퇴계원 고등학교</h3>
+                            <div class="letter-05 subheading">문과계열</div>
+                        </div>
+                        <div class="flex-shrink"><span class="text-span">2010. 03 - 2013. 02</span></div>
+                    </div>
+                    <div class="display-flex mb-3">
+                        <div class="flex-grow">
+                            <h3>경복대학교</h3>
+                            <div class="letter-05 subheading">항공서비스과</div>
+                        </div>
+                        <div class="flex-shrink"><span class="text-span">2013. 03 - 2015. 02</span></div>
+                    </div>
+                    <div class="display-flex mb-3">
+                        <div class="flex-grow">
+                            <h3>UI·UX 엔지니어링 양성과정 취업성공패키지</h3>
+                            <div>* 웹 기획과 스토리보드 작성, 2D 그래픽 디자인, UX디자인,<br>웹표준 HTML5를 이용한 웹페이지 제작,웹페이지 만들고<br>CSS적용, 웹표준실무를 위한 멀티미디어 제작</div>
+                        </div>
+                        <div class="flex-shrink"><span class="text-span">2019. 01 - 2019. 06</span></div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Skills-->
+            <section class="resume" id="skills">
+                <div class="resume-section">
+                    <h2 class="mb-3">SKILLS</h2>
+                    <ul id="skills-box">
+                        <li class="eq"> 
+                            <ul class="eq0">
+                                <li class="fw-500"><b>90</b>&nbsp;&nbsp;&nbsp;&nbsp;Photoshop</li>
+                                <li class="about_boxbg">
+                                  <ul class="about_boxbg2"></ul>
+                                </li>
+                            </ul>
+                            <ul class="eq1">
+                                <li class="fw-500"><b>85</b>&nbsp;&nbsp;&nbsp;&nbsp;Illustrator</li>
+                                <li class="about_boxbg">
+                                  <ul class="about_boxbg2"></ul>
+                               </li>
+                            </ul>
+                            <ul class="eq2">
+                                <li class="fw-500"><b>95</b>&nbsp;&nbsp;&nbsp;&nbsp;html5 & css</li>
+                                <li class="about_boxbg">
+                                  <ul class="about_boxbg2"></ul>
+                                </li>
+                            </ul>
+                            <ul class="eq3">
+                                <li class="fw-500"><b>75</b>&nbsp;&nbsp;&nbsp;&nbsp;Java script</li>
+                                <li class="about_boxbg">
+                                  <ul class="about_boxbg2"></ul>
+                                </li>
+                            </ul>
+                        </li> 
+                    </ul>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Interests-->
+            <section class="resume" id="works">
+                <div class="resume-section">
+                    <h2 class="mb-3">works</h2>
+                    <ul id="work_list">
+                        <li><div></div><button><a href="0.haagendaz/haagen2.html" target="_blank">View More</a></button></li>
+                        <li><div></div><button onclick="window.open('1.kakao_media/kakao.html','window_name','width=480,height=500,location=no,status=no,scrollbars=yes');"><a href="#">View More</a></button></li>	
+                        <li><div></div><button><a href="2.ralphlauren/RalphLauren.html" target="_blank">View More</a></button></li>			
+                        <li><div></div><button><a href="4.ford/ford.html" target="_blank">View More</a></button></li>
+                        <li><div></div><button><a href="5.bkk/bkk.html" target="_blank">View More</a></button></li>
+                        <li><div></div><button><a href="6.qnigirls/qnigirls.html" target="_blank">View More</a></button></li>
+                        <li><div></div><button><a href="7.lotteworld/index.html" target="_blank">View More</a></button></li>
+                        <li><div></div><button><a href="8.SeoulArtsCenter/SeoulArtsCenter.html" target="_blank">View More</a></button></li>
+                        <li><div></div><button><a href="9.coffeebeankorea/coffeebeenkorea.html" target="_blank">View More</a></button></li>
+                        <li><div></div><button><a href="http://www.lawfirmseoin.co.kr/" target="_blank">View More</a></button></li>
+		             </ul>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- CERTIFICATE-->
+            <section class="resume" id="certificate">
+                <div class="resume-section">
+                    <h2 class="mb-3">CERTIFICATE</h2>
+                    <div class="display-flex mb-3">
+                        <div class="flex-grow pl-2">
+                            <h4>(국가공인) GTQ 1급</h4>
+                        <span class="text-span">2016.12</span></div>
+                    </div>
+                    <div class="display-flex mb-3">
+                        <div class="flex-grow pl-2">
+                            <h4>2종보통운전면허</h4>
+                        <span class="text-span">2018.03</span></div>
+                    </div>
+                    <div class="display-flex mb-3">
+                        <div class="flex-grow pl-2">
+                            <h4>웹디자인기능사</h4>
+                        <span class="text-span">2019.06</span></div>
+                    </div>
+                </div>
+            </section>           
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

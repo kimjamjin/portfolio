@@ -4,14 +4,6 @@
   <meta charset="UTF-8">
   <title>예술의전당</title>
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
-  <!-- 제이쿼리 설치 -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <!-- 스크립트 입력코드 -->
-  <script>
-	$(document).ready(function(){
-		
-	}) // 최종괄호. 이 최종괄호는 항상유지. 지우지않는다.
-  </script>
   <style>
 		* { margin:0; padding:0; list-style:none; font-family: 'Noto Sans KR', sans-serif;}
 		a{color:inherit; text-decoration: none;}
@@ -44,14 +36,15 @@
 
 		#main{width: 100%; height: 570px; position: relative; overflow: hidden;}
 
-		#box{position: absolute; width: 100%; height: 90px; background-color:rgba(0,0,0,0.7); bottom: 0;}
-		#left_w{float: left; margin:25px 10px;}
-		#right_w{float: right; margin: 25px 10px;}
-		#box_center{height: 90px;width: 700px; margin: auto;}
-		#box_center li{color: #fff; font-size: 18px; line-height: 30px; padding-top: 10px; text-align: center;}
-		#box_center li:nth-child(1){font-size: 25px;}
-		
-		#section1{width: 100%;  }
+		.swiper{width: 100%; height: 540px; position: relative;}
+        .swiper-wrapper{width: 100%; position: absolute;}
+        .swiper-wrapper .swiper-slide{align-items: center;}
+        .swiper-slide img {display: block; width: 100%; height: 100%; object-fit: cover;}      
+        .swiper-button-next:after, .swiper-button-prev:after{ display: none;}
+        .swiper-button-next img {margin-right: 50px;}
+		.swiper-button-prev img {margin-left: 50px;}
+      
+		#section1{width: 100%; border-top: 1px solid #eee;}
 		#section1>h4{width: 1150px; height: 80px; margin: auto; padding: 20px;font-size: 30px; line-height: 80px;}
 		#section1_box{width: 1250px; height:650px; margin: auto; position: relative; }		
 		#left{float: left; margin-top: 300px;}
@@ -88,12 +81,9 @@
 
 		#section1_bt{text-align: center; margin-bottom: 20px; }
 
-		#section2{width: 100%; height:470px; background-color: #cacaca; position: relative; 	}
-		#section2_icon{width: 1740px; height: 30px; position: absolute; bottom: 30px; left: 80px;}
-		#section2_icon img:nth-child(1){float: left;}
-		#section2_icon img:nth-child(2){float: right;}
-		#section2_slide_wrap { width: 1152px; height:400px;margin:auto; position: relative; }
-		#section2_slide_wrap ul{width: 3496px; height: 386px; position: absolute; left: -1172px; margin-top: 20px;	}
+		#section2{width: 100%; height:420px; background-color: #cacaca; position: relative;}
+		#section2_slide_wrap {width: 1152px; height:386px; margin:auto; position: relative;}
+		#section2_slide_wrap ul{width: 3496px; height: 386px; position: absolute; left: -1172px; padding: 17px 0;}
 		#section2_slide_wrap ul li{width: 273px; height: 386px; float: left; margin-right: 20px; position: relative;} 
 		#section2_slide_wrap ul li:last-child {margin-right:0p;}
 		.op05{opacity: 0.5;}	
@@ -105,7 +95,7 @@
 		#section2_slide li:hover div h6{display: block;}
 	
 		#section3{width: 100%; height: 470px; background-color: #ffffff; overflow: hidden;}
-		#section3_box{width:445px; height: 50px; border: 1px solid #b0b0b0;	 margin: auto; margin-top: 30px;}
+		#section3_box{width:445px; height: 50px; border: 1px solid #b0b0b0;	 margin: auto; margin-top: 50px;}
 		#section3_box li{display: inline-block; font-size: 18px; line-height: 20px; padding: 15px 30px; color: #b0b0b0;}
 		#section3_box li:nth-child(1){color: #fff; background-color: #707070;}
 		#section3_box li:nth-child(1),#section3_box li:nth-child(2){ border-right: 1px solid #b0b0b0;}
@@ -162,9 +152,7 @@
 		#box3_left{float: left; height: 200px; width: 800px; margin-top: 30px;}
 		#box3_left img{margin-bottom: 10px;}
 		#box3_left p{font-size: 13px; line-height: 20px; color: #717171;}
-
-		#box3_right{float: right; width: 180px; height: 70px; margin-top: 30px; border-bottom: 1px solid #d8d8d8;}
-		
+		#box3_right{float: right; width: 180px; height: 70px; margin-top: 30px; border-bottom: 1px solid #d8d8d8;}		
   </style></head>
  <body>
  <header>
@@ -185,7 +173,6 @@
 					<li><a href="">사이트맵</a></li>
 					<li><a href="">ENG</a></li>
 				</ul>
-			
 			</div>
 		</div>
  		<div id="header2">
@@ -203,34 +190,27 @@
 					<li>대관안내</li>
 				</ul>
 		 </div>
-
 		 <div id="header2_menu3">
 			 <ul>
-					<li><img src="icons/search.png" alt=""></li>
-					<li><img src="icons/t_calendar.png" alt=""></li>
+                 <li><img src="icons/search.png" alt=""></li>
+                 <li><img src="icons/t_calendar.png" alt=""></li>
 			 </ul>		
 		</div>
 	</div> 
  </header>
-<!--  -->
- 		<div id="main">		
-			<img src="images/6cb2fb19458011e9a6df0010e.jpg" alt="">
-			<div id="box">
-				<img src="icons/left_w.png" alt="" id="left_w">
-				<img src="icons/right_w.png" alt="" id="right_w">
-				<ul id="box_center">
-					<li>LG와 함께하는 제15회 서울국제음악콩쿠르</li>
-					<li>2019.03.24(일) - 30(토) 리사이틀홀 & 콘서트홀</li>
-				</ul>				
-			</div>
-		</div>
-<!-- 		 -->
+     <div class="swiper mySwiper">
+         <div class="swiper-wrapper">
+             <div class="swiper-slide"><img src="images/banner01.jpg" alt="배너01"></div>
+             <div class="swiper-slide"><img src="images/banner02.png" alt="배너02"></div>
+             <div class="swiper-slide"><img src="images/banner03.jpg" alt="배너03"></div>
+         </div>
+         <div class="swiper-button-next"><img src="icons/btn_next.png" alt="배너 왼쪽 버튼"></div>
+         <div class="swiper-button-prev"><img src="icons/btn_prev.png" alt="배너 오른쪽 버튼"></div>
+         <div class="swiper-pagination"></div>
+     </div>
 		<div id="section1">
 			<h4>What's On</h4>
-			<div id="section1_box">
-				<img src="icons/left_2.png" alt="" id="left">
-				<img src="icons/right_2.png" alt="" id="right">
-
+			<div id="section1_box mySwiper">
 				<div id="section1_wrap">
 					<ul id="section1_box_left">
 					 <li>
@@ -279,92 +259,79 @@
 					</ul>
 				</div>				
 			</div>
-			    <div id="section1_bt">
-					<img src="icons/paging3_on.png" alt="">
-					<img src="icons/paging3_off.png" alt="">
-				</div>			
-		   </div>
+        </div>
 <!--  -->		
-	<div id="section2">
-	<div id="section2_icon">
-		<img src="icons/left_5.png" alt="">
-		<img src="icons/right_5.png" alt="">
-	
-	</div>
-	<div id="section2_slide_wrap">
+<div id="section2">
+    <div id="section2_slide_wrap">
 		<ul id="section2_slide">
-				<li class="op05"><img src="images/c3d03ff03feb11e9a6df0010e.png" alt="">
-				<div>
-				 <h4>2019 SAC Festa ‘예술의 뜰’<br>아트마켓 및 아트체험 운영자 모집</h4>
-				 <h6>신청기간: 03.12(화) - 04.06(토) 18시까지<br>운영기간: 5~9월 매월 2,4주 토요일 13~18시</h6>
-				</div>
-				</li>
-				<li class="op05"><img src="images/bc4911b3bd6211e8bc9e0010e.png" alt="">
-				<div>
-				<h4>CJ 토월극장 매표소 이전 안내<br>(오페라하우스 3층 → 2층)</h4>
-				<h6>- 2층 매표소 오픈일 : 10/2(화)<br>(※ 물품보관소는 3층)</h6>
-				</div>
-				</li>
-				<li class="op05"><img src="images/e98e44813feb11e9a6df0010e.png" alt="">
-				<div>
-				<h4>2019 SAC Festa ‘예술의 뜰’<br>아트마켓 및 아트체험 운영자 모집</h4>
-				<h6>신청기간: 03.12(화) - 04.06(토) 18시까지<br>운영기간: 5~9월 매월 2,4주 토요일 13~18시</h6>
-				</div>
-				</li>
-				<li class="op05">
-					<img src="images/9eb80122bd5c11e8bc9e0010e.png" alt="">
-					<div>
-						 <h4>인터넷 주차요금 사전결제 서비스<br>서비스 개시 (9/22~)</h4>
-						 <h6>9월 22일(토)부터 새로운 주차서비스가<br>시작됩니다. (※ 공연관람객 대상)</h6>
-					</div>
-				</li>
-				<li >
-					<img src="images/bc4911b3bd6211e8bc9e0010e.png" alt="">
-					<div>
-							<h4>CJ 토월극장 매표소 이전 안내<br>(오페라하우스 3층 → 2층)</h4>
-							<h6>- 2층 매표소 오픈일 : 10/2(화)<br>(※ 물품보관소는 3층)</h6>
-					</div>
-				</li>
-				<li ><img src="images/c3d03ff03feb11e9a6df0010e.png" alt="">
-					<div>
-					<h4>2019 SAC Festa ‘예술의 뜰’<br>아트마켓 및 아트체험 운영자 모집</h4>
-					<h6>신청기간: 03.12(화) - 04.06(토) 18시까지<br>운영기간: 5~9월 매월 2,4주 토요일 13~18시</h6>
-					</div>
-				</li>
-				<li ><img src="images/e67d7cb8457e11e9a6df0010e.jpg" alt="">
-					<div>
-					<h4>박종화 피아노 리사이틀<br>Jonghwa Park Piano Recital</h4>
-					<h6>IBK챔버홀<Br>2019.05.11(토) 8PM</h6>
-				</div>
-				</li>
-				<li ><img src="images/f9a5d5e23feb11e9a6df0010e.png" alt="">
-						<div> 
-						<h4>2019 SAC Festa ‘예술의 뜰’<br>푸드트럭 운영 업체 모집</h4>
-						<h6>신청기간: 03.12(화) - 04.06(토) 18시까지<br>운영기간: 05.01(수) - 09.30(월) (총 153일 운영)</h6>
-
-						</div>
-				</li>
-				<li class="op05">
-				<img src="images/2562da5e4c8411e9a6df0010e.png" alt="">
-				<div>
-				 <h4>주차요금 결제방식 변경안내<br>(4월 2일부터 현금사용 제한)</h4>
-				 <h6>현금 사용 X, 카드 전용 O<br>(신용카드, 삼성PAY, 후불교통카드 가능</h6>
-				</div>
-				</li>
-				<li class="op05">
-				<img src="images/843be2d5535611e8873b0010e.jpg" alt="">
-				<div>
-				<h4>서울서예박물관 전시도록 (1988 ~)<br>온라인 판매 중!!</h4>
-				<h6>* 서예박물관에서 열렸었던 전시의 도록을 온라인을 통해 위탁판매하고 있습니다.<br>많은 관심 부탁 드립니다.</h6>
-				</div>
-				</li>
-				<li class="op05"><img src="images/7b2152f78be611e8873b0010e.png" alt="">
-				<div>
-				<h4>도서ㆍ공연비 소득공제 정책<br>시행(7/1~) 안내</h4>
-				<h6> 도서ㆍ공연비 소득공제란???<br>신용카드 등으로 도서 구입 및 공연을 관람하기 위해 사용한 금액 추가공제(최대 100만원), 공제율은 30%로 적용</h6>
-				</div>
-				</li>
-				
+            <li class="op05"><img src="images/c3d03ff03feb11e9a6df0010e.png" alt="">
+                <div>
+                    <h4>2019 SAC Festa ‘예술의 뜰’<br>아트마켓 및 아트체험 운영자 모집</h4>
+                    <h6>신청기간: 03.12(화) - 04.06(토) 18시까지<br>운영기간: 5~9월 매월 2,4주 토요일 13~18시</h6>
+                </div>
+            </li>
+            <li class="op05"><img src="images/bc4911b3bd6211e8bc9e0010e.png" alt="">
+                <div>
+                    <h4>CJ 토월극장 매표소 이전 안내<br>(오페라하우스 3층 → 2층)</h4>
+                    <h6>- 2층 매표소 오픈일 : 10/2(화)<br>(※ 물품보관소는 3층)</h6>
+                </div>
+            </li>
+            <li class="op05"><img src="images/e98e44813feb11e9a6df0010e.png" alt="">
+                <div>
+                    <h4>2019 SAC Festa ‘예술의 뜰’<br>아트마켓 및 아트체험 운영자 모집</h4>
+                    <h6>신청기간: 03.12(화) - 04.06(토) 18시까지<br>운영기간: 5~9월 매월 2,4주 토요일 13~18시</h6>
+                </div>
+            </li>
+            <li class="op05">
+                <img src="images/9eb80122bd5c11e8bc9e0010e.png" alt="">
+                <div>
+                    <h4>인터넷 주차요금 사전결제 서비스<br>서비스 개시 (9/22~)</h4>
+                    <h6>9월 22일(토)부터 새로운 주차서비스가<br>시작됩니다. (※ 공연관람객 대상)</h6>
+                </div>
+            </li>
+            <li >
+                <img src="images/bc4911b3bd6211e8bc9e0010e.png" alt="">
+                <div>
+                    <h4>CJ 토월극장 매표소 이전 안내<br>(오페라하우스 3층 → 2층)</h4>
+                    <h6>- 2층 매표소 오픈일 : 10/2(화)<br>(※ 물품보관소는 3층)</h6>
+                </div>
+            </li>
+            <li ><img src="images/c3d03ff03feb11e9a6df0010e.png" alt="">
+                <div>
+                    <h4>2019 SAC Festa ‘예술의 뜰’<br>아트마켓 및 아트체험 운영자 모집</h4>
+                    <h6>신청기간: 03.12(화) - 04.06(토) 18시까지<br>운영기간: 5~9월 매월 2,4주 토요일 13~18시</h6>
+                </div>
+            </li>
+            <li><img src="images/e67d7cb8457e11e9a6df0010e.jpg" alt="">
+                <div>
+                    <h4>박종화 피아노 리사이틀<br>Jonghwa Park Piano Recital</h4>
+                    <h6>IBK챔버홀<br>2019.05.11(토) 8PM</h6>
+                </div>
+            </li>
+            <li><img src="images/f9a5d5e23feb11e9a6df0010e.png" alt="">
+                <div> 
+                    <h4>2019 SAC Festa ‘예술의 뜰’<br>푸드트럭 운영 업체 모집</h4>
+                    <h6>신청기간: 03.12(화) - 04.06(토) 18시까지<br>운영기간: 05.01(수) - 09.30(월) (총 153일 운영)</h6> 
+                </div>
+            </li>
+            <li class="op05"><img src="images/2562da5e4c8411e9a6df0010e.png" alt="">
+                <div>
+                    <h4>주차요금 결제방식 변경안내<br>(4월 2일부터 현금사용 제한)</h4>
+                    <h6>현금 사용 X, 카드 전용 O<br>(신용카드, 삼성PAY, 후불교통카드 가능</h6>
+                </div>
+            </li>
+            <li class="op05"><img src="images/843be2d5535611e8873b0010e.jpg" alt="">
+                <div>
+                    <h4>서울서예박물관 전시도록 (1988 ~)<br>온라인 판매 중!!</h4>
+                    <h6>* 서예박물관에서 열렸었던 전시의 도록을 온라인을 통해 위탁판매하고 있습니다.<br>많은 관심 부탁 드립니다.</h6>
+                </div>
+            </li>
+            <li class="op05"><img src="images/7b2152f78be611e8873b0010e.png" alt="">
+                <div>
+                    <h4>도서ㆍ공연비 소득공제 정책<br>시행(7/1~) 안내</h4>
+                    <h6>도서ㆍ공연비 소득공제란???<br>신용카드 등으로 도서 구입 및 공연을 관람하기 위해 사용한 금액 추가공제(최대 100만원), 공제율은 30%로 적용</h6>
+                </div>
+            </li>	
 		</ul>		
 	</div>
 </div>
@@ -433,52 +400,76 @@
 		</div>
 		</div>
 <!--  -->
-		<footer>
-			<div id="box1">
-				<div id="box1_box">
-					<img src="icons/notice_icon.png" alt="" id="box1_box_left">				
-					<div id="box1_box1">
-						<div id="box1_box_right1"><img src="icons/stop.png" alt="" "></div>
-						<div id="box1_box_right2"><img src="icons/next.png" alt="" ></div>
-					</div>
-				</div>
+<footer>
+	<div id="box1">
+		<div id="box1_box">
+			<img src="icons/notice_icon.png" alt="" id="box1_box_left">				
+			<div id="box1_box1">
+				<div id="box1_box_right1"><img src="icons/stop.png" alt=""></div>
+				<div id="box1_box_right2"><img src="icons/next.png" alt="" ></div>
 			</div>
-			
-			<div id="box2">
-				<div id="box2_box">
-				<h5>Connect With Us</h5>
-				<ul id="box2_box1">
-					<li><img src="icons/sns_i.png" alt=""></li>
-					<li><img src="icons/sns_n.png" alt=""></li>
-					<li><img src="icons/sns_np.png" alt=""></li>
-					<li><img src="icons/sns_plus.png" alt=""></li>
-					<li><img src="icons/sns_podcast.png" alt=""></li>
-					<li><img src="icons/sns_t.png" alt=""></li>
-					<li><img src="icons/sns_tv.png" alt=""></li>
-					<li><img src="icons/sns_youtube.png" alt=""></li>
-				</ul>
-				<ul id="box2_box2">
-					<li>사이트맵</li>
-					<li>이용약관 · 정책</li>
-					<li>개인정보처리방침</li>
-					<li>홈페이지저작권보호정책</li>
-				</ul>
-				</div>
-			</div>
-				<div id="box3">
-					<div id="box3_left">
-					<img src="icons/sac_ci_g.png" alt="">
-					<p>(우) 06757,서울시 서초구 남부순환로 2406 예술의전당|대표자 유인택|사업자 등록번호 214-82-00264|통신판매업신고 서초 제 0706호<br>예술의전당 고객센터 : 02-580-1300 (AM 09:00 - PM 08:00) |webmaster@sac.or.kr<br>copyrightⓒ2017 Seoul Arts Center All rights Reserved.</p>
-					</div>
-				<div id="box3_right">
-					<img src="images/footer_sponsor_banner.png" alt="">
-					
-					</div>				
-				</div>
-			
-					
-		
-		</footer>
-  
- </body>
- </html>
+		</div>
+	</div>	
+	<div id="box2">
+		<div id="box2_box">
+		<h5>Connect With Us</h5>
+		<ul id="box2_box1">
+			<li><img src="icons/sns_i.png" alt=""></li>
+			<li><img src="icons/sns_n.png" alt=""></li>
+			<li><img src="icons/sns_np.png" alt=""></li>
+			<li><img src="icons/sns_plus.png" alt=""></li>
+			<li><img src="icons/sns_podcast.png" alt=""></li>
+			<li><img src="icons/sns_t.png" alt=""></li>
+			<li><img src="icons/sns_tv.png" alt=""></li>
+			<li><img src="icons/sns_youtube.png" alt=""></li>
+		</ul>
+		<ul id="box2_box2">
+			<li>사이트맵</li>
+			<li>이용약관 · 정책</li>
+			<li>개인정보처리방침</li>
+			<li>홈페이지저작권보호정책</li>
+		</ul>
+		</div>
+	</div>
+    <div id="box3">
+        <div id="box3_left">
+            <img src="icons/sac_ci_g.png" alt="">
+            <p>(우) 06757,서울시 서초구 남부순환로 2406 예술의전당|대표자 유인택|사업자 등록번호 214-82-00264|통신판매업신고 서초 제 0706호<br>예술의전당 고객센터 : 02-580-1300 (AM 09:00 - PM 08:00) |webmaster@sac.or.kr<br>copyrightⓒ2017 Seoul Arts Center All rights Reserved.</p>
+        </div>
+        <div id="box3_right">
+            <img src="images/footer_sponsor_banner.png" alt="">
+        </div>				
+    </div>
+</footer>  
+</body></html>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#popup_box2 button,#btn').click(function(){
+            $('#popup_bg').hide();
+        })  
+    })
+    
+    var swiper = new Swiper(".mySwiper", {
+        cssMode: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+        },
+        mousewheel: true,
+        keyboard: true,
+    });
+    
+    var swiper = new Swiper(".mySwiper", {
+          spaceBetween: 30,
+          pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+          },
+      });
+</script>
