@@ -4,70 +4,161 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <title>Cafemememi</title>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-    <link rel="stylesheet" type="text/css" href="css/css.css"/>  
+    <link rel="stylesheet" type="text/css" href="css/css.css"/> 
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="/share/js/jquery.flowslider.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
 <script>
-    $(document).ready(function(){
-//        $(window).scroll(function(){
-//				sc=$(window).scrollTop();//현재 스크롤탑의 위치정보를 sc라는 변수에 선언
-//				
-//				if(sc>=700){ //만약 sc(현재스크롤이) 800보다 크거나 같으면 
-//					$('header').css({'position':'fixed'})				
-//				}
-////				else{
-////					$('header').css({'position':'static'})
-////				}
-//				
-//			})
-    })   //마지막
+$(document).ready(function(){
+    $(window).scroll(function(){
+        sc=$(window).scrollTop();
+        if(sc>=650){
+            $('header').css({'position':'fixed','top':'0'})		
+        }
+        else{
+            $('header').css({'position':'static'})
+        }				
+    });
+////    $('.menu-wrap .menu span').mouseenter(function(){
+////      $(this).find('div');
+////     });
+//   $(function(){
+//      $('.menu-wrap .menu').mouseover(function(){
+//          $('.menu-wrap .menu span').children('.sub-menu').stop().slideDown();
+//      })
+//   });
+    $(function(){
+      $(".menu-wrap .menu").mouseover(function(){
+          $(".menu-wrap .menu .sub-menu").stop().slideDown();
+      })
+   });
+}); //마지막 괄호 항상 유지 ! 전체문서 괄호는 지우지 않음
 </script>
 <body>
     <div class="header-bg"></div>
-    <header>
-        <div class="gnb fix">
-            <div class="menu">
-                <ul class="depth1">
-                    <li><a href="javascript:(0);">MeMeMi</a>
-                        <div class="depth2 depth2-01">
-                            <ul class="sub-menu">
-                                <li>About</li>
-                                <li>Pleasure</li>
-                                <li>Location</li>
-                                <li>Contact Us</li>      
-                            </ul>
-                            <div class="sub-img">
-                                <div class="sub-title">About MeMeMi</div>
-                                <img src="images/19_0.png">
-                                <div>미미미 가든을 소개합니다.<br><span>Read More+</span></div>
-                            </div>
-                            <div class="sub-img img02">
-                               <div class="sub-title">in MILANO</div>
-                                <img src="images/19_1.png">
-                                <div>VIA BRERA 23<br><span>이탈리아 밀라노점</span></div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>Penthouse
-                       
-                    </li>
-                    <li>Garden
-                        
-                    </li>
-                    <li>Kitchen
-                       
-                    </li>
-                    <li>Caffè
-                        
-                    </li>
-                    <li>Collective Shop
-                        
-                    </li>
-                </ul>
-            </div>
-        </div> 
+    <header style="position: static;">
+        <ul class="menu-wrap">
+            <li class="menu">
+                <span>MeMeMi</span>
+                <div class="sub-menu">
+                    <ul class="sub-fl pr150">
+                        <li>About</li>
+                        <li>Pleasure</li>
+                        <li>Location</li>
+                        <li>Contact Us</li>      
+                    </ul>                            
+                    <div class="sub-cen pr40">
+                        <div class="sub-title">About MeMeMi</div>
+                        <img src="images/19_0.png">
+                        <div>미미미 가든을 소개합니다.<br><p>Read More+</p></div>
+                    </div>
+                    <div class="sub-cen">
+                       <div class="sub-title">in MILANO</div>
+                        <img src="images/19_1.png">
+                        <div>VIA BRERA 23<br><p>이탈리아 밀라노점</p></div>
+                    </div>
+                </div>
+            </li>
+            <li class="menu">
+                <span>Penthouse</span>
+                <div class="sub-menu">
+                    <ul class="sub-fl pr150">
+                        <li>About</li>
+                        <li>Reservation</li>      
+                    </ul>                            
+                    <div class="sub-cen">
+                        <div class="sub-title">Penthouse</div>
+                        <img src="images/penthouse.jpg">
+                    </div>
+                </div>
+            </li>
+            <li class="menu">
+                <span>Garden</span>
+                <div class="sub-menu">
+                    <ul class="sub-fl pr150">
+                        <li>About</li>     
+                    </ul>                            
+                    <div class="sub-cen">
+                        <div class="sub-title">Garden</div>
+                        <img src="images/garden.png">
+                    </div>
+                </div>
+            </li>
+            <li class="menu">
+                <span>Kitchen</span>
+                 <div class="sub-menu">
+                    <ul class="sub-fl pr150">
+                        <li>Salad</li>                      
+                        <li>Brunch Plate</li>
+                        <li>Pasta</li>
+                        <li>Rice</li>
+                        <li>Steak</li>
+                        <li>Pizza</li>
+                        <li>Side</li>
+                    </ul> 
+                    <ul class="sub-cen pr40">
+                        <li>Bread & Cookie</li>                     
+                        <li>Cake</li>
+                        <li>+ Season Menu</li>
+                        <li>Bakery</li>
+                    </ul> 
+                    <div class="sub-cen">
+                        <div class="sub-title">New Menu</div>
+                    </div>                             
+                </div> 
+            </li>
+            <li class="menu">
+                <span>Caffè</span>
+                <div  class="sub-menu">
+                    <ul class="sub-fl pr150">
+                        <li>+ Season Menu</li>   
+                        <li>Espresso</li>
+                        <li>Coffee</li>
+                        <li>Tea</li>
+                        <li>Tea Latte</li>
+                        <li>Others</li>
+                        <li>Ade</li>
+                    </ul> 
+                    <ul class="sub-cen pr40">
+                        <li>Fresh Juice</li>                     
+                        <li>Smoothie</li>
+                        <li>Granita</li>
+                        <li>Ice Cream</li>
+                        <li>Dessert</li>
+                        <li>Food</li>
+                    </ul> 
+                    <div class="sub-cen">
+                        <div class="sub-title">New Menu</div>
+                        <img src="images/caffe.png">
+                        Ring my berry (I)<p>링 마이 베리(I)</p>
+                    </div>  
+                </div>
+
+            </li>
+            <li class="menu">
+                <span>Collective Shop</span>
+                <div class="sub-menu">
+                    <ul class="sub-menu">
+                        <li>ALL</li>                      
+                        <li>Product</li>
+                        <li>Bakery</li>
+                    </ul>  
+                    <div class="sub-cen pr40">
+                        <div class="sub-title">Product</div>
+                        <img src="images/shop01.png">
+                        드래곤 후르츠 파우치 M<p>View More+</p>
+                    </div>
+                    <div class="sub-cen">
+                       <div class="sub-title">Product</div>
+                        <img src="images/shop02.jpg">
+                        드렁크 토트백<p>View More+</p>
+                    </div>
+                </div>    
+            </li>
+        </ul>
+<!--
         <div class="login">
             <ul>
                 <li><a href="">Login</a></li>
@@ -76,23 +167,21 @@
                 <li><a href="">Delivery</a></li>
             </ul>
         </div>
+-->
         <div class="gnb-bg"></div>
     </header>
     <div class="section01">
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide slide01">
-                    <img src="images/swiper01.png" alt="슬라이드01">
+                <div class="swiper-slide slide01">                    
                 </div>
                 <div class="swiper-slide slide02">
-                    <img src="images/swiper02.png" alt="슬라이드02">
                 </div>
                 <div class="swiper-slide slide03">
-                    <img src="images/swiper03.png" alt="슬라이드03">
+                </div>
+                <div class="swiper-slide slide04">
                 </div>
             </div>
-            <div class="swiper-button-next"><img src="images/roll_prev.png" alt="배너 왼쪽 버튼"></div>
-            <div class="swiper-button-prev"><img src="images/roll_next.png" alt="배너 오른쪽 버튼"></div>
         </div>
         <div class="banner">  
         </div>
@@ -313,9 +402,9 @@
                     <img src="images/neon_logo2.png">
                     <p class="p40">(주)미미미 대표이사:양지해, Add : 서울특별시 강남구 도산대로 417, 3층(청담동), Tel : 02-410-0080<br>E-mail : jhlee1@metrocity.co.kr, 사업자등록번호 : 519-87-00640, 통신판매업신고 : 2017-서울강남-03277<br>개인정보관리책임자 : 이정훈</p>  
                     <ul>
-                        <li><a href=""><img src="images/sns_f.png"></a></li>
-                        <li><a href=""><img src="images/sns_i.png"></a></li>
-                        <li><a href=""><img src="images/sns_n.png"></a></li>
+                        <li><a href="https://www.facebook.com/mememi.official/"><img src="images/ico_facebook.png"></a></li>
+                        <li><a href="https://www.instagram.com/mememi.official/"><img src="images/ico_instagram.png"></a></li>
+                        <li><a href="https://vimeo.com/user40123280"><img src="images/ico_twitter.png"></a></li>
                 </ul>
                 </div>
                 <div class="footer-menu" style="margin-left: 40px;">
@@ -338,7 +427,5 @@
             </div>
         </div>    
     </footer>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 </body></html>
-<script>
-
-</script>
