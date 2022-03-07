@@ -21,40 +21,40 @@ $(document).ready(function(){
             $('header').css({'position':'static'})
         }				
     });
-////    $('.menu-wrap .menu span').mouseenter(function(){
-////      $(this).find('div');
-////     });
-//   $(function(){
-//      $('.menu-wrap .menu').mouseover(function(){
-//          $('.menu-wrap .menu span').children('.sub-menu').stop().slideDown();
-//      })
-//   });
+
     $(function(){
-      $(".menu-wrap .menu").mouseover(function(){
-          $(".menu-wrap .menu .sub-menu").stop().slideDown();
-      })
-   });
+        $(".menu-wrap .menu").mouseenter(function(){
+            $(this).children(".sub-menu").stop().slideDown();
+        })
+        $(".menu-wrap .menu").mouseleave(function(){
+            $(this).children(".sub-menu").stop().slideUp();
+        })
+    });
+    
+    $('.logo').bind('click', function() {
+        $('html, body').animate({scrollTop: '0'}, 680);
+    });
 }); //마지막 괄호 항상 유지 ! 전체문서 괄호는 지우지 않음
 </script>
 <body>
-    <div class="header-bg"></div>
+    <div class="header-bg" id="top"></div>
     <header style="position: static;">
         <ul class="menu-wrap">
             <li class="menu">
                 <span>MeMeMi</span>
                 <div class="sub-menu">
-                    <ul class="sub-fl pr150">
+                    <ul class="sub-fl">
                         <li>About</li>
                         <li>Pleasure</li>
                         <li>Location</li>
                         <li>Contact Us</li>      
                     </ul>                            
-                    <div class="sub-cen pr40">
+                    <div class="sub-cen fl pr40">
                         <div class="sub-title">About MeMeMi</div>
                         <img src="images/19_0.png">
                         <div>미미미 가든을 소개합니다.<br><p>Read More+</p></div>
                     </div>
-                    <div class="sub-cen">
+                    <div class="sub-cen fl">
                        <div class="sub-title">in MILANO</div>
                         <img src="images/19_1.png">
                         <div>VIA BRERA 23<br><p>이탈리아 밀라노점</p></div>
@@ -68,7 +68,7 @@ $(document).ready(function(){
                         <li>About</li>
                         <li>Reservation</li>      
                     </ul>                            
-                    <div class="sub-cen">
+                    <div class="sub-cen fl">
                         <div class="sub-title">Penthouse</div>
                         <img src="images/penthouse.jpg">
                     </div>
@@ -80,7 +80,7 @@ $(document).ready(function(){
                     <ul class="sub-fl pr150">
                         <li>About</li>     
                     </ul>                            
-                    <div class="sub-cen">
+                    <div class="sub-cen fl">
                         <div class="sub-title">Garden</div>
                         <img src="images/garden.png">
                     </div>
@@ -89,7 +89,7 @@ $(document).ready(function(){
             <li class="menu">
                 <span>Kitchen</span>
                  <div class="sub-menu">
-                    <ul class="sub-fl pr150">
+                    <ul class="sub-fl">
                         <li>Salad</li>                      
                         <li>Brunch Plate</li>
                         <li>Pasta</li>
@@ -98,21 +98,18 @@ $(document).ready(function(){
                         <li>Pizza</li>
                         <li>Side</li>
                     </ul> 
-                    <ul class="sub-cen pr40">
+                    <ul class="sub-fl">
                         <li>Bread & Cookie</li>                     
                         <li>Cake</li>
                         <li>+ Season Menu</li>
                         <li>Bakery</li>
-                    </ul> 
-                    <div class="sub-cen">
-                        <div class="sub-title">New Menu</div>
-                    </div>                             
+                    </ul>                            
                 </div> 
             </li>
             <li class="menu">
                 <span>Caffè</span>
                 <div  class="sub-menu">
-                    <ul class="sub-fl pr150">
+                    <ul class="sub-fl">
                         <li>+ Season Menu</li>   
                         <li>Espresso</li>
                         <li>Coffee</li>
@@ -121,7 +118,7 @@ $(document).ready(function(){
                         <li>Others</li>
                         <li>Ade</li>
                     </ul> 
-                    <ul class="sub-cen pr40">
+                    <ul class="sub-fl">
                         <li>Fresh Juice</li>                     
                         <li>Smoothie</li>
                         <li>Granita</li>
@@ -129,36 +126,37 @@ $(document).ready(function(){
                         <li>Dessert</li>
                         <li>Food</li>
                     </ul> 
-                    <div class="sub-cen">
+                    <div class="sub-cen fl">
                         <div class="sub-title">New Menu</div>
                         <img src="images/caffe.png">
-                        Ring my berry (I)<p>링 마이 베리(I)</p>
+                        <div>Ring my berry (I)<br><p>링 마이 베리(I)</p></div>
                     </div>  
                 </div>
-
             </li>
             <li class="menu">
                 <span>Collective Shop</span>
                 <div class="sub-menu">
-                    <ul class="sub-menu">
+                    <ul class="sub-fl">
                         <li>ALL</li>                      
                         <li>Product</li>
                         <li>Bakery</li>
                     </ul>  
-                    <div class="sub-cen pr40">
+                    <div class="sub-cen fl pr40">
                         <div class="sub-title">Product</div>
                         <img src="images/shop01.png">
-                        드래곤 후르츠 파우치 M<p>View More+</p>
+                        <div>드래곤 후르츠 파우치 M<br><p>View More+</p></div>
                     </div>
-                    <div class="sub-cen">
+                    <div class="sub-cen fl">
                        <div class="sub-title">Product</div>
                         <img src="images/shop02.jpg">
-                        드렁크 토트백<p>View More+</p>
+                        <div>드렁크 토트백<br><p>View More+</p></div>
                     </div>
                 </div>    
             </li>
         </ul>
-<!--
+        <div class="logo">
+            <img src="images/mememi.png">
+        </div>
         <div class="login">
             <ul>
                 <li><a href="">Login</a></li>
@@ -167,8 +165,6 @@ $(document).ready(function(){
                 <li><a href="">Delivery</a></li>
             </ul>
         </div>
--->
-        <div class="gnb-bg"></div>
     </header>
     <div class="section01">
         <div class="swiper mySwiper">
