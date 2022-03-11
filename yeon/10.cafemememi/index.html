@@ -1,16 +1,16 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<head>    
+    <meta charset="utf-8" />
     <title>Cafemememi</title>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="css/css.css"/> 
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="/share/js/jquery.flowslider.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
-<script>
+<script type="text/javascript">
 $(document).ready(function(){
     $(window).scroll(function(){
         sc=$(window).scrollTop();
@@ -34,6 +34,57 @@ $(document).ready(function(){
     $('.logo').bind('click', function() {
         $('html, body').animate({scrollTop: '0'}, 680);
     });
+
+    var FlowSlider = function(ele, parms){
+        if(ele.length == 0) return;
+        var slider = this; // this는 객체 FlowSlider를 가리킨다.
+        var $container = ele.find('>ul');
+        var $item = $container.find('>li');
+        var obj = $.extend({
+            maxSpeed:5,
+            minSpeed:1,
+            duration:30
+        },parms);
+        var maxSpeed = obj.maxSpeed; // 최대 속도
+        var minSpeed = obj.minSpeed; // 최소 속도
+        var dur = obj.duration || 30; // 움직이는 시간
+        var itemTotal = $item.length; // 객체 총개수
+        var speed = minSpeed;
+        var size = $item.eq(0).outerWidth() + parseInt($item.eq(1).css("margin-left")); // 객체 하나의 기본크기
+        var sizeTotal = size * itemTotal; // 이미지 총크기 
+        var init = function(){
+            $container.prepend($item.clone().addClass('clone')).append($item.clone().addClass('clone')).css("margin-left",-sizeTotal);
+            $container.width(size * $('>li',$container).length);
+            motion();
+            //console.log(this) window를 가리킨다.
+        }
+
+    function motion(){
+        $container.stop().animate({"margin-left":"-="+speed},dur,function(){
+            if(parseInt($(this).css("margin-left")) <= -sizeTotal*2){
+                $(this).css("margin-left",-sizeTotal);
+            } else if(parseInt($(this).css("margin-left")) >= 0){
+                $(this).css("margin-left",-sizeTotal);
+            }
+            motion();
+        });
+    }
+
+      $('.slider-wrap').on({mouseenter:function(e){$container.stop();},mouseleave:function(e){motion();}});
+      // prev()
+      $('.btn_prev').on({mouseenter:function(e){speed = -maxSpeed;},mouseleave:function(e){speed = minSpeed;}});
+      // next()
+      $('.btn_next').on({mouseenter:function(e){speed = maxSpeed;},mouseleave:function(e){speed = minSpeed;}});
+
+      init();
+  };
+
+    var flowslider = new FlowSlider($('.slider-wrap'),{
+      maxSpeed:5,
+      minSpeed:1,
+      duration:30
+    });
+
 }); //마지막 괄호 항상 유지 ! 전체문서 괄호는 지우지 않음
 </script>
 <body>
@@ -169,19 +220,14 @@ $(document).ready(function(){
     <div class="section01">
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide slide01">                    
-                </div>
-                <div class="swiper-slide slide02">
-                </div>
-                <div class="swiper-slide slide03">
-                </div>
-                <div class="swiper-slide slide04">
-                </div>
+                <div class="swiper-slide slide01"></div>
+                <div class="swiper-slide slide02"></div>
+                <div class="swiper-slide slide03"></div>
+                <div class="swiper-slide slide04"></div>
             </div>
         </div>
-        <div class="banner">  
-        </div>
-</div>
+        <div class="banner"></div>
+    </div>
     <div class="section section02">
         <h1 class="title">MeMeMi Now</h1>
         <p class="line"></p>
@@ -270,47 +316,27 @@ $(document).ready(function(){
                     </li>
                 </ul>
             </div>
-        </div> <!-- 넓이 1000 끝 -->
-        <div class="issueSlider">
+        </div>
+        <div class="issueSlid">
             <div class="slider-wrap">
-                <div class="slider-item">
-                    <img src="images/slider01.png">
-                </div> 
-                <div class="slider-item">
-                    <img src="images/slider02.png">
-                </div> 
-                <div class="slider-item">
-                    <img src="images/slider03.png">
-                </div> 
-                <div class="slider-item">
-                    <img src="images/slider04.png">
-                </div> 
-                <div class="slider-item">
-                    <img src="images/slider05.png">
-                </div> 
-                <div class="slider-item">
-                    <img src="images/slider06.png">
-                </div> 
-                <div class="slider-item">
-                    <img src="images/slider07.png">
-                </div> 
-                <div class="slider-item">
-                    <img src="images/slider08.png">
-                </div> 
-                <div class="slider-item">
-                    <img src="images/slider09.png">
-                </div> 
-                <div class="slider-item">
-                    <img src="images/slider10.png">
-                </div>
-                <div class="slider-item">
-                    <img src="images/slider11.png">
-                </div> 
-                <div class="slider-item">
-                    <img src="images/slider12.png">
-                </div>
+              <ul>
+                <li><img src="images/slider01.png" alt=""></li>
+                <li><img src="images/slider02.png"></li>
+                <li><img src="images/slider03.png"></li>
+                <li><img src="images/slider04.png"></li>
+                <li><img src="images/slider05.png"></li>
+                <li><img src="images/slider06.png"></li>
+                <li><img src="images/slider07.png"></li>
+                <li><img src="images/slider08.png"></li>
+                <li><img src="images/slider09.png"></li>
+                <li><img src="images/slider10.png"></li>
+                <li><img src="images/slider11.png"></li>
+                <li><img src="images/slider12.png"></li>
+              </ul>
             </div>
-        </div> <!-- Slide 끝 -->
+        </div>  
+        <button type="button" class="btn_prev"><img src="images/btn_prev.png" alt="왼쪽 버튼"></button>
+        <button type="button" class="btn_next"><img src="images/btn_next.png" alt="오른쪽 버튼"></button>
     </div>
     <div class="section section04">
         <h1 class="title">Eat & Life MeMeMi<br>FROM MILANO</h1>
@@ -336,8 +362,7 @@ $(document).ready(function(){
                     </div>
                 </li>
             </ul>
-        </div>
-        
+        </div>        
     </div>
     <div class="section section05">
         <h1 class="title">MeMeMi Garden TREND</h1>
@@ -393,7 +418,7 @@ $(document).ready(function(){
     </div>
     <footer>
         <div class="footer-wrap">
-            <div class="sec-wrap p40">
+            <div class="sec-wrap p80">
                 <div class="footer-info">
                     <img src="images/neon_logo2.png">
                     <p class="p40">(주)미미미 대표이사:양지해, Add : 서울특별시 강남구 도산대로 417, 3층(청담동), Tel : 02-410-0080<br>E-mail : jhlee1@metrocity.co.kr, 사업자등록번호 : 519-87-00640, 통신판매업신고 : 2017-서울강남-03277<br>개인정보관리책임자 : 이정훈</p>  
@@ -409,8 +434,7 @@ $(document).ready(function(){
                         <li>회사소개</li>
                         <li>매장소개</li>
                         <li>Contact Us</li>
-                    </ul>
-                
+                    </ul>                
                 </div>
                 <div class="footer-menu">
                     <p>Help</p>
@@ -422,6 +446,6 @@ $(document).ready(function(){
                 </div>
             </div>
         </div>    
-    </footer>
-<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-</body></html>
+    </footer>     
+</body>
+</html>
