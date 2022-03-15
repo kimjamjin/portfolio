@@ -4,15 +4,14 @@
   <meta charset="UTF-8">
   <title>롯데월드</title>
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
-  <!-- 제이쿼리 설치 -->
+  <link rel="stylesheet" type="text/css" href="css/css.css"/> 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <!-- 스크립트 입력코드 -->
   <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
   <script>
 	$(document).ready(function(){
 		$(window).scroll(function(){	
-		sc = $(window).scrollTop(); //$(window).scrollTop() 애니메이트 기능이 아니라 스크립트 명령어로 현재 스크롤탑의 정보를 읽어주거나 변경해준다.
+		sc = $(window).scrollTop();
 		$('#title_sc').text(sc)	
 			if(sc>100){
 				$('#header1').hide();
@@ -133,175 +132,9 @@
 		$('#top_btn').click(function(){			
 				$('body,html').animate({scrollTop:0},400)
 			})
-
-
-	})
+	}) //마지막
   </script>
-  <style>
-		* { margin:0; padding:0; list-style:none; font-family: 'Noto Sans KR', sans-serif; }		
-		header{width: 100%;}
-		#header1{width: 100%; height: 45px; line-height: 40px; border: 1px solid #e3e3e3; background-color:#f8f8f8;}
-		#header1_box{width: 1400px; height: 40px; margin: auto;}
-		
-		#header1_menu1{width: 730px; height: 38px; margin-top: 1px;  float: left;}
-		#header1_menu1 li{display: inline-block; font-size: 15px; color: #868686; margin-bottom: 10px; line-height: 20px; margin-right: 10px; }
-		#header1_menu1 img{margin-right: 10px;  vertical-align: middle;}
-
-		#header1_menu1 li:after {content:'|'; margin: 0 10px;}
-		#header1_menu1 li:last-child:after{content:''; margin: 0;}
-		
-		#header1_menu2{width: 250px; height: 38px; margin-top: 1px;  float: right; text-align: right; margin-right: 40px;}
-		#header1_menu2 li{display: inline-block; font-size: 15px; font-weight: 900; margin-right: 12px; color: #404040;}
-		#header1_menu2 img{vertical-align: middle;	}
-
-		#header1_menu3{width: 200px; height: 38px; margin-top: 1px;  float: right;}
-		#header1_menu3 li{display: inline-block; font-size: 15px; font-weight: 100; color: #404040;  }
-		#header1_menu3 li:after{content:'|'; margin: 0 10px;}
-		#header1_menu3 li:last-child:after{content:''; margin: 0;}		
-
-		#header2{width: 100%; height: 90px; line-height: 90px; background-color: #fff;}
-		#header2_box{width: 1400px; height: 90px;  margin: auto;  overflow: hidden; position: relative;}
-
-		#logo{float: left; margin-top: 9px; }
-		#icon_menu{float: right; width: 250px; height: 60px; margin-top: 15px; }
-		#icon_menu li{display: inline-block; line-height: 30px;  height: 60px; vertical-align: top; width: 50px; margin-left: 21px; margin-top: 5px;  }
-		#icon_menu li:nth-child(2){margin: px 25px 0;}
-		#icon_menu li img{}
-		#icon_menu li h3{ font-size: 16px; line-height:30px; color: #6600cc; font-weight: 100;	}
-
-		#gnb{position: absolute;  text-align: center; width: 750px; right: 0; left: 0; margin: auto;}
-		#gnb li{display: inline-block; margin: 0 15px; font-size: 18px; font-weight: 900;}
-
-		#slide{width: 100%; position: relative; overflow: hidden;}
-		#slide_box{width: 600%; overflow: hidden;} 
-		#slide_box li{width: 16.666%; float: left;}
-		#slide_box li img{width: 100%;}
-
-		#slide_prevbt{position: absolute; margin: auto; left: 30px; bottom: 0;  top: 0; }
-		#slide_nextbt{position: absolute; margin: auto; right: 30px;bottom: 0; top: 0;}
-
-		#slide_btbox{width:200px; height: 41px; border-radius:50px; background-color:rgba(0,0,0,0.5); position: absolute; left: 0; right: 0; margin: auto; bottom: 50px; text-align: center;}
-		#slide_btbox_bt{width: 120px; float: left; margin-left: 22px; margin-top: 8px;}
-		#slide_btbox_bt li{width:7px; height: 7px; border-radius:7px; display: inline-block; margin: 0 5px; border: 2px solid #fff; opacity: 0.5; cursor: pointer;}
-		#slide_btbox_bt li:nth-child(1){background-color: #fff; opacity: 1;}
-		#pausebt{float: right;}
-
-		#section1{width: 1400px; margin: auto; text-align: center; }
-		#section1_title{width: 100%; line-height: 100px; border-bottom: 1px solid #d0d0d0; text-align: center; font-size: 20px; font-weight: 900; margin-top: 100px; opacity: 0;}
-		#section1_title span:nth-child(1){padding-left:60px; margin: 0 30px; display: inline-block; background:url(icons/gnb_timeInfo_bg.png) 0 center no-repeat;}
-		#section1>h3{text-align: center; font-size: 40px; line-height: 45px; margin-top: 180px; opacity: 0;}
-		#section1>h5{text-align: center; font-size: 18px; line-height: 30px; margin-top: 120px; color: #9d9d9d; font-weight: 100; opacity: 0;}
-
-		.fw100{font-weight: 100;}
-		.fw900{font-weight: 900;}
-
-		#section1_box{width: 1400px; height: 900px; margin: 200px auto 0; text-align: left; opacity: 0; }
-		#section1_box li{width: 350px; height: 450px; float: left; border-left: 1px solid #dedede; border-top: 1px solid #dedede;	box-sizing: border-box; padding: 25px;  position: relative; }
-		#section1_box li:nth-child(4),#section1_box li:nth-child(8){border-right: 1px solid #dedede;}
-		#section1_box li:nth-child(5),#section1_box li:nth-child(6),#section1_box li:nth-child(7),#section1_box li:nth-child(8){border-bottom: 1px solid #dedede;}
-		#section1_box li img{width: 100%;}
-		#section1_box li h5{color: #6600ff; font-size: 18px; line-height: 50px; font-weight: 100;}
-		#section1_box li h4{font-size: 24px; line-height: 50px; font-weight: 900;	}
-		#section1_box li h4:nth-child(3){width: 100%; overflow: hidden; white-space:nowrap; text-overflow: ellipsis;}
-
-		#section1_box li div { width: 100%; height: 100%; box-sizing: border-box; border: 2px solid #6633cc; box-shadow: 15px 15px 20px rgba(0,0,0,0.3); position: absolute; top: 0; left: 0; transition:0.5s; opacity: 0;}
-		#section1_box li:hover div{opacity: 1;}
-		#section1_box li:hover h4{color: #6600ff; }
-
-		#section1 button{width: 220px; height:55px; border-radius: 50px 50px ; background:linear-gradient(to right,#681cf2,#590ee3); color: #fff; font-size: 17px; margin-top: 200px; border: none; outline:none; opacity: 0;}
-
-		#section2{width: 100%; height: 900px;  margin-top: 120px; background:  url(images/mainCon2_bg.jpg) 0 center no-repeat; overflow: hidden; text-align: center; position: relative;}
-		#section2>h3{text-align: center; font-size: 40px; line-height: 80px; color: #fff; margin-top: 120px; opacity: 0;}
-		#section2>h5{text-align: center; font-size: 17px; line-height: 60px; margin-top: 12px; font-weight: 100; color: #fff; opacity: 0;}
-
-		#sec2_box{ position: relative;}
-		#section2_slide{width: 3256px; height: 350px; margin-top: 100px; display: inline-block; position: absolute; left: 0; top: 20px; opacity: 0;}
-		#section2_slide li{width: 276px; height: 350px; margin: 0 10px 0 10px; float: left; left: 10px; top: 0; bottom: 10px; position: relative;}
-		#section2_slide li div{width: 100%; height: 60%; left: 0;bottom: 0;position: absolute;  background:linear-gradient(transparent,rgba(0,0,0,0.9));}
-		#section2_slide li h4{position: absolute; left: 30px; bottom: 30px; color: #fff; font-size: 20px; font-weight: 100; }
-		
-		#section2 button{width: 200px; height: 55px; background-color: #fff; color: #6600cc; border-radius: 50px 50px ; border: none; outline: none; margin-top: 500px; font-size: 18px; font-weight: 100;  }
-		#section2 button:nth-child(6){border: 2px solid #fff; color: #fff; margin-left: 15px; background-color: transparent; margin-bottom: 80px;}
-
-		#dragbox{width: 200px; height: 50px;  position: absolute; left: 0; right: 0; margin: auto; bottom: 10px;}
-		#dragbg{width: 100%; height: 5px; background-color: #fff; border-radius: 5px; position: absolute; margin-top: 22.5px;}
-		#dragbt{width: 50px; height: 30px; border-radius: 20px ; background-color: #6600cc; position: absolute; left: 0; bottom: 0; top: 0; margin: auto;	text-align: center;	}
-		#dragbt img:nth-child(1) { margin-right: 20px;}
-
-		#section3{width: 100%; height: 1300px; background:  url(images/mainCon3_bg.jpg) 0 0 no-repeat; overflow: hidden; text-align: center;}
-		#section3 h3{font-size: 40px; line-height: 100px; text-align: center; margin-top: 80px; opacity: 0;}
-		#section3_bt{text-align: center; margin-top: 50px; opacity: 0;}
-		#section3_bt li{width: 160px; height: 50px; border: 1px solid #cacaca; border-radius: 50px 50px; display: inline-block; text-align: center; color: #6e6e6e; font-size: 16px; line-height: 50px; cursor: pointer;}
-		#section3_bt li:nth-child(1){width: 130px; height: 50px; border: 2px solid #6600cc; border-radius: 50px 50px; color: #6600cc; font-weight: 900;}
-		#section3_bt li:nth-child(2){margin: 0 15px;}
-
-		#section3_content{width: 1166px; height: 700px;  margin: auto; margin-top: 90px; opacity: 0;}	
-		#section3_content li{background-color: #fff;  display: inline-block; float: left;    transition:0.3s;}
-		#section3_content li:hover{background-color: #6600cc; color: #fff; box-shadow: 15px 15px 20px rgba(0,0,0,0.3);}
-		#section3_content li:hover p{color: #fff;}
-		
-		#section3_content li:nth-child(2){margin: 0 20px;}
-		#section3_content li:nth-child(5){margin: 0 20px;}		
-		
-		#section3_content img{}
-		#section3_content h4{margin-left: 10px; font-size: 22px; line-height: 45px; text-align: left;}
-		#section3_content p{margin-left: 10px; font-size: 17px; line-height: 34px; color: #000; font-weight: 100; margin-bottom: 10px;  text-align: left; 	}
-		#section3_content li:nth-child(4),#section3_content li:nth-child(5),#section3_content li:nth-child(6){margin-top: 20px;}
-
-		#section3 button{width: 220px; height: 55px; border-radius: 55px 55px ; background-color: #6600cc; color: #000; border: none; color: #fff; font-size: 18px; font-weight: 100;  }
-		#section3 button:nth-child(5){border: 2px solid #6600cc; color: #6600cc; margin-left: 15px; background-color: transparent; color: #6600cc; margin-top: 60px; font-weight: 100;}
-
-		#section4{width: 100%; margin: auto; overflow: hidden;}
-		
-		#section4_title h3{font-size: 40px; line-height: 60px; margin-top: 150px; opacity: 0; text-align: center;}
-		#section4_title h5{font-size: 18px; line-height: 60px; color: #505050; margin-bottom: 100px; text-align: center; opacity: 0;}
-		#section4_title {border-bottom: 1px solid #a8a8a8; width: 1190px; margin: auto; margin-bottom: 50px; }		
-		
-		#section4_content{width: 1190px; height: 380px; margin: auto;	 margin-top: 50px;}
-		#section4_content h4{ font-size: 23px; line-height: 55px; float: left; width: 1190px; height: 50px; opacity: 0;	}
-		#section4_content img{width: 276px; height: 276px;}
-		#section4_content li{ display: inline-block; float: left; margin-right: 20px; transition:0.5s;  margin-top: 80px; opacity: 0; }
-		#section4_content li:nth-child(5){margin-right: 0;}
-		#section4_content li h5{font-size: 20px; text-align: left; margin-top:15px;}
-
-		#section4_content li:hover h5{ color: #6600cc;}
-		#section4_content li:hover img {box-shadow: 15px 15px 20px rgba(0,0,0,0.3); }
-
-		#section4_box{width: 1190px; height: 330px; margin: auto;}
-		#notice{width: 600px; height: 250px; border: 1px solid #000; float: left; margin-top: 40px;}
-		#notice_left{}
-		#notice_left ul {width: 300px; height: 250px;  margin: 20px 30px 0 20px; }
-		#notice_left ul li{font-size: 18px; line-height: 36px;}
-		#notice_right{}
-
-		#banner{float: right;  width: 70px; height: 135px;margin-right: 50px;  }
-		#banner1{ margin-bottom: 20px; }	
-		#top_btn{cursor: pointer;}
-
-		footer{width: 100%; height:350px; border-top: 1px solid #868686; margin: auto; }
-		#footer1{width: 1164px; height: 100px; margin: auto; }
-		#footer1_menu1{width: 900px; height:100px; margin: auto; color: #868686;	 float: left;}
-		#footer1_menu1 li{display: inline-block; float: left; font-size: 16px; line-height: 40px; text-align: center; padding-top: 30px; margin-right: 10px;}
-		#footer1_menu1 li:nth-child(4){color: #cc0000; }
-		#footer1_menu2{width: 135px; height: 100px; float: right; }
-		#footer1_menu2 li{display: inline-block; float: left; padding-top: 30px; margin-left: 10px;	}
-
-		#footer2{width: 1164px; height: 200px; margin: auto;  border-top: 1px solid #868686; position: relative;  }
-
-		#footer2_left1{width: 79px; height: 100px; float: left; margin-top: 20px; margin-right: 20px;   }
-
-		#footer2_left2{height: 180px; width:700px; margin: auto; margin-left: 100px;margin-top: 20px; position: absolute;} 
-		#footer2_left2 h5{font-size: 15px; color: #868686; line-height: 25px; }
-		#footer2_left2 p{font-size: 12px; margin-top: 20px; color: #868686;}
-		#footer2_left2 ul{height: 20px; margin-top: 20px; }		
-		#footer2_left2 ul li{ margin-left: 10px; font-size: 12px; line-height: 20px;  display: inline-block; color: #868686;}		
-
-		#footer2_left3{width: 200px; height: 40px; border: 1px solid #868686; right: 0; top: 20px; position: absolute;}
-		#footer2_left3 img{ top: 15px; right: 20px;  position: absolute;}
-		#footer2_left3 h4{margin-top: 8px; font-size: 15px; margin-left: 10px; font-weight: 100; color: #868686;	}
-		
-/*		#title_sc{font-size: 100px; background-color: #000; color: yellow; position: fixed; left: 0; top: 0; z-index: 99999999999999999;}*/
-  </style></head>
+  </head>
   <body>
 		<header>
 			<div id="header1">
@@ -331,16 +164,16 @@
 						<h1 id="logo"><img src="logo.png" alt=""></h1>
 						<ul id="icon_menu">
 						 <li>
-							 <img src="icons/header_srch_btn.png" alt="">
+							 <img src="icons/header_srch_btn.png" alt="검색 버튼">
 							 <h3>검색</h3>
 						 </li>
 
 						 <li>
-							 <img src="icons/reser_btn.png" alt="">
+							 <img src="icons/reser_btn.png" alt="예매 버튼">
 							 <h3>예매</h3>
 						 </li>
 						 <li>
-							 <img src="icons/group_btn.png" alt="">
+							 <img src="icons/group_btn.png" alt="단체 버튼">
 							 <h3>단체</h3>
 						 </li>
 						</ul>
@@ -365,8 +198,6 @@
 				<li><img src="images/slide5.jpg" alt=""></li>
 				<li><img src="images/slide1.jpg" alt=""></li>
 			</ul>
-			<img src="icons/imgRoll_prev.png" alt="" id="slide_prevbt">
-			<img src="icons/imgRoll_next.png" alt="" id="slide_nextbt">
 			<div id="slide_btbox">
 				<ul id="slide_btbox_bt">
 					<li></li>
@@ -375,7 +206,6 @@
 					<li></li>
 					<li></li>
 				</ul>
-				<img src="icons/play_bt.png" alt="" id="pausebt">
 			</div>			
 		</div>
 <!--  -->
@@ -460,8 +290,7 @@
 					<div id="dragbt">
 						<img src="icons/mainCon2_scroll_bg1.png" alt="">
 						<img src="icons/mainCon2_scroll_bg2.png" alt="">
-					</div>
-				
+					</div>				
 			</div>			
 			<button>더 많은 공연 보기</button>
 			<button>참여 프로그램 보기</button>			
